@@ -1,0 +1,12 @@
+expanded_workloads:
+  - multiplier_n16
+  - multiplier_n24
+  - phase_estimation_like_synthetic
+  - hamiltonian_simulation_synthetic
+  - modular_arithmetic_block_synthetic
+  - larger_qft_n10
+  - approximate_qft_n16
+C_values: [1, 2, 3, 4, 5]
+B_values: [0, 4, 8, 16]
+output_dir: results/prelim_v4
+figure_dir: figures/prelim_v4

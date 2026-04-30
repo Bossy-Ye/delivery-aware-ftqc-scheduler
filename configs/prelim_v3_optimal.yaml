@@ -1,0 +1,5 @@
+input: results/prelim_v2/exp5_small_optimal_comparison.csv
+output_dir: results/prelim_v3
+figure_dir: figures/prelim_v3
+near_optimal_threshold_cycles: [0, 1]
+near_optimal_threshold_percent: 0.05

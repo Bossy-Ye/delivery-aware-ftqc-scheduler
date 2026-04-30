@@ -1,0 +1,6 @@
+strategy_match_rate,mean_regret,median_regret,regime_label,match_rate_by_regime,count
+0.9848901098901099,0.00941499777360989,0.0,OVERALL,0.9848901098901099,1456
+,,,no_delivery_bottleneck,1.0,970
+,,,peak_dominated_buffer_limited,0.9473684210526315,57
+,,,peak_dominated_smooth_solvable,0.9496021220159151,377
+,,,persistent_underprovisioning,1.0,52

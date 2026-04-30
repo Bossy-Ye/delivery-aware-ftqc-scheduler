@@ -1,0 +1,8 @@
+C_values: [1, 2, 3]
+B_values: [0, 8]
+adder_n: [8, 16]
+multiplier_n: [4, 6, 8, 12]
+qft_n: [8]
+approx_qft_n: [12]
+output_dir: results/prelim_v1
+figure_dir: figures/prelim_v1

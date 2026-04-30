@@ -1,0 +1,479 @@
+workload,family,seed,n,C,B,regime_label,regime_reason,recommended_strategy,slack_ratio,supply_tightness,peak_demand_over_C,mean_demand_over_C,smooth_L_backlog,smooth_BacklogArea
+constructed_high,high_compressibility,0,24,1,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,1,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,1,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,1,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,2,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,2,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,2,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,3,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,3,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,3,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,4,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,4,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,4,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,4,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,5,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,5,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,5,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,0,24,5,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,1,0,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.8367346938775511,0.6712328767123288,7.0,0.6712328767123288,30,212
+constructed_medium,medium_compressibility,0,24,1,4,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.8367346938775511,0.6363636363636364,7.0,0.6712328767123288,20,105
+constructed_medium,medium_compressibility,0,24,1,8,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.8367346938775511,0.6049382716049383,7.0,0.6712328767123288,12,34
+constructed_medium,medium_compressibility,0,24,1,12,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.8367346938775511,0.5764705882352941,7.0,0.6712328767123288,2,3
+constructed_medium,medium_compressibility,0,24,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,0,24,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,1,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,1,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,1,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,1,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,2,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,3,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,0,24,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,1,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,1,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,1,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,1,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,2,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,2,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,2,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,3,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,3,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,3,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,4,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,4,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,4,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,4,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,5,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,5,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,5,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,1,24,5,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,1,0,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.684931506849315,7.0,0.684931506849315,35,263
+constructed_medium,medium_compressibility,1,24,1,4,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.6493506493506493,7.0,0.684931506849315,25,138
+constructed_medium,medium_compressibility,1,24,1,8,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.6172839506172839,7.0,0.684931506849315,14,56
+constructed_medium,medium_compressibility,1,24,1,12,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.5882352941176471,7.0,0.684931506849315,5,15
+constructed_medium,medium_compressibility,1,24,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,2,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,4,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,1,24,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,1,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,1,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,1,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,1,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,2,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,3,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,1,24,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,1,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,1,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,1,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,1,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,2,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,2,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,2,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,3,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,3,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,3,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,4,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,4,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,4,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,4,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,5,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,5,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,5,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,2,24,5,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,1,0,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.8461538461538461,0.7123287671232876,9.0,0.7123287671232876,35,288
+constructed_medium,medium_compressibility,2,24,1,4,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.8461538461538461,0.6753246753246753,9.0,0.7123287671232876,24,163
+constructed_medium,medium_compressibility,2,24,1,8,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.8461538461538461,0.6419753086419753,9.0,0.7123287671232876,15,81
+constructed_medium,medium_compressibility,2,24,1,12,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.8461538461538461,0.611764705882353,9.0,0.7123287671232876,8,29
+constructed_medium,medium_compressibility,2,24,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,2,24,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,1,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,1,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,1,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,1,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,2,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,3,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,2,24,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,1,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,1,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,1,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,1,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,2,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,2,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,2,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,3,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,3,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,3,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,4,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,4,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,4,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,4,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,5,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,5,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,5,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,3,24,5,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,1,0,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.684931506849315,8.0,0.684931506849315,31,240
+constructed_medium,medium_compressibility,3,24,1,4,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.6493506493506493,8.0,0.684931506849315,24,128
+constructed_medium,medium_compressibility,3,24,1,8,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.6172839506172839,8.0,0.684931506849315,15,47
+constructed_medium,medium_compressibility,3,24,1,12,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.5882352941176471,8.0,0.684931506849315,3,6
+constructed_medium,medium_compressibility,3,24,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,2,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,4,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,3,24,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,1,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,1,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,1,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,1,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,2,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,3,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,3,24,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,1,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,1,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,1,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,1,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,2,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,2,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,2,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,3,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,3,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,3,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,4,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,4,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,4,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,4,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,5,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,5,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,5,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_high,high_compressibility,4,24,5,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,1,0,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.684931506849315,8.0,0.684931506849315,34,257
+constructed_medium,medium_compressibility,4,24,1,4,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.6493506493506493,8.0,0.684931506849315,25,136
+constructed_medium,medium_compressibility,4,24,1,8,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.6172839506172839,8.0,0.684931506849315,16,51
+constructed_medium,medium_compressibility,4,24,1,12,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.84,0.5882352941176471,8.0,0.684931506849315,4,10
+constructed_medium,medium_compressibility,4,24,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_medium,medium_compressibility,4,24,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,1,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,1,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,1,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,1,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,2,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,3,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+constructed_low,low_compressibility,4,24,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,1,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,1,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,1,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,1,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,2,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,3,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n8,semi_real_adder,0,8,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,1,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,1,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,1,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,1,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,2,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,3,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+adder_n16,semi_real_adder,0,16,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,1,0,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.8421052631578947,0.8636363636363636,4.0,0.8636363636363636,4,5
+multiplier_n4,semi_real_multiplier,0,4,1,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,1,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,1,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,3,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n4,semi_real_multiplier,0,4,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,1,0,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9,1.25,6.0,0.9523809523809523,10,31
+multiplier_n6,semi_real_multiplier,0,6,1,4,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9,1.1111111111111112,6.0,0.9523809523809523,2,3
+multiplier_n6,semi_real_multiplier,0,6,1,8,peak_dominated_smooth_solvable,static has bursts but smooth removes backlog with available slack,smooth,0.9,1.0,6.0,0.9523809523809523,0,0
+multiplier_n6,semi_real_multiplier,0,6,1,12,peak_dominated_smooth_solvable,static has bursts but smooth removes backlog with available slack,smooth,0.9,0.9090909090909091,6.0,0.9523809523809523,0,0
+multiplier_n6,semi_real_multiplier,0,6,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,2,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n6,semi_real_multiplier,0,6,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,1,0,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.927536231884058,1.6428571428571428,8.0,0.971830985915493,13,60
+multiplier_n8,semi_real_multiplier,0,8,1,4,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.927536231884058,1.5,8.0,0.971830985915493,6,17
+multiplier_n8,semi_real_multiplier,0,8,1,8,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.927536231884058,1.38,8.0,0.971830985915493,1,1
+multiplier_n8,semi_real_multiplier,0,8,1,12,peak_dominated_smooth_solvable,static has bursts but smooth removes backlog with available slack,smooth,0.927536231884058,1.2777777777777777,8.0,0.971830985915493,0,0
+multiplier_n8,semi_real_multiplier,0,8,2,0,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.927536231884058,0.8214285714285714,4.0,0.8214285714285714,11,38
+multiplier_n8,semi_real_multiplier,0,8,2,4,uncertainty_sensitive,deterministic schedule degrades under stochastic or effective-capacity loss,robust_scheduling,0.927536231884058,0.7840909090909091,4.0,0.8214285714285714,3,8
+multiplier_n8,semi_real_multiplier,0,8,2,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,2,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,4,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n8,semi_real_multiplier,0,8,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n12,semi_real_multiplier,0,12,1,0,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9473684210526315,2.4516129032258065,12.0,0.987012987012987,19,127
+multiplier_n12,semi_real_multiplier,0,12,1,4,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9473684210526315,2.303030303030303,12.0,0.987012987012987,11,60
+multiplier_n12,semi_real_multiplier,0,12,1,8,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9473684210526315,2.1714285714285713,12.0,0.987012987012987,7,22
+multiplier_n12,semi_real_multiplier,0,12,1,12,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9473684210526315,2.054054054054054,12.0,0.987012987012987,2,3
+multiplier_n12,semi_real_multiplier,0,12,2,0,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9473684210526315,1.2258064516129032,6.0,0.9743589743589743,28,396
+multiplier_n12,semi_real_multiplier,0,12,2,4,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9473684210526315,1.1875,6.0,0.9743589743589743,23,291
+multiplier_n12,semi_real_multiplier,0,12,2,8,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9473684210526315,1.1515151515151516,6.0,0.9743589743589743,20,204
+multiplier_n12,semi_real_multiplier,0,12,2,12,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9473684210526315,1.1176470588235294,6.0,0.9743589743589743,16,132
+multiplier_n12,semi_real_multiplier,0,12,3,0,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9473684210526315,0.8172043010752689,4.333333333333333,0.8172043010752689,19,144
+multiplier_n12,semi_real_multiplier,0,12,3,4,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9473684210526315,0.8,4.333333333333333,0.8172043010752689,13,80
+multiplier_n12,semi_real_multiplier,0,12,3,8,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9473684210526315,0.7835051546391752,4.333333333333333,0.8172043010752689,8,36
+multiplier_n12,semi_real_multiplier,0,12,3,12,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9473684210526315,0.7676767676767676,4.333333333333333,0.8172043010752689,3,11
+multiplier_n12,semi_real_multiplier,0,12,4,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n12,semi_real_multiplier,0,12,4,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n12,semi_real_multiplier,0,12,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n12,semi_real_multiplier,0,12,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n12,semi_real_multiplier,0,12,5,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n12,semi_real_multiplier,0,12,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n12,semi_real_multiplier,0,12,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+multiplier_n12,semi_real_multiplier,0,12,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,1,0,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9032258064516129,1.1923076923076923,5.0,0.9393939393939394,14,51
+exact_qft_n8,semi_real_qft,0,8,1,4,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9032258064516129,1.0333333333333334,5.0,0.9393939393939394,6,8
+exact_qft_n8,semi_real_qft,0,8,1,8,peak_dominated_smooth_solvable,static has bursts but smooth removes backlog with available slack,smooth,0.9032258064516129,0.9117647058823529,5.0,0.9393939393939394,0,0
+exact_qft_n8,semi_real_qft,0,8,1,12,peak_dominated_smooth_solvable,static has bursts but smooth removes backlog with available slack,smooth,0.9032258064516129,0.8157894736842105,5.0,0.9393939393939394,0,0
+exact_qft_n8,semi_real_qft,0,8,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,2,4,uncertainty_sensitive,deterministic schedule degrades under stochastic or effective-capacity loss,robust_scheduling,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,2,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,2,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.9032258064516129,0.484375,2.5,0.5961538461538461,0,0
+exact_qft_n8,semi_real_qft,0,8,3,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,3,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.9032258064516129,0.34444444444444444,1.6666666666666667,0.3974358974358974,0,0
+exact_qft_n8,semi_real_qft,0,8,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.9032258064516129,0.2672413793103448,1.25,0.2980769230769231,0,0
+exact_qft_n8,semi_real_qft,0,8,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+exact_qft_n8,semi_real_qft,0,8,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.9032258064516129,0.21830985915492956,1.0,0.23846153846153845,0,0
+approx_qft_n12,semi_real_qft,0,12,1,0,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9047619047619048,1.105263157894737,9.0,0.9545454545454546,26,259
+approx_qft_n12,semi_real_qft,0,12,1,4,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9047619047619048,1.0,9.0,0.9545454545454546,21,164
+approx_qft_n12,semi_real_qft,0,12,1,8,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9047619047619048,0.9130434782608695,9.0,0.9545454545454546,15,91
+approx_qft_n12,semi_real_qft,0,12,1,12,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9047619047619048,0.84,9.0,0.9545454545454546,10,38
+approx_qft_n12,semi_real_qft,0,12,2,0,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9047619047619048,0.5526315789473685,5.0,0.5526315789473685,9,57
+approx_qft_n12,semi_real_qft,0,12,2,4,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9047619047619048,0.525,5.0,0.5526315789473685,6,25
+approx_qft_n12,semi_real_qft,0,12,2,8,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9047619047619048,0.5,5.0,0.5526315789473685,2,6
+approx_qft_n12,semi_real_qft,0,12,2,12,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,3,4,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,3,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,3,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,4,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,4,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,4,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,4,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,5,0,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,5,4,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,5,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+approx_qft_n12,semi_real_qft,0,12,5,12,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+larger_multiplier_n16,semi_real_multiplier_larger,0,16,1,0,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9624060150375939,3.2439024390243905,17.0,0.9925373134328358,25,244
+larger_multiplier_n16,semi_real_multiplier_larger,0,16,1,8,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9624060150375939,2.9555555555555557,17.0,0.9925373134328358,13,83
+larger_multiplier_n16,semi_real_multiplier_larger,0,16,2,0,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9624060150375939,1.6219512195121952,8.5,0.9851851851851852,31,652
+larger_multiplier_n16,semi_real_multiplier_larger,0,16,2,8,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9624060150375939,1.5465116279069768,8.5,0.9851851851851852,26,417
+larger_multiplier_n16,semi_real_multiplier_larger,0,16,3,0,uncertainty_sensitive,deterministic schedule degrades under stochastic or effective-capacity loss,robust_scheduling,0.9624060150375939,1.08130081300813,5.666666666666667,0.9743589743589743,45,1351
+larger_multiplier_n16,semi_real_multiplier_larger,0,16,3,8,uncertainty_sensitive,deterministic schedule degrades under stochastic or effective-capacity loss,robust_scheduling,0.9624060150375939,1.047244094488189,5.666666666666667,0.9743589743589743,38,1014
+phase_estimation_like_n10,semi_real_phase_estimation_like,0,10,1,0,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.92,1.1904761904761905,9.0,0.9615384615384616,18,102
+phase_estimation_like_n10,semi_real_phase_estimation_like,0,10,1,8,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.92,1.0,9.0,0.9615384615384616,4,9
+phase_estimation_like_n10,semi_real_phase_estimation_like,0,10,2,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+phase_estimation_like_n10,semi_real_phase_estimation_like,0,10,2,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+phase_estimation_like_n10,semi_real_phase_estimation_like,0,10,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+phase_estimation_like_n10,semi_real_phase_estimation_like,0,10,3,8,no_delivery_bottleneck,static schedule has no delivery bottleneck,none,0.0,0.0,0.0,0.0,0,0.0
+larger_exact_qft_n12,semi_real_qft_larger,0,12,1,0,persistent_underprovisioning,average demand is too close to available supply for scheduling alone,increase_capacity,0.9428571428571428,1.8421052631578947,5.0,0.9722222222222222,17,83
+larger_exact_qft_n12,semi_real_qft_larger,0,12,1,8,peak_dominated_smooth_solvable,static has bursts but smooth removes backlog with available slack,smooth,0.9428571428571428,1.5217391304347827,5.0,0.9722222222222222,0,0
+larger_exact_qft_n12,semi_real_qft_larger,0,12,2,0,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9428571428571428,0.9210526315789473,5.0,0.9210526315789473,24,284
+larger_exact_qft_n12,semi_real_qft_larger,0,12,2,8,peak_dominated_buffer_limited,smoothing reduces peaks but buffer remains too small,increase_buffer,0.9428571428571428,0.8333333333333334,5.0,0.9210526315789473,17,113
+larger_exact_qft_n12,semi_real_qft_larger,0,12,3,0,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0
+larger_exact_qft_n12,semi_real_qft_larger,0,12,3,8,peak_dominated_smooth_solvable,smooth is sufficient in this setting,smooth,0.0,0.0,0.0,0.0,0,0.0

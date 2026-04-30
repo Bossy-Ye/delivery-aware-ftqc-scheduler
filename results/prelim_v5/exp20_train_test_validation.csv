@@ -1,0 +1,7 @@
+split,partition,num_cases,peak_threshold,persistent_threshold,high_slack_threshold,small_buffer_over_c,match_rate,mean_regret,median_regret,p95_regret,nontrivial_match_rate,nontrivial_mean_regret,nontrivial_median_regret,nontrivial_p95_regret,excluding_ties_match_rate,excluding_ties_mean_regret,excluding_ties_median_regret,excluding_ties_p95_regret,num_cases,num_nontrivial_cases,num_unique_best_cases
+seed,train,1120,1.5,0.85,0.3,8.0,0.9964285714285714,0.0006242661448140901,0.0,0.0,0.9885714285714285,0.0019976516634050887,0.0,0.0,1.0,0.0,0.0,0.0,1120,350,74
+seed,test,336,1.5,0.85,0.3,8.0,0.9910714285714286,0.0010216894977168951,0.0,0.0,0.9779411764705882,0.002524174053182917,0.0,0.0,0.0,0.0,0.0,0.0,336,136,0
+workload,train,1232,1.5,0.85,0.3,8.0,0.9943181818181818,0.0008461572673901443,0.0,0.0,0.9832935560859188,0.002487985091705627,0.0,0.0,1.0,0.0,0.0,0.0,1232,419,41
+workload,test,224,1.5,0.85,0.3,8.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,224,67,33
+cb,train,416,1.5,0.85,0.3,8.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,416,217,44
+cb,test,1040,1.5,0.85,0.3,8.0,0.9932692307692308,0.0010023709167544786,0.0,0.0,0.9739776951672863,0.0038753373733258654,0.0,0.0,1.0,0.0,0.0,0.0,1040,269,30

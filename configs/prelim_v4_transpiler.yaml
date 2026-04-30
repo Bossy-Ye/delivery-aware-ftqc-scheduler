@@ -1,0 +1,7 @@
+transpiler: qiskit
+optimization_levels: [0, 1, 2, 3]
+proxy_type_fallback: proxy_non_clifford_demand
+C: 2
+B: 4
+output_dir: results/prelim_v4
+figure_dir: figures/prelim_v4

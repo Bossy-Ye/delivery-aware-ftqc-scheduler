@@ -1,0 +1,17 @@
+.DS_Store
+.idea/
+TASK*.md
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+results/**/*.tmp
+
+# Large, reproducible V6 per-case tables. Keep summaries and reports tracked.
+results/prelim_v6/exp22_resource_penalized_policy_comparison.csv
+results/prelim_v6/exp23_budget_constrained_policy_comparison.csv

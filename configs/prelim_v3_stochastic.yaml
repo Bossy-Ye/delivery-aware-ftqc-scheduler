@@ -1,0 +1,10 @@
+p_acc_values: [1.0, 0.995, 0.99, 0.95, 0.90]
+num_trials: 200
+rho: 0.9
+workloads:
+  - constructed_high
+  - constructed_medium
+  - multiplier_n8
+  - exact_qft_n8
+output_dir: results/prelim_v3
+figure_dir: figures/prelim_v3

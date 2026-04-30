@@ -1,0 +1,6 @@
+input_exp1: results/prelim_v2/exp1_schedule_reshaping_v2.csv
+input_exp2: results/prelim_v2/exp2_required_capacity_v2.csv
+input_exp6: results/prelim_v3/exp6_optimal_gap_analysis.csv
+epsilon: 0.05
+output_dir: results/prelim_v3
+figure_dir: figures/prelim_v3

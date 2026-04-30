@@ -1,0 +1,2 @@
+observed_match_rate,observed_mean_regret,observed_nontrivial_mean_regret,p_value_match_rate,p_value_mean_regret,p_value_nontrivial_mean_regret,num_trials
+0.989010989010989,0.003614370605799248,0.01082823786428746,0.000999000999000999,0.000999000999000999,0.000999000999000999,1000

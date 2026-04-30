@@ -1,0 +1,15 @@
+C_values: [1, 2, 3]
+B_values: [0, 8]
+adder_n: [8, 16]
+multiplier_n: [4, 6, 8, 12, 16]
+qft_n: [8, 12]
+phase_estimation_like_n: [10]
+lookahead_horizon: 5
+weights:
+  lambda_exe: 2.0
+  lambda_delta: 1.0
+  lambda_backlog: 1.0
+  lambda_static: 0.5
+  lambda_critical: 0.5
+output_dir: results/prelim_v2
+figure_dir: figures/prelim_v2

@@ -1,0 +1,12 @@
+case_id,workload,family,seed,n,C,B,regime_label,intervention,T_ref_asap,T_exe,ratio_to_T_ref,BacklogArea,L_backlog
+case1_smooth_solvable,constructed_high,high_compressibility,0,24,1,0,peak_dominated_smooth_solvable,static,80,139,1.7375,2031,68
+case1_smooth_solvable,constructed_high,high_compressibility,0,24,1,0,peak_dominated_smooth_solvable,smooth,80,80,1.0,0,0
+case2_buffer_limited,larger_multiplier_n16,semi_real_multiplier_larger,0,16,4,0,peak_dominated_buffer_limited,B_base,82,90,1.0975609756097562,370,27
+case2_buffer_limited,larger_multiplier_n16,semi_real_multiplier_larger,0,16,4,8,peak_dominated_buffer_limited,B_plus_8,82,88,1.0731707317073171,192,18
+case2_buffer_limited,larger_multiplier_n16,semi_real_multiplier_larger,0,16,4,16,peak_dominated_buffer_limited,B_plus_16,82,86,1.048780487804878,73,10
+case3_persistent_underprovisioning,larger_multiplier_n16,semi_real_multiplier_larger,0,16,3,0,persistent_underprovisioning,C_base,82,112,1.3658536585365855,1351,45
+case3_persistent_underprovisioning,larger_multiplier_n16,semi_real_multiplier_larger,0,16,4,0,persistent_underprovisioning,C_plus_1,82,90,1.0975609756097562,370,27
+case3_persistent_underprovisioning,larger_multiplier_n16,semi_real_multiplier_larger,0,16,5,0,persistent_underprovisioning,C_plus_2,82,82,1.0,0,0
+case4_effective_capacity_sensitive,constructed_high,high_compressibility,0,24,2,0,peak_dominated_smooth_solvable,smooth_eta_1,80,80,1.0,0,0
+case4_effective_capacity_sensitive,constructed_high,high_compressibility,0,24,1,0,peak_dominated_smooth_solvable,smooth_eta_0.75,80,80,1.0,0,0
+case4_effective_capacity_sensitive,constructed_high,high_compressibility,0,24,1,0,peak_dominated_smooth_solvable,robust_eta_0.75,80,80,1.0,0,0

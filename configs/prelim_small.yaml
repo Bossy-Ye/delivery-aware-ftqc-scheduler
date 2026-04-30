@@ -1,0 +1,5 @@
+C_values: [1, 2, 3, 4, 5]
+B_values: [0, 4, 8, 12]
+seeds: [0, 1, 2, 3, 4]
+output_dir: results/prelim_v1
+figure_dir: figures/prelim_v1

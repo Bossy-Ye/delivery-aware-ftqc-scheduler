@@ -1,0 +1,9 @@
+eta_values: [1.0, 0.9, 0.75, 0.5]
+rho: 0.9
+workloads:
+  - constructed_high
+  - constructed_medium
+  - multiplier_n8
+  - exact_qft_n8
+output_dir: results/prelim_v3
+figure_dir: figures/prelim_v3
