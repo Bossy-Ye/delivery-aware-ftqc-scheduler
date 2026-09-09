@@ -1,0 +1,7 @@
+model,description,cases,regret_median,regret_mean,regret_p90,regret_max,prediction_error_mean,prediction_error_max,candidate_selection_accuracy
+deps_only,dependencies only (what T-depth sees),196,1.4789,1.4697,1.9815,1.9996,0.6173,0.9977,0.3112
+t_count_only,T-count and average supply rate,196,1.0,1.3239,2.254,4.4514,0.1172,0.8939,0.6224
+deps_plus_count,dependencies + T-count,196,1.0,1.03,1.1216,1.3684,0.0303,0.3053,0.8673
+deps_plus_throughput,dependencies + arrival timing,196,1.0,1.0218,1.0709,1.4105,0.0041,0.2188,0.9184
+sccp,dependencies + arrival timing + buffer,196,1.0,1.0068,1.0105,1.3158,0.004,0.2188,0.9184
+sccp_plus,full model with the fluid buffer-loss term,196,1.0,1.0065,1.0105,1.3158,0.004,0.2188,0.9184

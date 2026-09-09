@@ -1,0 +1,1177 @@
+program,kernel,regime,rate,model,description,makespan,reference,regret,reference_exhaustive,prediction_error_mean,prediction_error_max,selected_best_candidate
+grover_c16_i2,grover,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),2482,1842,1.3474,1,0.9162,0.9678,0
+grover_c16_i2,grover,rate0.1,0.1,deps_plus_count,dependencies + T-count,1842,1842,1.0,1,0.0037,0.0043,1
+grover_c16_i2,grover,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,1842,1842,1.0,1,0.0,0.0,1
+grover_c16_i2,grover,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,1842,1842,1.0,1,0.0,0.0,1
+grover_c16_i2,grover,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,1842,1842,1.0,1,0.0,0.0,1
+grover_c16_i2,grover,rate0.1,0.1,t_count_only,T-count and average supply rate,1842,1842,1.0,1,0.0037,0.0043,1
+grover_c16_i2,grover,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),1247,927,1.3452,1,0.8333,0.9358,0
+grover_c16_i2,grover,rate0.2,0.2,deps_plus_count,dependencies + T-count,927,927,1.0,1,0.0028,0.0032,1
+grover_c16_i2,grover,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,927,927,1.0,1,0.0,0.0,1
+grover_c16_i2,grover,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,927,927,1.0,1,0.0,0.0,1
+grover_c16_i2,grover,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,927,927,1.0,1,0.0,0.0,1
+grover_c16_i2,grover,rate0.2,0.2,t_count_only,T-count and average supply rate,927,927,1.0,1,0.0028,0.0032,1
+grover_c16_i2,grover,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),506,383,1.3211,1,0.5921,0.8419,0
+grover_c16_i2,grover,rate0.5,0.5,deps_plus_count,dependencies + T-count,383,383,1.0,1,0.0026,0.0131,1
+grover_c16_i2,grover,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,383,383,1.0,1,0.001,0.0052,1
+grover_c16_i2,grover,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,383,383,1.0,1,0.001,0.0052,1
+grover_c16_i2,grover,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,383,383,1.0,1,0.001,0.0052,1
+grover_c16_i2,grover,rate0.5,0.5,t_count_only,T-count and average supply rate,383,383,1.0,1,0.0026,0.0131,1
+grover_c16_i2,grover,rate1,1.0,deps_only,dependencies only (what T-depth sees),259,218,1.1881,1,0.2992,0.6911,0
+grover_c16_i2,grover,rate1,1.0,deps_plus_count,dependencies + T-count,248,218,1.1376,1,0.033,0.2177,0
+grover_c16_i2,grover,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,225,218,1.0321,1,0.0048,0.0484,1
+grover_c16_i2,grover,rate1,1.0,sccp,dependencies + arrival timing + buffer,225,218,1.0321,1,0.0048,0.0484,1
+grover_c16_i2,grover,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,225,218,1.0321,1,0.0048,0.0484,1
+grover_c16_i2,grover,rate1,1.0,t_count_only,T-count and average supply rate,248,218,1.1376,1,0.0805,0.3555,0
+grover_c16_i2,grover,rate2,2.0,deps_only,dependencies only (what T-depth sees),135,125,1.08,1,0.1277,0.4074,0
+grover_c16_i2,grover,rate2,2.0,deps_plus_count,dependencies + T-count,141,125,1.128,1,0.0564,0.125,0
+grover_c16_i2,grover,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,125,125,1.0,1,0.0096,0.0962,1
+grover_c16_i2,grover,rate2,2.0,sccp,dependencies + arrival timing + buffer,125,125,1.0,1,0.0096,0.0962,1
+grover_c16_i2,grover,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,125,125,1.0,1,0.0087,0.0865,1
+grover_c16_i2,grover,rate2,2.0,t_count_only,T-count and average supply rate,212,125,1.696,1,0.3382,0.66,0
+grover_c16_i2,grover,rate4,4.0,deps_only,dependencies only (what T-depth sees),94,94,1.0,1,0.0597,0.1489,1
+grover_c16_i2,grover,rate4,4.0,deps_plus_count,dependencies + T-count,94,94,1.0,1,0.0597,0.1489,1
+grover_c16_i2,grover,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,94,94,1.0,1,0.0063,0.0426,1
+grover_c16_i2,grover,rate4,4.0,sccp,dependencies + arrival timing + buffer,94,94,1.0,1,0.0063,0.0426,1
+grover_c16_i2,grover,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,94,94,1.0,1,0.0063,0.0426,1
+grover_c16_i2,grover,rate4,4.0,t_count_only,T-count and average supply rate,202,94,2.1489,1,0.5945,0.8133,0
+grover_c16_i2,grover,rate8,8.0,deps_only,dependencies only (what T-depth sees),86,86,1.0,1,0.0385,0.0698,1
+grover_c16_i2,grover,rate8,8.0,deps_plus_count,dependencies + T-count,86,86,1.0,1,0.0385,0.0698,1
+grover_c16_i2,grover,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,86,86,1.0,1,0.0,0.0,1
+grover_c16_i2,grover,rate8,8.0,sccp,dependencies + arrival timing + buffer,86,86,1.0,1,0.0,0.0,1
+grover_c16_i2,grover,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,86,86,1.0,1,0.0,0.0,1
+grover_c16_i2,grover,rate8,8.0,t_count_only,T-count and average supply rate,198,86,2.3023,1,0.7582,0.89,0
+grover_c32_i2,grover,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),3762,3122,1.205,1,0.9231,0.9755,0
+grover_c32_i2,grover,rate0.1,0.1,deps_plus_count,dependencies + T-count,3122,3122,1.0,1,0.0023,0.0026,1
+grover_c32_i2,grover,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,3122,3122,1.0,1,0.0,0.0,1
+grover_c32_i2,grover,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,3122,3122,1.0,1,0.0,0.0,1
+grover_c32_i2,grover,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,3122,3122,1.0,1,0.0,0.0,1
+grover_c32_i2,grover,rate0.1,0.1,t_count_only,T-count and average supply rate,3122,3122,1.0,1,0.0023,0.0026,1
+grover_c32_i2,grover,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),1887,1567,1.2042,1,0.8467,0.9512,0
+grover_c32_i2,grover,rate0.2,0.2,deps_plus_count,dependencies + T-count,1567,1567,1.0,1,0.0017,0.0019,1
+grover_c32_i2,grover,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,1567,1567,1.0,1,0.0,0.0,1
+grover_c32_i2,grover,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,1567,1567,1.0,1,0.0,0.0,1
+grover_c32_i2,grover,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,1567,1567,1.0,1,0.0,0.0,1
+grover_c32_i2,grover,rate0.2,0.2,t_count_only,T-count and average supply rate,1567,1567,1.0,1,0.0017,0.0019,1
+grover_c32_i2,grover,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),762,639,1.1925,1,0.6216,0.8793,0
+grover_c32_i2,grover,rate0.5,0.5,deps_plus_count,dependencies + T-count,639,639,1.0,1,0.0016,0.0078,1
+grover_c32_i2,grover,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,639,639,1.0,1,0.0011,0.0078,1
+grover_c32_i2,grover,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,639,639,1.0,1,0.0011,0.0078,1
+grover_c32_i2,grover,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,639,639,1.0,1,0.0011,0.0078,1
+grover_c32_i2,grover,rate0.5,0.5,t_count_only,T-count and average supply rate,639,639,1.0,1,0.0016,0.0078,1
+grover_c32_i2,grover,rate1,1.0,deps_only,dependencies only (what T-depth sees),387,346,1.1185,1,0.3417,0.7623,0
+grover_c32_i2,grover,rate1,1.0,deps_plus_count,dependencies + T-count,376,346,1.0867,1,0.0302,0.1436,0
+grover_c32_i2,grover,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,380,346,1.0983,1,0.0114,0.0426,1
+grover_c32_i2,grover,rate1,1.0,sccp,dependencies + arrival timing + buffer,352,346,1.0173,1,0.0114,0.0426,1
+grover_c32_i2,grover,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,352,346,1.0173,1,0.0114,0.0426,1
+grover_c32_i2,grover,rate1,1.0,t_count_only,T-count and average supply rate,376,346,1.0867,1,0.0805,0.3015,0
+grover_c32_i2,grover,rate2,2.0,deps_only,dependencies only (what T-depth sees),199,189,1.0529,1,0.2068,0.5377,0
+grover_c32_i2,grover,rate2,2.0,deps_plus_count,dependencies + T-count,236,189,1.2487,1,0.071,0.2609,0
+grover_c32_i2,grover,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,205,189,1.0847,1,0.0264,0.1053,1
+grover_c32_i2,grover,rate2,2.0,sccp,dependencies + arrival timing + buffer,205,189,1.0847,1,0.0264,0.1053,1
+grover_c32_i2,grover,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,205,189,1.0847,1,0.0259,0.1053,1
+grover_c32_i2,grover,rate2,2.0,t_count_only,T-count and average supply rate,276,189,1.4603,1,0.3389,0.6391,0
+grover_c32_i2,grover,rate4,4.0,deps_only,dependencies only (what T-depth sees),125,125,1.0,1,0.1022,0.264,1
+grover_c32_i2,grover,rate4,4.0,deps_plus_count,dependencies + T-count,128,125,1.024,1,0.0926,0.2121,0
+grover_c32_i2,grover,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,125,125,1.0,1,0.0299,0.096,1
+grover_c32_i2,grover,rate4,4.0,sccp,dependencies + arrival timing + buffer,125,125,1.0,1,0.0299,0.096,1
+grover_c32_i2,grover,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,125,125,1.0,1,0.0299,0.096,1
+grover_c32_i2,grover,rate4,4.0,t_count_only,T-count and average supply rate,232,125,1.856,1,0.5659,0.8087,0
+grover_c32_i2,grover,rate8,8.0,deps_only,dependencies only (what T-depth sees),104,104,1.0,1,0.0511,0.1154,1
+grover_c32_i2,grover,rate8,8.0,deps_plus_count,dependencies + T-count,104,104,1.0,1,0.0511,0.1154,1
+grover_c32_i2,grover,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,104,104,1.0,1,0.0072,0.0192,1
+grover_c32_i2,grover,rate8,8.0,sccp,dependencies + arrival timing + buffer,104,104,1.0,1,0.0072,0.0192,1
+grover_c32_i2,grover,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,104,104,1.0,1,0.0072,0.0192,1
+grover_c32_i2,grover,rate8,8.0,t_count_only,T-count and average supply rate,216,104,2.0769,1,0.7371,0.8935,0
+grover_c8_i2,grover,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),1842,1202,1.5324,1,0.9092,0.9631,0
+grover_c8_i2,grover,rate0.1,0.1,deps_plus_count,dependencies + T-count,1202,1202,1.0,1,0.0054,0.0067,1
+grover_c8_i2,grover,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,1202,1202,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,1202,1202,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,1202,1202,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate0.1,0.1,t_count_only,T-count and average supply rate,1202,1202,1.0,1,0.0054,0.0067,1
+grover_c8_i2,grover,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),927,607,1.5272,1,0.82,0.9266,0
+grover_c8_i2,grover,rate0.2,0.2,deps_plus_count,dependencies + T-count,607,607,1.0,1,0.004,0.0049,1
+grover_c8_i2,grover,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,607,607,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,607,607,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,607,607,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate0.2,0.2,t_count_only,T-count and average supply rate,607,607,1.0,1,0.004,0.0049,1
+grover_c8_i2,grover,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),378,255,1.4824,1,0.5643,0.8201,0
+grover_c8_i2,grover,rate0.5,0.5,deps_plus_count,dependencies + T-count,255,255,1.0,1,0.0039,0.0196,1
+grover_c8_i2,grover,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,255,255,1.0,1,0.0008,0.0078,1
+grover_c8_i2,grover,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,255,255,1.0,1,0.0008,0.0078,1
+grover_c8_i2,grover,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,255,255,1.0,1,0.0008,0.0078,1
+grover_c8_i2,grover,rate0.5,0.5,t_count_only,T-count and average supply rate,255,255,1.0,1,0.0039,0.0196,1
+grover_c8_i2,grover,rate1,1.0,deps_only,dependencies only (what T-depth sees),195,154,1.2662,1,0.2924,0.6513,0
+grover_c8_i2,grover,rate1,1.0,deps_plus_count,dependencies + T-count,161,154,1.0455,1,0.0258,0.1,1
+grover_c8_i2,grover,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,154,154,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate1,1.0,sccp,dependencies + arrival timing + buffer,154,154,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,154,154,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate1,1.0,t_count_only,T-count and average supply rate,200,154,1.2987,1,0.1003,0.4118,0
+grover_c8_i2,grover,rate2,2.0,deps_only,dependencies only (what T-depth sees),103,95,1.0842,1,0.107,0.3398,0
+grover_c8_i2,grover,rate2,2.0,deps_plus_count,dependencies + T-count,100,95,1.0526,1,0.0592,0.2031,1
+grover_c8_i2,grover,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,104,95,1.0947,1,0.0156,0.1562,1
+grover_c8_i2,grover,rate2,2.0,sccp,dependencies + arrival timing + buffer,104,95,1.0947,1,0.0133,0.1328,1
+grover_c8_i2,grover,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,104,95,1.0947,1,0.0133,0.1328,1
+grover_c8_i2,grover,rate2,2.0,t_count_only,T-count and average supply rate,190,95,2.0,1,0.3355,0.6818,0
+grover_c8_i2,grover,rate4,4.0,deps_only,dependencies only (what T-depth sees),78,78,1.0,1,0.0575,0.1282,1
+grover_c8_i2,grover,rate4,4.0,deps_plus_count,dependencies + T-count,78,78,1.0,1,0.0575,0.1282,1
+grover_c8_i2,grover,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,78,78,1.0,1,0.0087,0.0513,1
+grover_c8_i2,grover,rate4,4.0,sccp,dependencies + arrival timing + buffer,78,78,1.0,1,0.0087,0.0513,1
+grover_c8_i2,grover,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,78,78,1.0,1,0.0087,0.0513,1
+grover_c8_i2,grover,rate4,4.0,t_count_only,T-count and average supply rate,186,78,2.3846,1,0.5977,0.8182,0
+grover_c8_i2,grover,rate8,8.0,deps_only,dependencies only (what T-depth sees),73,73,1.0,1,0.0449,0.0685,1
+grover_c8_i2,grover,rate8,8.0,deps_plus_count,dependencies + T-count,73,73,1.0,1,0.0449,0.0685,1
+grover_c8_i2,grover,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,73,73,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate8,8.0,sccp,dependencies + arrival timing + buffer,73,73,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,73,73,1.0,1,0.0,0.0,1
+grover_c8_i2,grover,rate8,8.0,t_count_only,T-count and average supply rate,185,73,2.5342,1,0.7533,0.8864,0
+mixed_w32_c16_l1,mixed,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),3682,2162,1.7031,1,0.9471,0.9758,0
+mixed_w32_c16_l1,mixed,rate0.1,0.1,deps_plus_count,dependencies + T-count,2162,2162,1.0,1,0.0025,0.0037,1
+mixed_w32_c16_l1,mixed,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,2162,2162,1.0,1,0.0,0.0,1
+mixed_w32_c16_l1,mixed,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,2162,2162,1.0,1,0.0,0.0,1
+mixed_w32_c16_l1,mixed,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,2162,2162,1.0,1,0.0,0.0,1
+mixed_w32_c16_l1,mixed,rate0.1,0.1,t_count_only,T-count and average supply rate,2162,2162,1.0,1,0.0025,0.0037,1
+mixed_w32_c16_l1,mixed,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),1847,1087,1.6992,1,0.8946,0.9518,0
+mixed_w32_c16_l1,mixed,rate0.2,0.2,deps_plus_count,dependencies + T-count,1087,1087,1.0,1,0.0018,0.0028,1
+mixed_w32_c16_l1,mixed,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,1087,1087,1.0,1,0.0,0.0,1
+mixed_w32_c16_l1,mixed,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,1087,1087,1.0,1,0.0,0.0,1
+mixed_w32_c16_l1,mixed,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,1087,1087,1.0,1,0.0,0.0,1
+mixed_w32_c16_l1,mixed,rate0.2,0.2,t_count_only,T-count and average supply rate,1087,1087,1.0,1,0.0018,0.0028,1
+mixed_w32_c16_l1,mixed,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),746,447,1.6689,1,0.7403,0.8807,0
+mixed_w32_c16_l1,mixed,rate0.5,0.5,deps_plus_count,dependencies + T-count,447,447,1.0,1,0.0016,0.0112,1
+mixed_w32_c16_l1,mixed,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,447,447,1.0,1,0.0004,0.0045,1
+mixed_w32_c16_l1,mixed,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,447,447,1.0,1,0.0004,0.0045,1
+mixed_w32_c16_l1,mixed,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,447,447,1.0,1,0.0004,0.0045,1
+mixed_w32_c16_l1,mixed,rate0.5,0.5,t_count_only,T-count and average supply rate,447,447,1.0,1,0.0016,0.0112,1
+mixed_w32_c16_l1,mixed,rate1,1.0,deps_only,dependencies only (what T-depth sees),379,248,1.5282,1,0.5233,0.7652,0
+mixed_w32_c16_l1,mixed,rate1,1.0,deps_plus_count,dependencies + T-count,248,248,1.0,1,0.0363,0.1414,1
+mixed_w32_c16_l1,mixed,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,248,248,1.0,1,0.0053,0.0848,1
+mixed_w32_c16_l1,mixed,rate1,1.0,sccp,dependencies + arrival timing + buffer,248,248,1.0,1,0.0042,0.0291,1
+mixed_w32_c16_l1,mixed,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,248,248,1.0,1,0.0042,0.0291,1
+mixed_w32_c16_l1,mixed,rate1,1.0,t_count_only,T-count and average supply rate,272,248,1.0968,1,0.0469,0.278,0
+mixed_w32_c16_l1,mixed,rate2,2.0,deps_only,dependencies only (what T-depth sees),195,191,1.0209,1,0.3067,0.5436,0
+mixed_w32_c16_l1,mixed,rate2,2.0,deps_plus_count,dependencies + T-count,238,191,1.2461,1,0.1375,0.3025,0
+mixed_w32_c16_l1,mixed,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,191,191,1.0,1,0.0077,0.0596,1
+mixed_w32_c16_l1,mixed,rate2,2.0,sccp,dependencies + arrival timing + buffer,191,191,1.0,1,0.0072,0.0468,1
+mixed_w32_c16_l1,mixed,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,191,191,1.0,1,0.0071,0.0468,1
+mixed_w32_c16_l1,mixed,rate2,2.0,t_count_only,T-count and average supply rate,261,191,1.3665,1,0.2255,0.6218,0
+mixed_w32_c16_l1,mixed,rate4,4.0,deps_only,dependencies only (what T-depth sees),115,115,1.0,1,0.1108,0.2344,1
+mixed_w32_c16_l1,mixed,rate4,4.0,deps_plus_count,dependencies + T-count,119,115,1.0348,1,0.105,0.2121,0
+mixed_w32_c16_l1,mixed,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,115,115,1.0,1,0.0156,0.0781,0
+mixed_w32_c16_l1,mixed,rate4,4.0,sccp,dependencies + arrival timing + buffer,115,115,1.0,1,0.0156,0.0781,0
+mixed_w32_c16_l1,mixed,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,115,115,1.0,1,0.0156,0.0781,0
+mixed_w32_c16_l1,mixed,rate4,4.0,t_count_only,T-count and average supply rate,261,115,2.2696,1,0.4464,0.7949,0
+mixed_w32_c16_l1,mixed,rate8,8.0,deps_only,dependencies only (what T-depth sees),96,96,1.0,1,0.0526,0.1165,1
+mixed_w32_c16_l1,mixed,rate8,8.0,deps_plus_count,dependencies + T-count,96,96,1.0,1,0.0526,0.1165,1
+mixed_w32_c16_l1,mixed,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,96,96,1.0,1,0.0034,0.0182,1
+mixed_w32_c16_l1,mixed,rate8,8.0,sccp,dependencies + arrival timing + buffer,96,96,1.0,1,0.0034,0.0182,1
+mixed_w32_c16_l1,mixed,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,96,96,1.0,1,0.0034,0.0182,1
+mixed_w32_c16_l1,mixed,rate8,8.0,t_count_only,T-count and average supply rate,261,96,2.7188,1,0.6691,0.8814,0
+mixed_w32_c16_l2,mixed,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),7362,4322,1.7034,1,0.9735,0.9879,0
+mixed_w32_c16_l2,mixed,rate0.1,0.1,deps_plus_count,dependencies + T-count,4322,4322,1.0,1,0.0012,0.0019,1
+mixed_w32_c16_l2,mixed,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,4322,4322,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,4322,4322,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,4322,4322,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate0.1,0.1,t_count_only,T-count and average supply rate,4322,4322,1.0,1,0.0012,0.0019,1
+mixed_w32_c16_l2,mixed,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),3687,2167,1.7014,1,0.9472,0.9759,0
+mixed_w32_c16_l2,mixed,rate0.2,0.2,deps_plus_count,dependencies + T-count,2167,2167,1.0,1,0.0009,0.0014,1
+mixed_w32_c16_l2,mixed,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,2167,2167,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,2167,2167,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,2167,2167,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate0.2,0.2,t_count_only,T-count and average supply rate,2167,2167,1.0,1,0.0009,0.0014,1
+mixed_w32_c16_l2,mixed,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),1482,874,1.6957,1,0.8688,0.9399,0
+mixed_w32_c16_l2,mixed,rate0.5,0.5,deps_plus_count,dependencies + T-count,874,874,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,874,874,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,874,874,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,874,874,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate0.5,0.5,t_count_only,T-count and average supply rate,874,874,1.0,1,0.0,0.0,1
+mixed_w32_c16_l2,mixed,rate1,1.0,deps_only,dependencies only (what T-depth sees),747,448,1.6674,1,0.7407,0.8809,0
+mixed_w32_c16_l2,mixed,rate1,1.0,deps_plus_count,dependencies + T-count,448,448,1.0,1,0.0031,0.0134,1
+mixed_w32_c16_l2,mixed,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,448,448,1.0,1,0.0004,0.0045,1
+mixed_w32_c16_l2,mixed,rate1,1.0,sccp,dependencies + arrival timing + buffer,448,448,1.0,1,0.0004,0.0045,1
+mixed_w32_c16_l2,mixed,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,448,448,1.0,1,0.0004,0.0045,1
+mixed_w32_c16_l2,mixed,rate1,1.0,t_count_only,T-count and average supply rate,448,448,1.0,1,0.0031,0.0134,1
+mixed_w32_c16_l2,mixed,rate2,2.0,deps_only,dependencies only (what T-depth sees),379,264,1.4356,1,0.5325,0.7652,0
+mixed_w32_c16_l2,mixed,rate2,2.0,deps_plus_count,dependencies + T-count,264,264,1.0,1,0.0497,0.1414,1
+mixed_w32_c16_l2,mixed,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,264,264,1.0,1,0.0189,0.1338,1
+mixed_w32_c16_l2,mixed,rate2,2.0,sccp,dependencies + arrival timing + buffer,264,264,1.0,1,0.0132,0.053,1
+mixed_w32_c16_l2,mixed,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,264,264,1.0,1,0.0125,0.053,1
+mixed_w32_c16_l2,mixed,rate2,2.0,t_count_only,T-count and average supply rate,288,264,1.0909,1,0.0602,0.278,0
+mixed_w32_c16_l2,mixed,rate4,4.0,deps_only,dependencies only (what T-depth sees),200,196,1.0204,1,0.3178,0.555,0
+mixed_w32_c16_l2,mixed,rate4,4.0,deps_plus_count,dependencies + T-count,238,196,1.2143,1,0.1518,0.3025,0
+mixed_w32_c16_l2,mixed,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,196,196,1.0,1,0.0231,0.1126,1
+mixed_w32_c16_l2,mixed,rate4,4.0,sccp,dependencies + arrival timing + buffer,196,196,1.0,1,0.0213,0.0816,1
+mixed_w32_c16_l2,mixed,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,196,196,1.0,1,0.0211,0.0816,1
+mixed_w32_c16_l2,mixed,rate4,4.0,t_count_only,T-count and average supply rate,269,196,1.3724,1,0.238,0.6218,0
+mixed_w32_c16_l2,mixed,rate8,8.0,deps_only,dependencies only (what T-depth sees),121,121,1.0,1,0.1198,0.2794,1
+mixed_w32_c16_l2,mixed,rate8,8.0,deps_plus_count,dependencies + T-count,121,121,1.0,1,0.1142,0.25,1
+mixed_w32_c16_l2,mixed,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,121,121,1.0,1,0.0257,0.1324,0
+mixed_w32_c16_l2,mixed,rate8,8.0,sccp,dependencies + arrival timing + buffer,121,121,1.0,1,0.0257,0.1324,0
+mixed_w32_c16_l2,mixed,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,121,121,1.0,1,0.0257,0.1324,0
+mixed_w32_c16_l2,mixed,rate8,8.0,t_count_only,T-count and average supply rate,263,121,2.1736,1,0.4534,0.7949,0
+mixed_w32_c16_l4,mixed,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),14722,8642,1.7035,0,0.9868,0.994,0
+mixed_w32_c16_l4,mixed,rate0.1,0.1,deps_plus_count,dependencies + T-count,8642,8642,1.0,0,0.0006,0.0009,1
+mixed_w32_c16_l4,mixed,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,8642,8642,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,8642,8642,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,8642,8642,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate0.1,0.1,t_count_only,T-count and average supply rate,8642,8642,1.0,0,0.0006,0.0009,1
+mixed_w32_c16_l4,mixed,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),7367,4327,1.7026,0,0.9736,0.9879,0
+mixed_w32_c16_l4,mixed,rate0.2,0.2,deps_plus_count,dependencies + T-count,4327,4327,1.0,0,0.0005,0.0007,1
+mixed_w32_c16_l4,mixed,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,4327,4327,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,4327,4327,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,4327,4327,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate0.2,0.2,t_count_only,T-count and average supply rate,4327,4327,1.0,0,0.0005,0.0007,1
+mixed_w32_c16_l4,mixed,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),2954,1738,1.6997,0,0.9341,0.9699,0
+mixed_w32_c16_l4,mixed,rate0.5,0.5,deps_plus_count,dependencies + T-count,1738,1738,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,1738,1738,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,1738,1738,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,1738,1738,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate0.5,0.5,t_count_only,T-count and average supply rate,1738,1738,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate1,1.0,deps_only,dependencies only (what T-depth sees),1483,875,1.6949,0,0.8689,0.94,0
+mixed_w32_c16_l4,mixed,rate1,1.0,deps_plus_count,dependencies + T-count,875,875,1.0,0,0.0008,0.0011,1
+mixed_w32_c16_l4,mixed,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,875,875,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate1,1.0,sccp,dependencies + arrival timing + buffer,875,875,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,875,875,1.0,0,0.0,0.0,1
+mixed_w32_c16_l4,mixed,rate1,1.0,t_count_only,T-count and average supply rate,875,875,1.0,0,0.0008,0.0011,1
+mixed_w32_c16_l4,mixed,rate2,2.0,deps_only,dependencies only (what T-depth sees),747,448,1.6674,0,0.7407,0.8809,0
+mixed_w32_c16_l4,mixed,rate2,2.0,deps_plus_count,dependencies + T-count,448,448,1.0,0,0.0031,0.0134,1
+mixed_w32_c16_l4,mixed,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,448,448,1.0,0,0.0004,0.0045,1
+mixed_w32_c16_l4,mixed,rate2,2.0,sccp,dependencies + arrival timing + buffer,448,448,1.0,0,0.0004,0.0045,1
+mixed_w32_c16_l4,mixed,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,448,448,1.0,0,0.0004,0.0045,1
+mixed_w32_c16_l4,mixed,rate2,2.0,t_count_only,T-count and average supply rate,448,448,1.0,0,0.0031,0.0134,1
+mixed_w32_c16_l4,mixed,rate4,4.0,deps_only,dependencies only (what T-depth sees),380,272,1.3971,0,0.538,0.7658,0
+mixed_w32_c16_l4,mixed,rate4,4.0,deps_plus_count,dependencies + T-count,272,272,1.0,0,0.0589,0.1596,1
+mixed_w32_c16_l4,mixed,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,273,272,1.0037,0,0.0282,0.1564,1
+mixed_w32_c16_l4,mixed,rate4,4.0,sccp,dependencies + arrival timing + buffer,273,272,1.0037,0,0.0189,0.0547,1
+mixed_w32_c16_l4,mixed,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,272,272,1.0,0,0.0183,0.0515,1
+mixed_w32_c16_l4,mixed,rate4,4.0,t_count_only,T-count and average supply rate,296,272,1.0882,0,0.0693,0.278,0
+mixed_w32_c16_l4,mixed,rate8,8.0,deps_only,dependencies only (what T-depth sees),208,202,1.0297,0,0.3291,0.5721,0
+mixed_w32_c16_l4,mixed,rate8,8.0,deps_plus_count,dependencies + T-count,242,202,1.198,0,0.168,0.3053,0
+mixed_w32_c16_l4,mixed,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,204,202,1.0099,0,0.0408,0.1423,0
+mixed_w32_c16_l4,mixed,rate8,8.0,sccp,dependencies + arrival timing + buffer,204,202,1.0099,0,0.0379,0.1071,0
+mixed_w32_c16_l4,mixed,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,204,202,1.0099,0,0.0378,0.1071,0
+mixed_w32_c16_l4,mixed,rate8,8.0,t_count_only,T-count and average supply rate,273,202,1.3515,0,0.2532,0.6218,0
+modexp_w16_s2,modexp,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),4643,2403,1.9322,1,0.9449,0.9681,0
+modexp_w16_s2,modexp,rate0.1,0.1,deps_plus_count,dependencies + T-count,2403,2403,1.0,1,0.0018,0.0029,1
+modexp_w16_s2,modexp,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,2403,2403,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,2403,2403,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,2403,2403,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate0.1,0.1,t_count_only,T-count and average supply rate,2403,2403,1.0,1,0.0018,0.0029,1
+modexp_w16_s2,modexp,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),2328,1208,1.9272,1,0.8903,0.9364,0
+modexp_w16_s2,modexp,rate0.2,0.2,deps_plus_count,dependencies + T-count,1208,1208,1.0,1,0.001,0.0017,1
+modexp_w16_s2,modexp,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,1208,1208,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,1208,1208,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,1208,1208,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate0.2,0.2,t_count_only,T-count and average supply rate,1208,1208,1.0,1,0.001,0.0017,1
+modexp_w16_s2,modexp,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),939,491,1.9124,1,0.729,0.8424,0
+modexp_w16_s2,modexp,rate0.5,0.5,deps_plus_count,dependencies + T-count,491,491,1.0,1,0.0013,0.002,1
+modexp_w16_s2,modexp,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,491,491,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,491,491,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,491,491,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate0.5,0.5,t_count_only,T-count and average supply rate,491,491,1.0,1,0.0013,0.002,1
+modexp_w16_s2,modexp,rate1,1.0,deps_only,dependencies only (what T-depth sees),476,323,1.4737,1,0.5237,0.6891,0
+modexp_w16_s2,modexp,rate1,1.0,deps_plus_count,dependencies + T-count,335,323,1.0372,1,0.0077,0.0217,1
+modexp_w16_s2,modexp,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,335,323,1.0372,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate1,1.0,sccp,dependencies + arrival timing + buffer,335,323,1.0372,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,335,323,1.0372,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate1,1.0,t_count_only,T-count and average supply rate,323,323,1.0,1,0.0486,0.226,1
+modexp_w16_s2,modexp,rate2,2.0,deps_only,dependencies only (what T-depth sees),244,244,1.0,1,0.2562,0.3934,1
+modexp_w16_s2,modexp,rate2,2.0,deps_plus_count,dependencies + T-count,250,244,1.0246,1,0.0103,0.0186,1
+modexp_w16_s2,modexp,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,250,244,1.0246,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate2,2.0,sccp,dependencies + arrival timing + buffer,250,244,1.0246,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,250,244,1.0246,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate2,2.0,t_count_only,T-count and average supply rate,322,244,1.3197,1,0.1258,0.5963,0
+modexp_w16_s2,modexp,rate4,4.0,deps_only,dependencies only (what T-depth sees),158,158,1.0,1,0.0569,0.1186,1
+modexp_w16_s2,modexp,rate4,4.0,deps_plus_count,dependencies + T-count,158,158,1.0,1,0.0569,0.1186,1
+modexp_w16_s2,modexp,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,158,158,1.0,1,0.0151,0.0565,1
+modexp_w16_s2,modexp,rate4,4.0,sccp,dependencies + arrival timing + buffer,158,158,1.0,1,0.0151,0.0565,1
+modexp_w16_s2,modexp,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,158,158,1.0,1,0.0151,0.0565,1
+modexp_w16_s2,modexp,rate4,4.0,t_count_only,T-count and average supply rate,322,158,2.038,1,0.3893,0.7826,0
+modexp_w16_s2,modexp,rate8,8.0,deps_only,dependencies only (what T-depth sees),154,154,1.0,1,0.0329,0.0429,1
+modexp_w16_s2,modexp,rate8,8.0,deps_plus_count,dependencies + T-count,154,154,1.0,1,0.0329,0.0429,1
+modexp_w16_s2,modexp,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,154,154,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate8,8.0,sccp,dependencies + arrival timing + buffer,154,154,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,154,154,1.0,1,0.0,0.0,1
+modexp_w16_s2,modexp,rate8,8.0,t_count_only,T-count and average supply rate,322,154,2.0909,1,0.6587,0.8758,0
+modexp_w32_s2,modexp,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),9763,4963,1.9672,1,0.9582,0.9799,0
+modexp_w32_s2,modexp,rate0.1,0.1,deps_plus_count,dependencies + T-count,4963,4963,1.0,1,0.0008,0.0014,1
+modexp_w32_s2,modexp,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,4963,4963,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,4963,4963,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,4963,4963,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate0.1,0.1,t_count_only,T-count and average supply rate,4963,4963,1.0,1,0.0008,0.0014,1
+modexp_w32_s2,modexp,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),4888,2488,1.9646,1,0.9165,0.9599,0
+modexp_w32_s2,modexp,rate0.2,0.2,deps_plus_count,dependencies + T-count,2488,2488,1.0,1,0.0005,0.0008,1
+modexp_w32_s2,modexp,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,2488,2488,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,2488,2488,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,2488,2488,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate0.2,0.2,t_count_only,T-count and average supply rate,2488,2488,1.0,1,0.0005,0.0008,1
+modexp_w32_s2,modexp,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),1963,1003,1.9571,1,0.7924,0.9002,0
+modexp_w32_s2,modexp,rate0.5,0.5,deps_plus_count,dependencies + T-count,1003,1003,1.0,1,0.0006,0.001,1
+modexp_w32_s2,modexp,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,1003,1003,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,1003,1003,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,1003,1003,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate0.5,0.5,t_count_only,T-count and average supply rate,1003,1003,1.0,1,0.0006,0.001,1
+modexp_w32_s2,modexp,rate1,1.0,deps_only,dependencies only (what T-depth sees),988,643,1.5365,1,0.6327,0.8016,0
+modexp_w32_s2,modexp,rate1,1.0,deps_plus_count,dependencies + T-count,703,643,1.0933,1,0.0035,0.0109,1
+modexp_w32_s2,modexp,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,703,643,1.0933,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate1,1.0,sccp,dependencies + arrival timing + buffer,643,643,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,643,643,1.0,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate1,1.0,t_count_only,T-count and average supply rate,643,643,1.0,1,0.0372,0.2131,1
+modexp_w32_s2,modexp,rate2,2.0,deps_only,dependencies only (what T-depth sees),500,500,1.0,1,0.4349,0.608,1
+modexp_w32_s2,modexp,rate2,2.0,deps_plus_count,dependencies + T-count,559,500,1.118,1,0.0049,0.0093,1
+modexp_w32_s2,modexp,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,559,500,1.118,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate2,2.0,sccp,dependencies + arrival timing + buffer,528,500,1.056,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,528,500,1.056,1,0.0,0.0,1
+modexp_w32_s2,modexp,rate2,2.0,t_count_only,T-count and average supply rate,642,500,1.284,1,0.103,0.5981,0
+modexp_w32_s2,modexp,rate4,4.0,deps_only,dependencies only (what T-depth sees),256,256,1.0,1,0.1432,0.2468,1
+modexp_w32_s2,modexp,rate4,4.0,deps_plus_count,dependencies + T-count,256,256,1.0,1,0.0456,0.1753,0
+modexp_w32_s2,modexp,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,256,256,1.0,1,0.0346,0.1591,0
+modexp_w32_s2,modexp,rate4,4.0,sccp,dependencies + arrival timing + buffer,256,256,1.0,1,0.0346,0.1591,0
+modexp_w32_s2,modexp,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,256,256,1.0,1,0.0346,0.1591,0
+modexp_w32_s2,modexp,rate4,4.0,t_count_only,T-count and average supply rate,642,256,2.5078,1,0.2174,0.7913,0
+modexp_w32_s2,modexp,rate8,8.0,deps_only,dependencies only (what T-depth sees),206,206,1.0,1,0.05,0.1053,1
+modexp_w32_s2,modexp,rate8,8.0,deps_plus_count,dependencies + T-count,206,206,1.0,1,0.05,0.1053,1
+modexp_w32_s2,modexp,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,206,206,1.0,1,0.021,0.057,1
+modexp_w32_s2,modexp,rate8,8.0,sccp,dependencies + arrival timing + buffer,206,206,1.0,1,0.021,0.057,1
+modexp_w32_s2,modexp,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,206,206,1.0,1,0.021,0.057,1
+modexp_w32_s2,modexp,rate8,8.0,t_count_only,T-count and average supply rate,642,206,3.1165,1,0.5345,0.8879,0
+modexp_w64_s2,modexp,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),20003,10083,1.9838,1,0.9669,0.9878,0
+modexp_w64_s2,modexp,rate0.1,0.1,deps_plus_count,dependencies + T-count,10083,10083,1.0,1,0.0004,0.0007,1
+modexp_w64_s2,modexp,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,10083,10083,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,10083,10083,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,10083,10083,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate0.1,0.1,t_count_only,T-count and average supply rate,10083,10083,1.0,1,0.0004,0.0007,1
+modexp_w64_s2,modexp,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),10008,5048,1.9826,1,0.9339,0.9756,0
+modexp_w64_s2,modexp,rate0.2,0.2,deps_plus_count,dependencies + T-count,5048,5048,1.0,1,0.0002,0.0004,1
+modexp_w64_s2,modexp,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,5048,5048,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,5048,5048,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,5048,5048,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate0.2,0.2,t_count_only,T-count and average supply rate,5048,5048,1.0,1,0.0002,0.0004,1
+modexp_w64_s2,modexp,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),4011,2027,1.9788,1,0.8353,0.9392,0
+modexp_w64_s2,modexp,rate0.5,0.5,deps_plus_count,dependencies + T-count,2027,2027,1.0,1,0.0003,0.0005,1
+modexp_w64_s2,modexp,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,2027,2027,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,2027,2027,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,2027,2027,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate0.5,0.5,t_count_only,T-count and average supply rate,2027,2027,1.0,1,0.0003,0.0005,1
+modexp_w64_s2,modexp,rate1,1.0,deps_only,dependencies only (what T-depth sees),2012,1283,1.5682,1,0.7088,0.8787,0
+modexp_w64_s2,modexp,rate1,1.0,deps_plus_count,dependencies + T-count,1439,1283,1.1216,1,0.0016,0.0055,1
+modexp_w64_s2,modexp,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,1439,1283,1.1216,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate1,1.0,sccp,dependencies + arrival timing + buffer,1283,1283,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,1283,1283,1.0,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate1,1.0,t_count_only,T-count and average supply rate,1283,1283,1.0,1,0.0304,0.2065,1
+modexp_w64_s2,modexp,rate2,2.0,deps_only,dependencies only (what T-depth sees),1012,1012,1.0,1,0.5614,0.7589,1
+modexp_w64_s2,modexp,rate2,2.0,deps_plus_count,dependencies + T-count,1135,1012,1.1215,1,0.0024,0.0047,1
+modexp_w64_s2,modexp,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,1135,1012,1.1215,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate2,2.0,sccp,dependencies + arrival timing + buffer,1072,1012,1.0593,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,1072,1012,1.0593,1,0.0,0.0,1
+modexp_w64_s2,modexp,rate2,2.0,t_count_only,T-count and average supply rate,1282,1012,1.2668,1,0.0873,0.5991,0
+modexp_w64_s2,modexp,rate4,4.0,deps_only,dependencies only (what T-depth sees),512,512,1.0,1,0.3219,0.5234,1
+modexp_w64_s2,modexp,rate4,4.0,deps_plus_count,dependencies + T-count,699,512,1.3652,1,0.0181,0.0957,0
+modexp_w64_s2,modexp,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,699,512,1.3652,1,0.0134,0.0922,0
+modexp_w64_s2,modexp,rate4,4.0,sccp,dependencies + arrival timing + buffer,512,512,1.0,1,0.0134,0.0922,0
+modexp_w64_s2,modexp,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,512,512,1.0,1,0.0134,0.0922,0
+modexp_w64_s2,modexp,rate4,4.0,t_count_only,T-count and average supply rate,1282,512,2.5039,1,0.1633,0.7956,0
+modexp_w64_s2,modexp,rate8,8.0,deps_only,dependencies only (what T-depth sees),292,288,1.0139,1,0.107,0.2708,0
+modexp_w64_s2,modexp,rate8,8.0,deps_plus_count,dependencies + T-count,292,288,1.0139,1,0.0957,0.2708,0
+modexp_w64_s2,modexp,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,291,288,1.0104,1,0.0722,0.2188,0
+modexp_w64_s2,modexp,rate8,8.0,sccp,dependencies + arrival timing + buffer,291,288,1.0104,1,0.0722,0.2188,0
+modexp_w64_s2,modexp,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,291,288,1.0104,1,0.0722,0.2188,0
+modexp_w64_s2,modexp,rate8,8.0,t_count_only,T-count and average supply rate,1282,288,4.4514,1,0.3704,0.8939,0
+oracle_bank_c16_l4,oracle_bank,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),2403,2403,1.0,1,0.9777,0.9883,1
+oracle_bank_c16_l4,oracle_bank,rate0.1,0.1,deps_plus_count,dependencies + T-count,2403,2403,1.0,1,0.0029,0.0029,1
+oracle_bank_c16_l4,oracle_bank,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,2403,2403,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,2403,2403,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,2403,2403,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate0.1,0.1,t_count_only,T-count and average supply rate,2403,2403,1.0,1,0.0029,0.0029,1
+oracle_bank_c16_l4,oracle_bank,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),1208,1208,1.0,1,0.9557,0.9768,1
+oracle_bank_c16_l4,oracle_bank,rate0.2,0.2,deps_plus_count,dependencies + T-count,1208,1208,1.0,1,0.0017,0.0017,1
+oracle_bank_c16_l4,oracle_bank,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,1208,1208,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,1208,1208,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,1208,1208,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate0.2,0.2,t_count_only,T-count and average supply rate,1208,1208,1.0,1,0.0017,0.0017,1
+oracle_bank_c16_l4,oracle_bank,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),491,491,1.0,1,0.891,0.943,1
+oracle_bank_c16_l4,oracle_bank,rate0.5,0.5,deps_plus_count,dependencies + T-count,491,491,1.0,1,0.002,0.002,1
+oracle_bank_c16_l4,oracle_bank,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,491,491,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,491,491,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,491,491,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate0.5,0.5,t_count_only,T-count and average supply rate,491,491,1.0,1,0.002,0.002,1
+oracle_bank_c16_l4,oracle_bank,rate1,1.0,deps_only,dependencies only (what T-depth sees),252,252,1.0,1,0.7877,0.8889,1
+oracle_bank_c16_l4,oracle_bank,rate1,1.0,deps_plus_count,dependencies + T-count,252,252,1.0,1,0.0079,0.0079,1
+oracle_bank_c16_l4,oracle_bank,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,252,252,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate1,1.0,sccp,dependencies + arrival timing + buffer,252,252,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,252,252,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate1,1.0,t_count_only,T-count and average supply rate,252,252,1.0,1,0.0079,0.0079,1
+oracle_bank_c16_l4,oracle_bank,rate2,2.0,deps_only,dependencies only (what T-depth sees),132,132,1.0,1,0.5947,0.7879,1
+oracle_bank_c16_l4,oracle_bank,rate2,2.0,deps_plus_count,dependencies + T-count,132,132,1.0,1,0.0152,0.0152,1
+oracle_bank_c16_l4,oracle_bank,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,132,132,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate2,2.0,sccp,dependencies + arrival timing + buffer,132,132,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,132,132,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate2,2.0,t_count_only,T-count and average supply rate,132,132,1.0,1,0.0152,0.0152,1
+oracle_bank_c16_l4,oracle_bank,rate4,4.0,deps_only,dependencies only (what T-depth sees),74,74,1.0,1,0.3515,0.6216,1
+oracle_bank_c16_l4,oracle_bank,rate4,4.0,deps_plus_count,dependencies + T-count,74,74,1.0,1,0.0677,0.0814,1
+oracle_bank_c16_l4,oracle_bank,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,74,74,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate4,4.0,sccp,dependencies + arrival timing + buffer,74,74,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,74,74,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate4,4.0,t_count_only,T-count and average supply rate,74,74,1.0,1,0.1201,0.186,0
+oracle_bank_c16_l4,oracle_bank,rate8,8.0,deps_only,dependencies only (what T-depth sees),48,48,1.0,1,0.2436,0.4167,1
+oracle_bank_c16_l4,oracle_bank,rate8,8.0,deps_plus_count,dependencies + T-count,48,48,1.0,1,0.1186,0.1667,1
+oracle_bank_c16_l4,oracle_bank,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,48,48,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate8,8.0,sccp,dependencies + arrival timing + buffer,48,48,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,48,48,1.0,1,0.0,0.0,1
+oracle_bank_c16_l4,oracle_bank,rate8,8.0,t_count_only,T-count and average supply rate,48,48,1.0,1,0.348,0.5294,0
+oracle_bank_c32_l4,oracle_bank,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),4963,4963,1.0,1,0.9806,0.9931,1
+oracle_bank_c32_l4,oracle_bank,rate0.1,0.1,deps_plus_count,dependencies + T-count,4963,4963,1.0,1,0.0014,0.0014,1
+oracle_bank_c32_l4,oracle_bank,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,4963,4963,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,4963,4963,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,4963,4963,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate0.1,0.1,t_count_only,T-count and average supply rate,4963,4963,1.0,1,0.0014,0.0014,1
+oracle_bank_c32_l4,oracle_bank,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),2488,2488,1.0,1,0.9612,0.9863,1
+oracle_bank_c32_l4,oracle_bank,rate0.2,0.2,deps_plus_count,dependencies + T-count,2488,2488,1.0,1,0.0008,0.0008,1
+oracle_bank_c32_l4,oracle_bank,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,2488,2488,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,2488,2488,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,2488,2488,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate0.2,0.2,t_count_only,T-count and average supply rate,2488,2488,1.0,1,0.0008,0.0008,1
+oracle_bank_c32_l4,oracle_bank,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),1003,1003,1.0,1,0.9038,0.9661,1
+oracle_bank_c32_l4,oracle_bank,rate0.5,0.5,deps_plus_count,dependencies + T-count,1003,1003,1.0,1,0.001,0.001,1
+oracle_bank_c32_l4,oracle_bank,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,1003,1003,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,1003,1003,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,1003,1003,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate0.5,0.5,t_count_only,T-count and average supply rate,1003,1003,1.0,1,0.001,0.001,1
+oracle_bank_c32_l4,oracle_bank,rate1,1.0,deps_only,dependencies only (what T-depth sees),508,508,1.0,1,0.81,0.9331,1
+oracle_bank_c32_l4,oracle_bank,rate1,1.0,deps_plus_count,dependencies + T-count,508,508,1.0,1,0.0039,0.0039,1
+oracle_bank_c32_l4,oracle_bank,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,508,508,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate1,1.0,sccp,dependencies + arrival timing + buffer,508,508,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,508,508,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate1,1.0,t_count_only,T-count and average supply rate,508,508,1.0,1,0.0039,0.0039,1
+oracle_bank_c32_l4,oracle_bank,rate2,2.0,deps_only,dependencies only (what T-depth sees),260,260,1.0,1,0.6288,0.8692,1
+oracle_bank_c32_l4,oracle_bank,rate2,2.0,deps_plus_count,dependencies + T-count,260,260,1.0,1,0.0077,0.0077,1
+oracle_bank_c32_l4,oracle_bank,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,260,260,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate2,2.0,sccp,dependencies + arrival timing + buffer,260,260,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,260,260,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate2,2.0,t_count_only,T-count and average supply rate,260,260,1.0,1,0.0077,0.0077,1
+oracle_bank_c32_l4,oracle_bank,rate4,4.0,deps_only,dependencies only (what T-depth sees),138,138,1.0,1,0.3979,0.7536,1
+oracle_bank_c32_l4,oracle_bank,rate4,4.0,deps_plus_count,dependencies + T-count,138,138,1.0,1,0.0356,0.0422,1
+oracle_bank_c32_l4,oracle_bank,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,138,138,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate4,4.0,sccp,dependencies + arrival timing + buffer,138,138,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,138,138,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate4,4.0,t_count_only,T-count and average supply rate,138,138,1.0,1,0.1109,0.1928,0
+oracle_bank_c32_l4,oracle_bank,rate8,8.0,deps_only,dependencies only (what T-depth sees),80,80,1.0,1,0.3057,0.575,1
+oracle_bank_c32_l4,oracle_bank,rate8,8.0,deps_plus_count,dependencies + T-count,80,80,1.0,1,0.0682,0.1,1
+oracle_bank_c32_l4,oracle_bank,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,80,80,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate8,8.0,sccp,dependencies + arrival timing + buffer,80,80,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,80,80,1.0,1,0.0,0.0,1
+oracle_bank_c32_l4,oracle_bank,rate8,8.0,t_count_only,T-count and average supply rate,80,80,1.0,1,0.3318,0.5636,0
+oracle_bank_c8_l4,oracle_bank,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),1123,1123,1.0,1,0.9728,0.9804,1
+oracle_bank_c8_l4,oracle_bank,rate0.1,0.1,deps_plus_count,dependencies + T-count,1123,1123,1.0,1,0.0062,0.0062,1
+oracle_bank_c8_l4,oracle_bank,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,1123,1123,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,1123,1123,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,1123,1123,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate0.1,0.1,t_count_only,T-count and average supply rate,1123,1123,1.0,1,0.0062,0.0062,1
+oracle_bank_c8_l4,oracle_bank,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),568,568,1.0,1,0.9463,0.9613,1
+oracle_bank_c8_l4,oracle_bank,rate0.2,0.2,deps_plus_count,dependencies + T-count,568,568,1.0,1,0.0035,0.0035,1
+oracle_bank_c8_l4,oracle_bank,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,568,568,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,568,568,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,568,568,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate0.2,0.2,t_count_only,T-count and average supply rate,568,568,1.0,1,0.0035,0.0035,1
+oracle_bank_c8_l4,oracle_bank,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),235,235,1.0,1,0.8702,0.9064,1
+oracle_bank_c8_l4,oracle_bank,rate0.5,0.5,deps_plus_count,dependencies + T-count,235,235,1.0,1,0.0043,0.0043,1
+oracle_bank_c8_l4,oracle_bank,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,235,235,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,235,235,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,235,235,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate0.5,0.5,t_count_only,T-count and average supply rate,235,235,1.0,1,0.0043,0.0043,1
+oracle_bank_c8_l4,oracle_bank,rate1,1.0,deps_only,dependencies only (what T-depth sees),124,124,1.0,1,0.754,0.8226,1
+oracle_bank_c8_l4,oracle_bank,rate1,1.0,deps_plus_count,dependencies + T-count,124,124,1.0,1,0.0161,0.0161,1
+oracle_bank_c8_l4,oracle_bank,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,124,124,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate1,1.0,sccp,dependencies + arrival timing + buffer,124,124,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,124,124,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate1,1.0,t_count_only,T-count and average supply rate,124,124,1.0,1,0.0161,0.0161,1
+oracle_bank_c8_l4,oracle_bank,rate2,2.0,deps_only,dependencies only (what T-depth sees),68,68,1.0,1,0.5515,0.6765,1
+oracle_bank_c8_l4,oracle_bank,rate2,2.0,deps_plus_count,dependencies + T-count,68,68,1.0,1,0.0294,0.0294,1
+oracle_bank_c8_l4,oracle_bank,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,68,68,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate2,2.0,sccp,dependencies + arrival timing + buffer,68,68,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,68,68,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate2,2.0,t_count_only,T-count and average supply rate,68,68,1.0,1,0.0294,0.0294,1
+oracle_bank_c8_l4,oracle_bank,rate4,4.0,deps_only,dependencies only (what T-depth sees),42,42,1.0,1,0.3142,0.4762,1
+oracle_bank_c8_l4,oracle_bank,rate4,4.0,deps_plus_count,dependencies + T-count,42,42,1.0,1,0.1237,0.1522,1
+oracle_bank_c8_l4,oracle_bank,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,42,42,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate4,4.0,sccp,dependencies + arrival timing + buffer,42,42,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,42,42,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate4,4.0,t_count_only,T-count and average supply rate,42,42,1.0,1,0.1346,0.1739,0
+oracle_bank_c8_l4,oracle_bank,rate8,8.0,deps_only,dependencies only (what T-depth sees),32,32,1.0,1,0.2229,0.3125,1
+oracle_bank_c8_l4,oracle_bank,rate8,8.0,deps_plus_count,dependencies + T-count,32,32,1.0,1,0.1917,0.25,1
+oracle_bank_c8_l4,oracle_bank,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,32,32,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate8,8.0,sccp,dependencies + arrival timing + buffer,32,32,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,32,32,1.0,1,0.0,0.0,1
+oracle_bank_c8_l4,oracle_bank,rate8,8.0,t_count_only,T-count and average supply rate,32,32,1.0,1,0.3583,0.4667,0
+qft_q5_t32,qft,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),6402,3202,1.9994,0,0.9655,0.9925,0
+qft_q5_t32,qft,rate0.1,0.1,deps_plus_count,dependencies + T-count,3202,3202,1.0,0,0.0018,0.0025,1
+qft_q5_t32,qft,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,3202,3202,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,3202,3202,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,3202,3202,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate0.1,0.1,t_count_only,T-count and average supply rate,3202,3202,1.0,0,0.0018,0.0025,1
+qft_q5_t32,qft,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),3207,1607,1.9956,0,0.9312,0.985,0
+qft_q5_t32,qft,rate0.2,0.2,deps_plus_count,dependencies + T-count,1607,1607,1.0,0,0.0013,0.0019,1
+qft_q5_t32,qft,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,1607,1607,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,1607,1607,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,1607,1607,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate0.2,0.2,t_count_only,T-count and average supply rate,1607,1607,1.0,0,0.0013,0.0019,1
+qft_q5_t32,qft,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),1290,654,1.9725,0,0.8301,0.9628,0
+qft_q5_t32,qft,rate0.5,0.5,deps_plus_count,dependencies + T-count,654,654,1.0,0,0.0012,0.0061,1
+qft_q5_t32,qft,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,654,654,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,654,654,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,654,654,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate0.5,0.5,t_count_only,T-count and average supply rate,654,654,1.0,0,0.0012,0.0061,1
+qft_q5_t32,qft,rate1,1.0,deps_only,dependencies only (what T-depth sees),651,347,1.8761,0,0.683,0.9263,0
+qft_q5_t32,qft,rate1,1.0,deps_plus_count,dependencies + T-count,371,347,1.0692,0,0.0256,0.1105,1
+qft_q5_t32,qft,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,347,347,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate1,1.0,sccp,dependencies + arrival timing + buffer,347,347,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,347,347,1.0,0,0.0,0.0,1
+qft_q5_t32,qft,rate1,1.0,t_count_only,T-count and average supply rate,371,347,1.0692,0,0.0256,0.1105,1
+qft_q5_t32,qft,rate2,2.0,deps_only,dependencies only (what T-depth sees),331,203,1.6305,0,0.4914,0.855,0
+qft_q5_t32,qft,rate2,2.0,deps_plus_count,dependencies + T-count,209,203,1.0296,0,0.0345,0.1213,1
+qft_q5_t32,qft,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,209,203,1.0296,0,0.0,0.0,1
+qft_q5_t32,qft,rate2,2.0,sccp,dependencies + arrival timing + buffer,209,203,1.0296,0,0.0,0.0,1
+qft_q5_t32,qft,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,209,203,1.0296,0,0.0,0.0,1
+qft_q5_t32,qft,rate2,2.0,t_count_only,T-count and average supply rate,279,203,1.3744,0,0.1076,0.3907,0
+qft_q5_t32,qft,rate4,4.0,deps_only,dependencies only (what T-depth sees),171,129,1.3256,0,0.3146,0.7193,0
+qft_q5_t32,qft,rate4,4.0,deps_plus_count,dependencies + T-count,156,129,1.2093,0,0.0474,0.1391,1
+qft_q5_t32,qft,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,156,129,1.2093,0,0.0,0.0,1
+qft_q5_t32,qft,rate4,4.0,sccp,dependencies + arrival timing + buffer,137,129,1.062,0,0.0,0.0,1
+qft_q5_t32,qft,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,137,129,1.062,0,0.0,0.0,1
+qft_q5_t32,qft,rate4,4.0,t_count_only,T-count and average supply rate,278,129,2.155,0,0.2505,0.6763,0
+qft_q5_t32,qft,rate8,8.0,deps_only,dependencies only (what T-depth sees),99,88,1.125,0,0.1788,0.5152,0
+qft_q5_t32,qft,rate8,8.0,deps_plus_count,dependencies + T-count,106,88,1.2045,0,0.0776,0.1837,1
+qft_q5_t32,qft,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,106,88,1.2045,0,0.0122,0.0404,0
+qft_q5_t32,qft,rate8,8.0,sccp,dependencies + arrival timing + buffer,88,88,1.0,0,0.0122,0.0404,0
+qft_q5_t32,qft,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,88,88,1.0,0,0.0122,0.0404,0
+qft_q5_t32,qft,rate8,8.0,t_count_only,T-count and average supply rate,278,88,3.1591,0,0.4354,0.8201,0
+qft_q6_t32,qft,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),9602,4802,1.9996,0,0.9712,0.9938,0
+qft_q6_t32,qft,rate0.1,0.1,deps_plus_count,dependencies + T-count,4802,4802,1.0,0,0.0012,0.0017,1
+qft_q6_t32,qft,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,4802,4802,1.0,0,0.0,0.0,1
+qft_q6_t32,qft,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,4802,4802,1.0,0,0.0,0.0,1
+qft_q6_t32,qft,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,4802,4802,1.0,0,0.0,0.0,1
+qft_q6_t32,qft,rate0.1,0.1,t_count_only,T-count and average supply rate,4802,4802,1.0,0,0.0012,0.0017,1
+qft_q6_t32,qft,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),4807,2407,1.9971,0,0.9426,0.9875,0
+qft_q6_t32,qft,rate0.2,0.2,deps_plus_count,dependencies + T-count,2407,2407,1.0,0,0.0009,0.0012,1
+qft_q6_t32,qft,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,2407,2407,1.0,0,0.0,0.0,1
+qft_q6_t32,qft,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,2407,2407,1.0,0,0.0,0.0,1
+qft_q6_t32,qft,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,2407,2407,1.0,0,0.0,0.0,1
+qft_q6_t32,qft,rate0.2,0.2,t_count_only,T-count and average supply rate,2407,2407,1.0,0,0.0009,0.0012,1
+qft_q6_t32,qft,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),1930,974,1.9815,0,0.8576,0.9689,0
+qft_q6_t32,qft,rate0.5,0.5,deps_plus_count,dependencies + T-count,974,974,1.0,0,0.0008,0.0041,1
+qft_q6_t32,qft,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,974,974,1.0,0,0.0004,0.0021,1
+qft_q6_t32,qft,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,974,974,1.0,0,0.0004,0.0021,1
+qft_q6_t32,qft,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,974,974,1.0,0,0.0004,0.0021,1
+qft_q6_t32,qft,rate0.5,0.5,t_count_only,T-count and average supply rate,974,974,1.0,0,0.0008,0.0041,1
+qft_q6_t32,qft,rate1,1.0,deps_only,dependencies only (what T-depth sees),971,507,1.9152,0,0.7286,0.9382,0
+qft_q6_t32,qft,rate1,1.0,deps_plus_count,dependencies + T-count,531,507,1.0473,0,0.0178,0.0772,1
+qft_q6_t32,qft,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,507,507,1.0,0,0.0008,0.0038,1
+qft_q6_t32,qft,rate1,1.0,sccp,dependencies + arrival timing + buffer,507,507,1.0,0,0.0008,0.0038,1
+qft_q6_t32,qft,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,507,507,1.0,0,0.0008,0.0038,1
+qft_q6_t32,qft,rate1,1.0,t_count_only,T-count and average supply rate,531,507,1.0473,0,0.0178,0.0772,1
+qft_q6_t32,qft,rate2,2.0,deps_only,dependencies only (what T-depth sees),491,283,1.735,0,0.542,0.8778,0
+qft_q6_t32,qft,rate2,2.0,deps_plus_count,dependencies + T-count,293,283,1.0353,0,0.0333,0.0855,1
+qft_q6_t32,qft,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,293,283,1.0353,0,0.0011,0.0029,1
+qft_q6_t32,qft,rate2,2.0,sccp,dependencies + arrival timing + buffer,293,283,1.0353,0,0.0011,0.0029,1
+qft_q6_t32,qft,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,293,283,1.0353,0,0.0011,0.0029,1
+qft_q6_t32,qft,rate2,2.0,t_count_only,T-count and average supply rate,363,283,1.2827,0,0.0829,0.3113,0
+qft_q6_t32,qft,rate4,4.0,deps_only,dependencies only (what T-depth sees),251,181,1.3867,0,0.3579,0.761,0
+qft_q6_t32,qft,rate4,4.0,deps_plus_count,dependencies + T-count,205,181,1.1326,0,0.0435,0.0995,1
+qft_q6_t32,qft,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,203,181,1.1215,0,0.0009,0.0047,1
+qft_q6_t32,qft,rate4,4.0,sccp,dependencies + arrival timing + buffer,204,181,1.1271,0,0.0009,0.0047,1
+qft_q6_t32,qft,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,194,181,1.0718,0,0.0009,0.0047,1
+qft_q6_t32,qft,rate4,4.0,t_count_only,T-count and average supply rate,347,181,1.9171,0,0.2152,0.6254,0
+qft_q6_t32,qft,rate8,8.0,deps_only,dependencies only (what T-depth sees),141,122,1.1557,0,0.2082,0.5745,0
+qft_q6_t32,qft,rate8,8.0,deps_plus_count,dependencies + T-count,164,122,1.3443,0,0.0719,0.1481,1
+qft_q6_t32,qft,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,164,122,1.3443,0,0.0144,0.0426,1
+qft_q6_t32,qft,rate8,8.0,sccp,dependencies + arrival timing + buffer,133,122,1.0902,0,0.0144,0.0426,1
+qft_q6_t32,qft,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,133,122,1.0902,0,0.0144,0.0426,1
+qft_q6_t32,qft,rate8,8.0,t_count_only,T-count and average supply rate,346,122,2.8361,0,0.3992,0.7977,0
+reduction_tree_mult_w16_r4,multiplier,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),3483,1803,1.9318,1,0.9633,0.9788,0
+reduction_tree_mult_w16_r4,multiplier,rate0.1,0.1,deps_plus_count,dependencies + T-count,1803,1803,1.0,1,0.0024,0.0039,1
+reduction_tree_mult_w16_r4,multiplier,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,1803,1803,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,1803,1803,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,1803,1803,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate0.1,0.1,t_count_only,T-count and average supply rate,1803,1803,1.0,1,0.0024,0.0039,1
+reduction_tree_mult_w16_r4,multiplier,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),1748,908,1.9251,1,0.927,0.9577,0
+reduction_tree_mult_w16_r4,multiplier,rate0.2,0.2,deps_plus_count,dependencies + T-count,908,908,1.0,1,0.0014,0.0022,1
+reduction_tree_mult_w16_r4,multiplier,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,908,908,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,908,908,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,908,908,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate0.2,0.2,t_count_only,T-count and average supply rate,908,908,1.0,1,0.0014,0.0022,1
+reduction_tree_mult_w16_r4,multiplier,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),707,371,1.9057,1,0.8203,0.8953,0
+reduction_tree_mult_w16_r4,multiplier,rate0.5,0.5,deps_plus_count,dependencies + T-count,371,371,1.0,1,0.0017,0.0027,1
+reduction_tree_mult_w16_r4,multiplier,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,371,371,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,371,371,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,371,371,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate0.5,0.5,t_count_only,T-count and average supply rate,371,371,1.0,1,0.0017,0.0027,1
+reduction_tree_mult_w16_r4,multiplier,rate1,1.0,deps_only,dependencies only (what T-depth sees),360,211,1.7062,1,0.6647,0.7944,0
+reduction_tree_mult_w16_r4,multiplier,rate1,1.0,deps_plus_count,dependencies + T-count,211,211,1.0,1,0.0243,0.0995,1
+reduction_tree_mult_w16_r4,multiplier,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,211,211,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate1,1.0,sccp,dependencies + arrival timing + buffer,211,211,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,211,211,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate1,1.0,t_count_only,T-count and average supply rate,211,211,1.0,1,0.0243,0.0995,1
+reduction_tree_mult_w16_r4,multiplier,rate2,2.0,deps_only,dependencies only (what T-depth sees),186,135,1.3778,1,0.4493,0.6022,0
+reduction_tree_mult_w16_r4,multiplier,rate2,2.0,deps_plus_count,dependencies + T-count,135,135,1.0,1,0.0171,0.0424,1
+reduction_tree_mult_w16_r4,multiplier,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,135,135,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate2,2.0,sccp,dependencies + arrival timing + buffer,135,135,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,135,135,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate2,2.0,t_count_only,T-count and average supply rate,165,135,1.2222,1,0.0874,0.3939,1
+reduction_tree_mult_w16_r4,multiplier,rate4,4.0,deps_only,dependencies only (what T-depth sees),108,108,1.0,1,0.2198,0.3148,1
+reduction_tree_mult_w16_r4,multiplier,rate4,4.0,deps_plus_count,dependencies + T-count,108,108,1.0,1,0.1229,0.178,0
+reduction_tree_mult_w16_r4,multiplier,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,108,108,1.0,1,0.0123,0.0354,1
+reduction_tree_mult_w16_r4,multiplier,rate4,4.0,sccp,dependencies + arrival timing + buffer,108,108,1.0,1,0.0123,0.0354,1
+reduction_tree_mult_w16_r4,multiplier,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,108,108,1.0,1,0.0123,0.0354,1
+reduction_tree_mult_w16_r4,multiplier,rate4,4.0,t_count_only,T-count and average supply rate,164,108,1.5185,1,0.2485,0.6646,0
+reduction_tree_mult_w16_r4,multiplier,rate8,8.0,deps_only,dependencies only (what T-depth sees),81,81,1.0,1,0.0814,0.1236,1
+reduction_tree_mult_w16_r4,multiplier,rate8,8.0,deps_plus_count,dependencies + T-count,81,81,1.0,1,0.0814,0.1236,1
+reduction_tree_mult_w16_r4,multiplier,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,81,81,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate8,8.0,sccp,dependencies + arrival timing + buffer,81,81,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,81,81,1.0,1,0.0,0.0,1
+reduction_tree_mult_w16_r4,multiplier,rate8,8.0,t_count_only,T-count and average supply rate,164,81,2.0247,1,0.4917,0.8018,0
+reduction_tree_mult_w16_r8,multiplier,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),8123,4203,1.9327,0,0.9764,0.9863,0
+reduction_tree_mult_w16_r8,multiplier,rate0.1,0.1,deps_plus_count,dependencies + T-count,4203,4203,1.0,0,0.001,0.0017,1
+reduction_tree_mult_w16_r8,multiplier,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,4203,4203,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,4203,4203,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,4203,4203,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate0.1,0.1,t_count_only,T-count and average supply rate,4203,4203,1.0,0,0.001,0.0017,1
+reduction_tree_mult_w16_r8,multiplier,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),4068,2108,1.9298,0,0.9529,0.9727,0
+reduction_tree_mult_w16_r8,multiplier,rate0.2,0.2,deps_plus_count,dependencies + T-count,2108,2108,1.0,0,0.0006,0.0009,1
+reduction_tree_mult_w16_r8,multiplier,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,2108,2108,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,2108,2108,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,2108,2108,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate0.2,0.2,t_count_only,T-count and average supply rate,2108,2108,1.0,0,0.0006,0.0009,1
+reduction_tree_mult_w16_r8,multiplier,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),1635,851,1.9213,0,0.883,0.9321,0
+reduction_tree_mult_w16_r8,multiplier,rate0.5,0.5,deps_plus_count,dependencies + T-count,851,851,1.0,0,0.0007,0.0012,1
+reduction_tree_mult_w16_r8,multiplier,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,851,851,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,851,851,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,851,851,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate0.5,0.5,t_count_only,T-count and average supply rate,851,851,1.0,0,0.0007,0.0012,1
+reduction_tree_mult_w16_r8,multiplier,rate1,1.0,deps_only,dependencies only (what T-depth sees),824,451,1.8271,0,0.7733,0.8653,0
+reduction_tree_mult_w16_r8,multiplier,rate1,1.0,deps_plus_count,dependencies + T-count,451,451,1.0,0,0.0113,0.0466,1
+reduction_tree_mult_w16_r8,multiplier,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,451,451,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate1,1.0,sccp,dependencies + arrival timing + buffer,451,451,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,451,451,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate1,1.0,t_count_only,T-count and average supply rate,451,451,1.0,0,0.0113,0.0466,1
+reduction_tree_mult_w16_r8,multiplier,rate2,2.0,deps_only,dependencies only (what T-depth sees),418,260,1.6077,0,0.5968,0.7344,0
+reduction_tree_mult_w16_r8,multiplier,rate2,2.0,deps_plus_count,dependencies + T-count,290,260,1.1154,0,0.0404,0.1828,1
+reduction_tree_mult_w16_r8,multiplier,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,260,260,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate2,2.0,sccp,dependencies + arrival timing + buffer,260,260,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,260,260,1.0,0,0.0,0.0,1
+reduction_tree_mult_w16_r8,multiplier,rate2,2.0,t_count_only,T-count and average supply rate,290,260,1.1154,0,0.0521,0.2414,1
+reduction_tree_mult_w16_r8,multiplier,rate4,4.0,deps_only,dependencies only (what T-depth sees),224,181,1.2376,0,0.3696,0.5045,1
+reduction_tree_mult_w16_r8,multiplier,rate4,4.0,deps_plus_count,dependencies + T-count,181,181,1.0,0,0.0631,0.0897,0
+reduction_tree_mult_w16_r8,multiplier,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,181,181,1.0,0,0.0061,0.0175,1
+reduction_tree_mult_w16_r8,multiplier,rate4,4.0,sccp,dependencies + arrival timing + buffer,181,181,1.0,0,0.0061,0.0175,1
+reduction_tree_mult_w16_r8,multiplier,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,181,181,1.0,0,0.0061,0.0175,1
+reduction_tree_mult_w16_r8,multiplier,rate4,4.0,t_count_only,T-count and average supply rate,244,181,1.3481,0,0.1631,0.5287,0
+reduction_tree_mult_w16_r8,multiplier,rate8,8.0,deps_only,dependencies only (what T-depth sees),145,145,1.0,0,0.1648,0.2345,1
+reduction_tree_mult_w16_r8,multiplier,rate8,8.0,deps_plus_count,dependencies + T-count,145,145,1.0,0,0.1641,0.231,1
+reduction_tree_mult_w16_r8,multiplier,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,145,145,1.0,0,0.0136,0.0414,1
+reduction_tree_mult_w16_r8,multiplier,rate8,8.0,sccp,dependencies + arrival timing + buffer,145,145,1.0,0,0.0136,0.0414,1
+reduction_tree_mult_w16_r8,multiplier,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,145,145,1.0,0,0.0136,0.0414,1
+reduction_tree_mult_w16_r8,multiplier,rate8,8.0,t_count_only,T-count and average supply rate,243,145,1.6759,0,0.3758,0.7428,0
+reduction_tree_mult_w32_r4,multiplier,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),7323,3723,1.967,1,0.9721,0.9866,0
+reduction_tree_mult_w32_r4,multiplier,rate0.1,0.1,deps_plus_count,dependencies + T-count,3723,3723,1.0,1,0.0011,0.0019,1
+reduction_tree_mult_w32_r4,multiplier,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,3723,3723,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,3723,3723,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,3723,3723,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate0.1,0.1,t_count_only,T-count and average supply rate,3723,3723,1.0,1,0.0011,0.0019,1
+reduction_tree_mult_w32_r4,multiplier,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),3668,1868,1.9636,1,0.9444,0.9733,0
+reduction_tree_mult_w32_r4,multiplier,rate0.2,0.2,deps_plus_count,dependencies + T-count,1868,1868,1.0,1,0.0006,0.0011,1
+reduction_tree_mult_w32_r4,multiplier,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,1868,1868,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,1868,1868,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,1868,1868,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate0.2,0.2,t_count_only,T-count and average supply rate,1868,1868,1.0,1,0.0006,0.0011,1
+reduction_tree_mult_w32_r4,multiplier,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),1475,755,1.9536,1,0.862,0.9336,0
+reduction_tree_mult_w32_r4,multiplier,rate0.5,0.5,deps_plus_count,dependencies + T-count,755,755,1.0,1,0.0008,0.0013,1
+reduction_tree_mult_w32_r4,multiplier,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,755,755,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,755,755,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,755,755,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate0.5,0.5,t_count_only,T-count and average supply rate,755,755,1.0,1,0.0008,0.0013,1
+reduction_tree_mult_w32_r4,multiplier,rate1,1.0,deps_only,dependencies only (what T-depth sees),744,419,1.7757,1,0.7391,0.8683,0
+reduction_tree_mult_w32_r4,multiplier,rate1,1.0,deps_plus_count,dependencies + T-count,419,419,1.0,1,0.017,0.0883,1
+reduction_tree_mult_w32_r4,multiplier,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,419,419,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate1,1.0,sccp,dependencies + arrival timing + buffer,419,419,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,419,419,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate1,1.0,t_count_only,T-count and average supply rate,419,419,1.0,1,0.017,0.0883,1
+reduction_tree_mult_w32_r4,multiplier,rate2,2.0,deps_only,dependencies only (what T-depth sees),378,279,1.3548,1,0.5724,0.7407,0
+reduction_tree_mult_w32_r4,multiplier,rate2,2.0,deps_plus_count,dependencies + T-count,279,279,1.0,1,0.008,0.0215,1
+reduction_tree_mult_w32_r4,multiplier,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,279,279,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate2,2.0,sccp,dependencies + arrival timing + buffer,279,279,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,279,279,1.0,1,0.0,0.0,1
+reduction_tree_mult_w32_r4,multiplier,rate2,2.0,t_count_only,T-count and average supply rate,325,279,1.1649,1,0.0706,0.3969,1
+reduction_tree_mult_w32_r4,multiplier,rate4,4.0,deps_only,dependencies only (what T-depth sees),195,195,1.0,1,0.3484,0.4974,1
+reduction_tree_mult_w32_r4,multiplier,rate4,4.0,deps_plus_count,dependencies + T-count,195,195,1.0,1,0.0448,0.1187,0
+reduction_tree_mult_w32_r4,multiplier,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,195,195,1.0,1,0.0113,0.0476,0
+reduction_tree_mult_w32_r4,multiplier,rate4,4.0,sccp,dependencies + arrival timing + buffer,195,195,1.0,1,0.0113,0.0476,0
+reduction_tree_mult_w32_r4,multiplier,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,195,195,1.0,1,0.0113,0.0476,0
+reduction_tree_mult_w32_r4,multiplier,rate4,4.0,t_count_only,T-count and average supply rate,324,195,1.6615,1,0.1554,0.6821,0
+reduction_tree_mult_w32_r4,multiplier,rate8,8.0,deps_only,dependencies only (what T-depth sees),123,123,1.0,1,0.1359,0.2267,1
+reduction_tree_mult_w32_r4,multiplier,rate8,8.0,deps_plus_count,dependencies + T-count,123,123,1.0,1,0.1312,0.2267,1
+reduction_tree_mult_w32_r4,multiplier,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,123,123,1.0,1,0.0234,0.0933,1
+reduction_tree_mult_w32_r4,multiplier,rate8,8.0,sccp,dependencies + arrival timing + buffer,123,123,1.0,1,0.0234,0.0933,1
+reduction_tree_mult_w32_r4,multiplier,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,123,123,1.0,1,0.0234,0.0933,1
+reduction_tree_mult_w32_r4,multiplier,rate8,8.0,t_count_only,T-count and average supply rate,324,123,2.6341,1,0.3632,0.8256,0
+reduction_tree_mult_w32_r8,multiplier,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),17083,8683,1.9674,0,0.9821,0.9914,0
+reduction_tree_mult_w32_r8,multiplier,rate0.1,0.1,deps_plus_count,dependencies + T-count,8683,8683,1.0,0,0.0005,0.0008,1
+reduction_tree_mult_w32_r8,multiplier,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,8683,8683,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,8683,8683,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,8683,8683,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate0.1,0.1,t_count_only,T-count and average supply rate,8683,8683,1.0,0,0.0005,0.0008,1
+reduction_tree_mult_w32_r8,multiplier,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),8548,4348,1.966,0,0.9642,0.9828,0
+reduction_tree_mult_w32_r8,multiplier,rate0.2,0.2,deps_plus_count,dependencies + T-count,4348,4348,1.0,0,0.0003,0.0005,1
+reduction_tree_mult_w32_r8,multiplier,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,4348,4348,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,4348,4348,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,4348,4348,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate0.2,0.2,t_count_only,T-count and average supply rate,4348,4348,1.0,0,0.0003,0.0005,1
+reduction_tree_mult_w32_r8,multiplier,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),3427,1747,1.9616,0,0.9107,0.9571,0
+reduction_tree_mult_w32_r8,multiplier,rate0.5,0.5,deps_plus_count,dependencies + T-count,1747,1747,1.0,0,0.0003,0.0006,1
+reduction_tree_mult_w32_r8,multiplier,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,1747,1747,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,1747,1747,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,1747,1747,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate0.5,0.5,t_count_only,T-count and average supply rate,1747,1747,1.0,0,0.0003,0.0006,1
+reduction_tree_mult_w32_r8,multiplier,rate1,1.0,deps_only,dependencies only (what T-depth sees),1720,915,1.8798,0,0.8259,0.9145,0
+reduction_tree_mult_w32_r8,multiplier,rate1,1.0,deps_plus_count,dependencies + T-count,915,915,1.0,0,0.0077,0.0404,1
+reduction_tree_mult_w32_r8,multiplier,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,915,915,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate1,1.0,sccp,dependencies + arrival timing + buffer,915,915,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,915,915,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate1,1.0,t_count_only,T-count and average supply rate,915,915,1.0,0,0.0077,0.0404,1
+reduction_tree_mult_w32_r8,multiplier,rate2,2.0,deps_only,dependencies only (what T-depth sees),866,532,1.6278,0,0.6892,0.8303,0
+reduction_tree_mult_w32_r8,multiplier,rate2,2.0,deps_plus_count,dependencies + T-count,578,532,1.0865,0,0.031,0.1747,1
+reduction_tree_mult_w32_r8,multiplier,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,532,532,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate2,2.0,sccp,dependencies + arrival timing + buffer,532,532,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,532,532,1.0,0,0.0,0.0,1
+reduction_tree_mult_w32_r8,multiplier,rate2,2.0,t_count_only,T-count and average supply rate,578,532,1.0865,0,0.0406,0.2318,1
+reduction_tree_mult_w32_r8,multiplier,rate4,4.0,deps_only,dependencies only (what T-depth sees),439,348,1.2615,0,0.5018,0.6651,1
+reduction_tree_mult_w32_r8,multiplier,rate4,4.0,deps_plus_count,dependencies + T-count,348,348,1.0,0,0.0218,0.0562,0
+reduction_tree_mult_w32_r8,multiplier,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,348,348,1.0,0,0.0052,0.022,0
+reduction_tree_mult_w32_r8,multiplier,rate4,4.0,sccp,dependencies + arrival timing + buffer,348,348,1.0,0,0.0052,0.022,0
+reduction_tree_mult_w32_r8,multiplier,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,348,348,1.0,0,0.0052,0.022,0
+reduction_tree_mult_w32_r8,multiplier,rate4,4.0,t_count_only,T-count and average supply rate,484,348,1.3908,0,0.1079,0.531,0
+reduction_tree_mult_w32_r8,multiplier,rate8,8.0,deps_only,dependencies only (what T-depth sees),248,248,1.0,0,0.2815,0.4073,1
+reduction_tree_mult_w32_r8,multiplier,rate8,8.0,deps_plus_count,dependencies + T-count,248,248,1.0,0,0.1201,0.2046,0
+reduction_tree_mult_w32_r8,multiplier,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,248,248,1.0,0,0.0235,0.0819,1
+reduction_tree_mult_w32_r8,multiplier,rate8,8.0,sccp,dependencies + arrival timing + buffer,248,248,1.0,0,0.0235,0.0819,1
+reduction_tree_mult_w32_r8,multiplier,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,248,248,1.0,0,0.0235,0.0819,1
+reduction_tree_mult_w32_r8,multiplier,rate8,8.0,t_count_only,T-count and average supply rate,483,248,1.9476,0,0.2611,0.7547,0
+reduction_tree_mult_w64_r4,multiplier,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),15003,7563,1.9837,1,0.978,0.9919,0
+reduction_tree_mult_w64_r4,multiplier,rate0.1,0.1,deps_plus_count,dependencies + T-count,7563,7563,1.0,1,0.0005,0.0009,1
+reduction_tree_mult_w64_r4,multiplier,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,7563,7563,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,7563,7563,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,7563,7563,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate0.1,0.1,t_count_only,T-count and average supply rate,7563,7563,1.0,1,0.0005,0.0009,1
+reduction_tree_mult_w64_r4,multiplier,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),7508,3788,1.982,1,0.956,0.9838,0
+reduction_tree_mult_w64_r4,multiplier,rate0.2,0.2,deps_plus_count,dependencies + T-count,3788,3788,1.0,1,0.0003,0.0005,1
+reduction_tree_mult_w64_r4,multiplier,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,3788,3788,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,3788,3788,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,3788,3788,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate0.2,0.2,t_count_only,T-count and average supply rate,3788,3788,1.0,1,0.0003,0.0005,1
+reduction_tree_mult_w64_r4,multiplier,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),3011,1523,1.977,1,0.8903,0.9595,0
+reduction_tree_mult_w64_r4,multiplier,rate0.5,0.5,deps_plus_count,dependencies + T-count,1523,1523,1.0,1,0.0004,0.0007,1
+reduction_tree_mult_w64_r4,multiplier,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,1523,1523,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,1523,1523,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,1523,1523,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate0.5,0.5,t_count_only,T-count and average supply rate,1523,1523,1.0,1,0.0004,0.0007,1
+reduction_tree_mult_w64_r4,multiplier,rate1,1.0,deps_only,dependencies only (what T-depth sees),1512,835,1.8108,1,0.7916,0.9193,0
+reduction_tree_mult_w64_r4,multiplier,rate1,1.0,deps_plus_count,dependencies + T-count,835,835,1.0,1,0.0129,0.0826,1
+reduction_tree_mult_w64_r4,multiplier,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,835,835,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate1,1.0,sccp,dependencies + arrival timing + buffer,835,835,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,835,835,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate1,1.0,t_count_only,T-count and average supply rate,835,835,1.0,1,0.0129,0.0826,1
+reduction_tree_mult_w64_r4,multiplier,rate2,2.0,deps_only,dependencies only (what T-depth sees),762,567,1.3439,1,0.6618,0.8399,0
+reduction_tree_mult_w64_r4,multiplier,rate2,2.0,deps_plus_count,dependencies + T-count,567,567,1.0,1,0.0038,0.0109,1
+reduction_tree_mult_w64_r4,multiplier,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,567,567,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate2,2.0,sccp,dependencies + arrival timing + buffer,567,567,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,567,567,1.0,1,0.0,0.0,1
+reduction_tree_mult_w64_r4,multiplier,rate2,2.0,t_count_only,T-count and average supply rate,645,567,1.1376,1,0.0592,0.3984,1
+reduction_tree_mult_w64_r4,multiplier,rate4,4.0,deps_only,dependencies only (what T-depth sees),387,387,1.0,1,0.4844,0.6848,1
+reduction_tree_mult_w64_r4,multiplier,rate4,4.0,deps_plus_count,dependencies + T-count,449,387,1.1602,1,0.0247,0.0984,0
+reduction_tree_mult_w64_r4,multiplier,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,449,387,1.1602,1,0.0057,0.0373,0
+reduction_tree_mult_w64_r4,multiplier,rate4,4.0,sccp,dependencies + arrival timing + buffer,387,387,1.0,1,0.0057,0.0373,0
+reduction_tree_mult_w64_r4,multiplier,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,387,387,1.0,1,0.0057,0.0373,0
+reduction_tree_mult_w64_r4,multiplier,rate4,4.0,t_count_only,T-count and average supply rate,644,387,1.6641,1,0.1221,0.691,0
+reduction_tree_mult_w64_r4,multiplier,rate8,8.0,deps_only,dependencies only (what T-depth sees),208,207,1.0048,1,0.2573,0.4309,0
+reduction_tree_mult_w64_r4,multiplier,rate8,8.0,deps_plus_count,dependencies + T-count,208,207,1.0048,1,0.082,0.1972,0
+reduction_tree_mult_w64_r4,multiplier,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,208,207,1.0048,1,0.0286,0.126,0
+reduction_tree_mult_w64_r4,multiplier,rate8,8.0,sccp,dependencies + arrival timing + buffer,208,207,1.0048,1,0.0286,0.126,0
+reduction_tree_mult_w64_r4,multiplier,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,208,207,1.0048,1,0.0286,0.126,0
+reduction_tree_mult_w64_r4,multiplier,rate8,8.0,t_count_only,T-count and average supply rate,644,207,3.1111,1,0.2567,0.8377,0
+reduction_tree_mult_w64_r8,multiplier,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),35003,17643,1.984,0,0.9858,0.9948,0
+reduction_tree_mult_w64_r8,multiplier,rate0.1,0.1,deps_plus_count,dependencies + T-count,17643,17643,1.0,0,0.0002,0.0004,1
+reduction_tree_mult_w64_r8,multiplier,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,17643,17643,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,17643,17643,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,17643,17643,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate0.1,0.1,t_count_only,T-count and average supply rate,17643,17643,1.0,0,0.0002,0.0004,1
+reduction_tree_mult_w64_r8,multiplier,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),17508,8828,1.9832,0,0.9717,0.9895,0
+reduction_tree_mult_w64_r8,multiplier,rate0.2,0.2,deps_plus_count,dependencies + T-count,8828,8828,1.0,0,0.0001,0.0002,1
+reduction_tree_mult_w64_r8,multiplier,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,8828,8828,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,8828,8828,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,8828,8828,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate0.2,0.2,t_count_only,T-count and average supply rate,8828,8828,1.0,0,0.0001,0.0002,1
+reduction_tree_mult_w64_r8,multiplier,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),7011,3539,1.9811,0,0.9293,0.9739,0
+reduction_tree_mult_w64_r8,multiplier,rate0.5,0.5,deps_plus_count,dependencies + T-count,3539,3539,1.0,0,0.0002,0.0003,1
+reduction_tree_mult_w64_r8,multiplier,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,3539,3539,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,3539,3539,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,3539,3539,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate0.5,0.5,t_count_only,T-count and average supply rate,3539,3539,1.0,0,0.0002,0.0003,1
+reduction_tree_mult_w64_r8,multiplier,rate1,1.0,deps_only,dependencies only (what T-depth sees),3512,1843,1.9056,0,0.8618,0.9479,0
+reduction_tree_mult_w64_r8,multiplier,rate1,1.0,deps_plus_count,dependencies + T-count,1843,1843,1.0,0,0.0058,0.0374,1
+reduction_tree_mult_w64_r8,multiplier,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,1843,1843,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate1,1.0,sccp,dependencies + arrival timing + buffer,1843,1843,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,1843,1843,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate1,1.0,t_count_only,T-count and average supply rate,1843,1843,1.0,0,0.0058,0.0374,1
+reduction_tree_mult_w64_r8,multiplier,rate2,2.0,deps_only,dependencies only (what T-depth sees),1762,1076,1.6375,0,0.7538,0.8961,0
+reduction_tree_mult_w64_r8,multiplier,rate2,2.0,deps_plus_count,dependencies + T-count,1154,1076,1.0725,0,0.0254,0.1707,1
+reduction_tree_mult_w64_r8,multiplier,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,1076,1076,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate2,2.0,sccp,dependencies + arrival timing + buffer,1076,1076,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,1076,1076,1.0,0,0.0,0.0,1
+reduction_tree_mult_w64_r8,multiplier,rate2,2.0,t_count_only,T-count and average supply rate,1154,1076,1.0725,0,0.0334,0.227,1
+reduction_tree_mult_w64_r8,multiplier,rate4,4.0,deps_only,dependencies only (what T-depth sees),887,700,1.2671,0,0.6086,0.7937,1
+reduction_tree_mult_w64_r8,multiplier,rate4,4.0,deps_plus_count,dependencies + T-count,700,700,1.0,0,0.0117,0.0453,0
+reduction_tree_mult_w64_r8,multiplier,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,700,700,1.0,0,0.0025,0.0166,0
+reduction_tree_mult_w64_r8,multiplier,rate4,4.0,sccp,dependencies + arrival timing + buffer,700,700,1.0,0,0.0025,0.0166,0
+reduction_tree_mult_w64_r8,multiplier,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,700,700,1.0,0,0.0025,0.0166,0
+reduction_tree_mult_w64_r8,multiplier,rate4,4.0,t_count_only,T-count and average supply rate,964,700,1.3771,0,0.0866,0.5322,0
+reduction_tree_mult_w64_r8,multiplier,rate8,8.0,deps_only,dependencies only (what T-depth sees),461,460,1.0022,0,0.4157,0.603,0
+reduction_tree_mult_w64_r8,multiplier,rate8,8.0,deps_plus_count,dependencies + T-count,524,460,1.1391,0,0.0676,0.1639,0
+reduction_tree_mult_w64_r8,multiplier,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,524,460,1.1391,0,0.0204,0.0832,0
+reduction_tree_mult_w64_r8,multiplier,rate8,8.0,sccp,dependencies + arrival timing + buffer,461,460,1.0022,0,0.0204,0.0832,0
+reduction_tree_mult_w64_r8,multiplier,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,461,460,1.0022,0,0.0204,0.0832,0
+reduction_tree_mult_w64_r8,multiplier,rate8,8.0,t_count_only,T-count and average supply rate,963,460,2.0935,0,0.1868,0.7606,0
+schoolbook_mult_w16_r3,multiplier,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),3483,1803,1.9318,1,0.9449,0.9681,0
+schoolbook_mult_w16_r3,multiplier,rate0.1,0.1,deps_plus_count,dependencies + T-count,1803,1803,1.0,1,0.0024,0.0039,1
+schoolbook_mult_w16_r3,multiplier,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,1803,1803,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,1803,1803,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,1803,1803,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate0.1,0.1,t_count_only,T-count and average supply rate,1803,1803,1.0,1,0.0024,0.0039,1
+schoolbook_mult_w16_r3,multiplier,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),1748,908,1.9251,1,0.8905,0.9365,0
+schoolbook_mult_w16_r3,multiplier,rate0.2,0.2,deps_plus_count,dependencies + T-count,908,908,1.0,1,0.0014,0.0022,1
+schoolbook_mult_w16_r3,multiplier,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,908,908,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,908,908,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,908,908,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate0.2,0.2,t_count_only,T-count and average supply rate,908,908,1.0,1,0.0014,0.0022,1
+schoolbook_mult_w16_r3,multiplier,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),707,371,1.9057,1,0.7305,0.843,0
+schoolbook_mult_w16_r3,multiplier,rate0.5,0.5,deps_plus_count,dependencies + T-count,371,371,1.0,1,0.0017,0.0027,1
+schoolbook_mult_w16_r3,multiplier,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,371,371,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,371,371,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,371,371,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate0.5,0.5,t_count_only,T-count and average supply rate,371,371,1.0,1,0.0017,0.0027,1
+schoolbook_mult_w16_r3,multiplier,rate1,1.0,deps_only,dependencies only (what T-depth sees),360,244,1.4754,1,0.5274,0.6917,0
+schoolbook_mult_w16_r3,multiplier,rate1,1.0,deps_plus_count,dependencies + T-count,244,244,1.0,1,0.0102,0.0287,1
+schoolbook_mult_w16_r3,multiplier,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,244,244,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate1,1.0,sccp,dependencies + arrival timing + buffer,244,244,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,244,244,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate1,1.0,t_count_only,T-count and average supply rate,244,244,1.0,1,0.0487,0.2213,1
+schoolbook_mult_w16_r3,multiplier,rate2,2.0,deps_only,dependencies only (what T-depth sees),186,186,1.0,1,0.2662,0.4032,1
+schoolbook_mult_w16_r3,multiplier,rate2,2.0,deps_plus_count,dependencies + T-count,192,186,1.0323,1,0.0135,0.0247,1
+schoolbook_mult_w16_r3,multiplier,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,192,186,1.0323,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate2,2.0,sccp,dependencies + arrival timing + buffer,192,186,1.0323,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,192,186,1.0323,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate2,2.0,t_count_only,T-count and average supply rate,243,186,1.3065,1,0.1263,0.5885,0
+schoolbook_mult_w16_r3,multiplier,rate4,4.0,deps_only,dependencies only (what T-depth sees),120,120,1.0,1,0.0686,0.1333,1
+schoolbook_mult_w16_r3,multiplier,rate4,4.0,deps_plus_count,dependencies + T-count,120,120,1.0,1,0.0686,0.1333,1
+schoolbook_mult_w16_r3,multiplier,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,120,120,1.0,1,0.0137,0.0519,1
+schoolbook_mult_w16_r3,multiplier,rate4,4.0,sccp,dependencies + arrival timing + buffer,120,120,1.0,1,0.0137,0.0519,1
+schoolbook_mult_w16_r3,multiplier,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,120,120,1.0,1,0.0137,0.0519,1
+schoolbook_mult_w16_r3,multiplier,rate4,4.0,t_count_only,T-count and average supply rate,243,120,2.025,1,0.3807,0.7737,0
+schoolbook_mult_w16_r3,multiplier,rate8,8.0,deps_only,dependencies only (what T-depth sees),117,117,1.0,1,0.0433,0.0565,1
+schoolbook_mult_w16_r3,multiplier,rate8,8.0,deps_plus_count,dependencies + T-count,117,117,1.0,1,0.0433,0.0565,1
+schoolbook_mult_w16_r3,multiplier,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,117,117,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate8,8.0,sccp,dependencies + arrival timing + buffer,117,117,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,117,117,1.0,1,0.0,0.0,1
+schoolbook_mult_w16_r3,multiplier,rate8,8.0,t_count_only,T-count and average supply rate,243,117,2.0769,1,0.6453,0.8663,0
+schoolbook_mult_w32_r3,multiplier,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),7323,3723,1.967,1,0.9582,0.9799,0
+schoolbook_mult_w32_r3,multiplier,rate0.1,0.1,deps_plus_count,dependencies + T-count,3723,3723,1.0,1,0.0011,0.0019,1
+schoolbook_mult_w32_r3,multiplier,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,3723,3723,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,3723,3723,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,3723,3723,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate0.1,0.1,t_count_only,T-count and average supply rate,3723,3723,1.0,1,0.0011,0.0019,1
+schoolbook_mult_w32_r3,multiplier,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),3668,1868,1.9636,1,0.9165,0.9599,0
+schoolbook_mult_w32_r3,multiplier,rate0.2,0.2,deps_plus_count,dependencies + T-count,1868,1868,1.0,1,0.0006,0.0011,1
+schoolbook_mult_w32_r3,multiplier,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,1868,1868,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,1868,1868,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,1868,1868,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate0.2,0.2,t_count_only,T-count and average supply rate,1868,1868,1.0,1,0.0006,0.0011,1
+schoolbook_mult_w32_r3,multiplier,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),1475,755,1.9536,1,0.793,0.9003,0
+schoolbook_mult_w32_r3,multiplier,rate0.5,0.5,deps_plus_count,dependencies + T-count,755,755,1.0,1,0.0008,0.0013,1
+schoolbook_mult_w32_r3,multiplier,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,755,755,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,755,755,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,755,755,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate0.5,0.5,t_count_only,T-count and average supply rate,755,755,1.0,1,0.0008,0.0013,1
+schoolbook_mult_w32_r3,multiplier,rate1,1.0,deps_only,dependencies only (what T-depth sees),744,484,1.5372,1,0.6341,0.8024,0
+schoolbook_mult_w32_r3,multiplier,rate1,1.0,deps_plus_count,dependencies + T-count,484,484,1.0,1,0.0047,0.0145,1
+schoolbook_mult_w32_r3,multiplier,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,484,484,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate1,1.0,sccp,dependencies + arrival timing + buffer,484,484,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,484,484,1.0,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate1,1.0,t_count_only,T-count and average supply rate,484,484,1.0,1,0.0374,0.2107,1
+schoolbook_mult_w32_r3,multiplier,rate2,2.0,deps_only,dependencies only (what T-depth sees),378,378,1.0,1,0.4386,0.6111,1
+schoolbook_mult_w32_r3,multiplier,rate2,2.0,deps_plus_count,dependencies + T-count,400,378,1.0582,1,0.0065,0.0124,1
+schoolbook_mult_w32_r3,multiplier,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,400,378,1.0582,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate2,2.0,sccp,dependencies + arrival timing + buffer,406,378,1.0741,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,406,378,1.0741,1,0.0,0.0,1
+schoolbook_mult_w32_r3,multiplier,rate2,2.0,t_count_only,T-count and average supply rate,483,378,1.2778,1,0.1034,0.5942,0
+schoolbook_mult_w32_r3,multiplier,rate4,4.0,deps_only,dependencies only (what T-depth sees),195,195,1.0,1,0.1526,0.2564,1
+schoolbook_mult_w32_r3,multiplier,rate4,4.0,deps_plus_count,dependencies + T-count,195,195,1.0,1,0.0484,0.1752,0
+schoolbook_mult_w32_r3,multiplier,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,195,195,1.0,1,0.0324,0.1453,0
+schoolbook_mult_w32_r3,multiplier,rate4,4.0,sccp,dependencies + arrival timing + buffer,195,195,1.0,1,0.0324,0.1453,0
+schoolbook_mult_w32_r3,multiplier,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,195,195,1.0,1,0.0324,0.1453,0
+schoolbook_mult_w32_r3,multiplier,rate4,4.0,t_count_only,T-count and average supply rate,483,195,2.4769,1,0.217,0.7867,0
+schoolbook_mult_w32_r3,multiplier,rate8,8.0,deps_only,dependencies only (what T-depth sees),156,156,1.0,1,0.0576,0.1156,1
+schoolbook_mult_w32_r3,multiplier,rate8,8.0,deps_plus_count,dependencies + T-count,156,156,1.0,1,0.0576,0.1156,1
+schoolbook_mult_w32_r3,multiplier,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,156,156,1.0,1,0.0194,0.052,1
+schoolbook_mult_w32_r3,multiplier,rate8,8.0,sccp,dependencies + arrival timing + buffer,156,156,1.0,1,0.0194,0.052,1
+schoolbook_mult_w32_r3,multiplier,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,156,156,1.0,1,0.0194,0.052,1
+schoolbook_mult_w32_r3,multiplier,rate8,8.0,t_count_only,T-count and average supply rate,483,156,3.0962,1,0.5267,0.883,0
+schoolbook_mult_w64_r3,multiplier,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),15003,7563,1.9837,1,0.9669,0.9878,0
+schoolbook_mult_w64_r3,multiplier,rate0.1,0.1,deps_plus_count,dependencies + T-count,7563,7563,1.0,1,0.0005,0.0009,1
+schoolbook_mult_w64_r3,multiplier,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,7563,7563,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,7563,7563,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,7563,7563,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate0.1,0.1,t_count_only,T-count and average supply rate,7563,7563,1.0,1,0.0005,0.0009,1
+schoolbook_mult_w64_r3,multiplier,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),7508,3788,1.982,1,0.9339,0.9756,0
+schoolbook_mult_w64_r3,multiplier,rate0.2,0.2,deps_plus_count,dependencies + T-count,3788,3788,1.0,1,0.0003,0.0005,1
+schoolbook_mult_w64_r3,multiplier,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,3788,3788,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,3788,3788,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,3788,3788,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate0.2,0.2,t_count_only,T-count and average supply rate,3788,3788,1.0,1,0.0003,0.0005,1
+schoolbook_mult_w64_r3,multiplier,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),3011,1523,1.977,1,0.8355,0.9392,0
+schoolbook_mult_w64_r3,multiplier,rate0.5,0.5,deps_plus_count,dependencies + T-count,1523,1523,1.0,1,0.0004,0.0007,1
+schoolbook_mult_w64_r3,multiplier,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,1523,1523,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,1523,1523,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,1523,1523,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate0.5,0.5,t_count_only,T-count and average supply rate,1523,1523,1.0,1,0.0004,0.0007,1
+schoolbook_mult_w64_r3,multiplier,rate1,1.0,deps_only,dependencies only (what T-depth sees),1512,964,1.5685,1,0.7094,0.879,0
+schoolbook_mult_w64_r3,multiplier,rate1,1.0,deps_plus_count,dependencies + T-count,964,964,1.0,1,0.0022,0.0073,1
+schoolbook_mult_w64_r3,multiplier,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,964,964,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate1,1.0,sccp,dependencies + arrival timing + buffer,964,964,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,964,964,1.0,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate1,1.0,t_count_only,T-count and average supply rate,964,964,1.0,1,0.0305,0.2054,1
+schoolbook_mult_w64_r3,multiplier,rate2,2.0,deps_only,dependencies only (what T-depth sees),762,762,1.0,1,0.5628,0.7598,1
+schoolbook_mult_w64_r3,multiplier,rate2,2.0,deps_plus_count,dependencies + T-count,816,762,1.0709,1,0.0031,0.0062,1
+schoolbook_mult_w64_r3,multiplier,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,816,762,1.0709,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate2,2.0,sccp,dependencies + arrival timing + buffer,822,762,1.0787,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,822,762,1.0787,1,0.0,0.0,1
+schoolbook_mult_w64_r3,multiplier,rate2,2.0,t_count_only,T-count and average supply rate,963,762,1.2638,1,0.0875,0.5971,0
+schoolbook_mult_w64_r3,multiplier,rate4,4.0,deps_only,dependencies only (what T-depth sees),387,387,1.0,1,0.3256,0.5271,1
+schoolbook_mult_w64_r3,multiplier,rate4,4.0,deps_plus_count,dependencies + T-count,387,387,1.0,1,0.0197,0.0962,0
+schoolbook_mult_w64_r3,multiplier,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,387,387,1.0,1,0.0134,0.0915,0
+schoolbook_mult_w64_r3,multiplier,rate4,4.0,sccp,dependencies + arrival timing + buffer,387,387,1.0,1,0.0134,0.0915,0
+schoolbook_mult_w64_r3,multiplier,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,387,387,1.0,1,0.0134,0.0915,0
+schoolbook_mult_w64_r3,multiplier,rate4,4.0,t_count_only,T-count and average supply rate,963,387,2.4884,1,0.1635,0.7934,0
+schoolbook_mult_w64_r3,multiplier,rate8,8.0,deps_only,dependencies only (what T-depth sees),221,218,1.0138,1,0.1124,0.2759,0
+schoolbook_mult_w64_r3,multiplier,rate8,8.0,deps_plus_count,dependencies + T-count,221,218,1.0138,1,0.0982,0.2759,0
+schoolbook_mult_w64_r3,multiplier,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,221,218,1.0138,1,0.0686,0.2138,0
+schoolbook_mult_w64_r3,multiplier,rate8,8.0,sccp,dependencies + arrival timing + buffer,221,218,1.0138,1,0.0686,0.2138,0
+schoolbook_mult_w64_r3,multiplier,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,221,218,1.0138,1,0.0686,0.2138,0
+schoolbook_mult_w64_r3,multiplier,rate8,8.0,t_count_only,T-count and average supply rate,963,218,4.4174,1,0.3668,0.8915,0
+toffoli_ladder_n3_l2,toffoli,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),423,243,1.7407,1,0.9243,0.9504,0
+toffoli_ladder_n3_l2,toffoli,rate0.1,0.1,deps_plus_count,dependencies + T-count,243,243,1.0,1,0.0196,0.0288,1
+toffoli_ladder_n3_l2,toffoli,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,243,243,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,243,243,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,243,243,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate0.1,0.1,t_count_only,T-count and average supply rate,243,243,1.0,1,0.0196,0.0288,1
+toffoli_ladder_n3_l2,toffoli,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),218,128,1.7031,1,0.8544,0.9037,0
+toffoli_ladder_n3_l2,toffoli,rate0.2,0.2,deps_plus_count,dependencies + T-count,128,128,1.0,1,0.0108,0.0156,1
+toffoli_ladder_n3_l2,toffoli,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,128,128,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,128,128,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,128,128,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate0.2,0.2,t_count_only,T-count and average supply rate,128,128,1.0,1,0.0108,0.0156,1
+toffoli_ladder_n3_l2,toffoli,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),95,59,1.6102,1,0.6724,0.7789,0
+toffoli_ladder_n3_l2,toffoli,rate0.5,0.5,deps_plus_count,dependencies + T-count,59,59,1.0,1,0.0121,0.0169,1
+toffoli_ladder_n3_l2,toffoli,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,59,59,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,59,59,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,59,59,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate0.5,0.5,t_count_only,T-count and average supply rate,59,59,1.0,1,0.0121,0.0169,1
+toffoli_ladder_n3_l2,toffoli,rate1,1.0,deps_only,dependencies only (what T-depth sees),54,38,1.4211,1,0.4474,0.6111,0
+toffoli_ladder_n3_l2,toffoli,rate1,1.0,deps_plus_count,dependencies + T-count,38,38,1.0,1,0.0541,0.1053,1
+toffoli_ladder_n3_l2,toffoli,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,38,38,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate1,1.0,sccp,dependencies + arrival timing + buffer,38,38,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,38,38,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate1,1.0,t_count_only,T-count and average supply rate,38,38,1.0,1,0.0541,0.1053,1
+toffoli_ladder_n3_l2,toffoli,rate2,2.0,deps_only,dependencies only (what T-depth sees),33,30,1.1,1,0.2635,0.3636,1
+toffoli_ladder_n3_l2,toffoli,rate2,2.0,deps_plus_count,dependencies + T-count,32,30,1.0667,1,0.1607,0.2143,0
+toffoli_ladder_n3_l2,toffoli,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,30,30,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate2,2.0,sccp,dependencies + arrival timing + buffer,30,30,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,30,30,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate2,2.0,t_count_only,T-count and average supply rate,34,30,1.1333,1,0.2094,0.3529,0
+toffoli_ladder_n3_l2,toffoli,rate4,4.0,deps_only,dependencies only (what T-depth sees),30,29,1.0345,1,0.2157,0.3,1
+toffoli_ladder_n3_l2,toffoli,rate4,4.0,deps_plus_count,dependencies + T-count,30,29,1.0345,1,0.2157,0.3,1
+toffoli_ladder_n3_l2,toffoli,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,29,29,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate4,4.0,sccp,dependencies + arrival timing + buffer,29,29,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,29,29,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate4,4.0,t_count_only,T-count and average supply rate,33,29,1.1379,1,0.4291,0.5152,0
+toffoli_ladder_n3_l2,toffoli,rate8,8.0,deps_only,dependencies only (what T-depth sees),28,28,1.0,1,0.1919,0.25,1
+toffoli_ladder_n3_l2,toffoli,rate8,8.0,deps_plus_count,dependencies + T-count,28,28,1.0,1,0.1919,0.25,1
+toffoli_ladder_n3_l2,toffoli,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,28,28,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate8,8.0,sccp,dependencies + arrival timing + buffer,28,28,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,28,28,1.0,1,0.0,0.0,1
+toffoli_ladder_n3_l2,toffoli,rate8,8.0,t_count_only,T-count and average supply rate,33,28,1.1786,1,0.5521,0.609,0
+toffoli_ladder_n3_l4,toffoli,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),843,483,1.7453,0,0.962,0.9751,0
+toffoli_ladder_n3_l4,toffoli,rate0.1,0.1,deps_plus_count,dependencies + T-count,483,483,1.0,0,0.0099,0.0145,1
+toffoli_ladder_n3_l4,toffoli,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,483,483,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,483,483,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,483,483,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate0.1,0.1,t_count_only,T-count and average supply rate,483,483,1.0,0,0.0099,0.0145,1
+toffoli_ladder_n3_l4,toffoli,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),428,248,1.7258,0,0.9255,0.9509,0
+toffoli_ladder_n3_l4,toffoli,rate0.2,0.2,deps_plus_count,dependencies + T-count,248,248,1.0,0,0.0055,0.0081,1
+toffoli_ladder_n3_l4,toffoli,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,248,248,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,248,248,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,248,248,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate0.2,0.2,t_count_only,T-count and average supply rate,248,248,1.0,0,0.0055,0.0081,1
+toffoli_ladder_n3_l4,toffoli,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),179,107,1.6729,0,0.8238,0.8827,0
+toffoli_ladder_n3_l4,toffoli,rate0.5,0.5,deps_plus_count,dependencies + T-count,107,107,1.0,0,0.0065,0.0093,1
+toffoli_ladder_n3_l4,toffoli,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,107,107,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,107,107,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,107,107,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate0.5,0.5,t_count_only,T-count and average supply rate,107,107,1.0,0,0.0065,0.0093,1
+toffoli_ladder_n3_l4,toffoli,rate1,1.0,deps_only,dependencies only (what T-depth sees),96,60,1.6,0,0.6766,0.7812,0
+toffoli_ladder_n3_l4,toffoli,rate1,1.0,deps_plus_count,dependencies + T-count,60,60,1.0,0,0.024,0.0333,1
+toffoli_ladder_n3_l4,toffoli,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,60,60,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate1,1.0,sccp,dependencies + arrival timing + buffer,60,60,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,60,60,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate1,1.0,t_count_only,T-count and average supply rate,60,60,1.0,0,0.024,0.0333,1
+toffoli_ladder_n3_l4,toffoli,rate2,2.0,deps_only,dependencies only (what T-depth sees),54,38,1.4211,0,0.4474,0.6111,0
+toffoli_ladder_n3_l4,toffoli,rate2,2.0,deps_plus_count,dependencies + T-count,38,38,1.0,0,0.0541,0.1053,1
+toffoli_ladder_n3_l4,toffoli,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,38,38,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate2,2.0,sccp,dependencies + arrival timing + buffer,38,38,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,38,38,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate2,2.0,t_count_only,T-count and average supply rate,38,38,1.0,0,0.0541,0.1053,1
+toffoli_ladder_n3_l4,toffoli,rate4,4.0,deps_only,dependencies only (what T-depth sees),33,33,1.0,0,0.2635,0.3636,1
+toffoli_ladder_n3_l4,toffoli,rate4,4.0,deps_plus_count,dependencies + T-count,32,33,0.9697,0,0.1607,0.2143,0
+toffoli_ladder_n3_l4,toffoli,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,33,33,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate4,4.0,sccp,dependencies + arrival timing + buffer,33,33,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,33,33,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate4,4.0,t_count_only,T-count and average supply rate,34,33,1.0303,0,0.2094,0.3529,0
+toffoli_ladder_n3_l4,toffoli,rate8,8.0,deps_only,dependencies only (what T-depth sees),30,30,1.0,0,0.2157,0.3,1
+toffoli_ladder_n3_l4,toffoli,rate8,8.0,deps_plus_count,dependencies + T-count,30,30,1.0,0,0.2157,0.3,1
+toffoli_ladder_n3_l4,toffoli,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,30,30,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate8,8.0,sccp,dependencies + arrival timing + buffer,30,30,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,30,30,1.0,0,0.0,0.0,1
+toffoli_ladder_n3_l4,toffoli,rate8,8.0,t_count_only,T-count and average supply rate,33,30,1.1,0,0.4291,0.5152,0
+trotter_t2_l2_b32,trotter,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),2562,1282,1.9984,1,0.9569,0.9906,0
+trotter_t2_l2_b32,trotter,rate0.1,0.1,deps_plus_count,dependencies + T-count,1282,1282,1.0,1,0.0044,0.0062,1
+trotter_t2_l2_b32,trotter,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,1282,1282,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,1282,1282,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,1282,1282,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate0.1,0.1,t_count_only,T-count and average supply rate,1282,1282,1.0,1,0.0044,0.0062,1
+trotter_t2_l2_b32,trotter,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),1287,647,1.9892,1,0.9145,0.9814,0
+trotter_t2_l2_b32,trotter,rate0.2,0.2,deps_plus_count,dependencies + T-count,647,647,1.0,1,0.0033,0.0046,1
+trotter_t2_l2_b32,trotter,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,647,647,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,647,647,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,647,647,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate0.2,0.2,t_count_only,T-count and average supply rate,647,647,1.0,1,0.0033,0.0046,1
+trotter_t2_l2_b32,trotter,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),522,266,1.9624,1,0.7911,0.954,0
+trotter_t2_l2_b32,trotter,rate0.5,0.5,deps_plus_count,dependencies + T-count,266,266,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,266,266,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,266,266,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,266,266,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate0.5,0.5,t_count_only,T-count and average supply rate,266,266,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate1,1.0,deps_only,dependencies only (what T-depth sees),267,143,1.8671,1,0.6031,0.9101,0
+trotter_t2_l2_b32,trotter,rate1,1.0,deps_plus_count,dependencies + T-count,143,143,1.0,1,0.0107,0.035,1
+trotter_t2_l2_b32,trotter,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,143,143,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate1,1.0,sccp,dependencies + arrival timing + buffer,143,143,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,143,143,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate1,1.0,t_count_only,T-count and average supply rate,143,143,1.0,1,0.0107,0.035,1
+trotter_t2_l2_b32,trotter,rate2,2.0,deps_only,dependencies only (what T-depth sees),139,95,1.4632,1,0.4254,0.8273,0
+trotter_t2_l2_b32,trotter,rate2,2.0,deps_plus_count,dependencies + T-count,112,95,1.1789,1,0.0239,0.0526,1
+trotter_t2_l2_b32,trotter,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,120,95,1.2632,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate2,2.0,sccp,dependencies + arrival timing + buffer,95,95,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,95,95,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate2,2.0,t_count_only,T-count and average supply rate,142,95,1.4947,1,0.1112,0.4789,0
+trotter_t2_l2_b32,trotter,rate4,4.0,deps_only,dependencies only (what T-depth sees),75,63,1.1905,1,0.272,0.68,0
+trotter_t2_l2_b32,trotter,rate4,4.0,deps_plus_count,dependencies + T-count,80,63,1.2698,1,0.0427,0.0794,1
+trotter_t2_l2_b32,trotter,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,80,63,1.2698,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate4,4.0,sccp,dependencies + arrival timing + buffer,63,63,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,63,63,1.0,1,0.0,0.0,1
+trotter_t2_l2_b32,trotter,rate4,4.0,t_count_only,T-count and average supply rate,142,63,2.254,1,0.256,0.7042,0
+trotter_t2_l2_b32,trotter,rate8,8.0,deps_only,dependencies only (what T-depth sees),45,43,1.0465,1,0.1665,0.4667,0
+trotter_t2_l2_b32,trotter,rate8,8.0,deps_plus_count,dependencies + T-count,52,43,1.2093,1,0.0772,0.1163,1
+trotter_t2_l2_b32,trotter,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,43,43,1.0,1,0.0089,0.0444,1
+trotter_t2_l2_b32,trotter,rate8,8.0,sccp,dependencies + arrival timing + buffer,43,43,1.0,1,0.0089,0.0444,1
+trotter_t2_l2_b32,trotter,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,43,43,1.0,1,0.0089,0.0444,1
+trotter_t2_l2_b32,trotter,rate8,8.0,t_count_only,T-count and average supply rate,142,43,3.3023,1,0.4265,0.8169,0
+trotter_t4_l2_b32,trotter,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),5122,2562,1.9992,0,0.9784,0.9953,0
+trotter_t4_l2_b32,trotter,rate0.1,0.1,deps_plus_count,dependencies + T-count,2562,2562,1.0,0,0.0022,0.0031,1
+trotter_t4_l2_b32,trotter,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,2562,2562,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,2562,2562,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,2562,2562,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate0.1,0.1,t_count_only,T-count and average supply rate,2562,2562,1.0,0,0.0022,0.0031,1
+trotter_t4_l2_b32,trotter,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),2567,1287,1.9946,0,0.957,0.9907,0
+trotter_t4_l2_b32,trotter,rate0.2,0.2,deps_plus_count,dependencies + T-count,1287,1287,1.0,0,0.0017,0.0023,1
+trotter_t4_l2_b32,trotter,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,1287,1287,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,1287,1287,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,1287,1287,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate0.2,0.2,t_count_only,T-count and average supply rate,1287,1287,1.0,0,0.0017,0.0023,1
+trotter_t4_l2_b32,trotter,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),1034,522,1.9808,0,0.8938,0.9768,0
+trotter_t4_l2_b32,trotter,rate0.5,0.5,deps_plus_count,dependencies + T-count,522,522,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,522,522,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,522,522,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,522,522,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate0.5,0.5,t_count_only,T-count and average supply rate,522,522,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate1,1.0,deps_only,dependencies only (what T-depth sees),523,267,1.9588,0,0.7917,0.9541,0
+trotter_t4_l2_b32,trotter,rate1,1.0,deps_plus_count,dependencies + T-count,267,267,1.0,0,0.0027,0.0037,1
+trotter_t4_l2_b32,trotter,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,267,267,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate1,1.0,sccp,dependencies + arrival timing + buffer,267,267,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,267,267,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate1,1.0,t_count_only,T-count and average supply rate,267,267,1.0,0,0.0027,0.0037,1
+trotter_t4_l2_b32,trotter,rate2,2.0,deps_only,dependencies only (what T-depth sees),267,143,1.8671,0,0.6031,0.9101,0
+trotter_t4_l2_b32,trotter,rate2,2.0,deps_plus_count,dependencies + T-count,143,143,1.0,0,0.0107,0.035,1
+trotter_t4_l2_b32,trotter,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,143,143,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate2,2.0,sccp,dependencies + arrival timing + buffer,143,143,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,143,143,1.0,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate2,2.0,t_count_only,T-count and average supply rate,143,143,1.0,0,0.0107,0.035,1
+trotter_t4_l2_b32,trotter,rate4,4.0,deps_only,dependencies only (what T-depth sees),139,95,1.4632,0,0.4254,0.8273,0
+trotter_t4_l2_b32,trotter,rate4,4.0,deps_plus_count,dependencies + T-count,124,95,1.3053,0,0.0239,0.0526,1
+trotter_t4_l2_b32,trotter,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,128,95,1.3474,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate4,4.0,sccp,dependencies + arrival timing + buffer,96,95,1.0105,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,96,95,1.0105,0,0.0,0.0,1
+trotter_t4_l2_b32,trotter,rate4,4.0,t_count_only,T-count and average supply rate,142,95,1.4947,0,0.1112,0.4789,0
+trotter_t4_l2_b32,trotter,rate8,8.0,deps_only,dependencies only (what T-depth sees),77,63,1.2222,0,0.2768,0.6883,0
+trotter_t4_l2_b32,trotter,rate8,8.0,deps_plus_count,dependencies + T-count,84,63,1.3333,0,0.0536,0.0794,1
+trotter_t4_l2_b32,trotter,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,84,63,1.3333,0,0.011,0.029,1
+trotter_t4_l2_b32,trotter,rate8,8.0,sccp,dependencies + arrival timing + buffer,65,63,1.0317,0,0.011,0.029,1
+trotter_t4_l2_b32,trotter,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,65,63,1.0317,0,0.011,0.029,1
+trotter_t4_l2_b32,trotter,rate8,8.0,t_count_only,T-count and average supply rate,142,63,2.254,0,0.2668,0.7042,0
+trotter_t8_l2_b32,trotter,rate0.1,0.1,deps_only,dependencies only (what T-depth sees),10242,5122,1.9996,0,0.9892,0.9977,0
+trotter_t8_l2_b32,trotter,rate0.1,0.1,deps_plus_count,dependencies + T-count,5122,5122,1.0,0,0.0011,0.0016,1
+trotter_t8_l2_b32,trotter,rate0.1,0.1,deps_plus_throughput,dependencies + arrival timing,5122,5122,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate0.1,0.1,sccp,dependencies + arrival timing + buffer,5122,5122,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate0.1,0.1,sccp_plus,full model with the fluid buffer-loss term,5122,5122,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate0.1,0.1,t_count_only,T-count and average supply rate,5122,5122,1.0,0,0.0011,0.0016,1
+trotter_t8_l2_b32,trotter,rate0.2,0.2,deps_only,dependencies only (what T-depth sees),5127,2567,1.9973,0,0.9785,0.9953,0
+trotter_t8_l2_b32,trotter,rate0.2,0.2,deps_plus_count,dependencies + T-count,2567,2567,1.0,0,0.0008,0.0012,1
+trotter_t8_l2_b32,trotter,rate0.2,0.2,deps_plus_throughput,dependencies + arrival timing,2567,2567,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate0.2,0.2,sccp,dependencies + arrival timing + buffer,2567,2567,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate0.2,0.2,sccp_plus,full model with the fluid buffer-loss term,2567,2567,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate0.2,0.2,t_count_only,T-count and average supply rate,2567,2567,1.0,0,0.0008,0.0012,1
+trotter_t8_l2_b32,trotter,rate0.5,0.5,deps_only,dependencies only (what T-depth sees),2058,1034,1.9903,0,0.9465,0.9883,0
+trotter_t8_l2_b32,trotter,rate0.5,0.5,deps_plus_count,dependencies + T-count,1034,1034,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate0.5,0.5,deps_plus_throughput,dependencies + arrival timing,1034,1034,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate0.5,0.5,sccp,dependencies + arrival timing + buffer,1034,1034,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate0.5,0.5,sccp_plus,full model with the fluid buffer-loss term,1034,1034,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate0.5,0.5,t_count_only,T-count and average supply rate,1034,1034,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate1,1.0,deps_only,dependencies only (what T-depth sees),1035,523,1.979,0,0.894,0.9768,0
+trotter_t8_l2_b32,trotter,rate1,1.0,deps_plus_count,dependencies + T-count,523,523,1.0,0,0.0014,0.0019,1
+trotter_t8_l2_b32,trotter,rate1,1.0,deps_plus_throughput,dependencies + arrival timing,523,523,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate1,1.0,sccp,dependencies + arrival timing + buffer,523,523,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate1,1.0,sccp_plus,full model with the fluid buffer-loss term,523,523,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate1,1.0,t_count_only,T-count and average supply rate,523,523,1.0,0,0.0014,0.0019,1
+trotter_t8_l2_b32,trotter,rate2,2.0,deps_only,dependencies only (what T-depth sees),523,267,1.9588,0,0.7917,0.9541,0
+trotter_t8_l2_b32,trotter,rate2,2.0,deps_plus_count,dependencies + T-count,267,267,1.0,0,0.0027,0.0037,1
+trotter_t8_l2_b32,trotter,rate2,2.0,deps_plus_throughput,dependencies + arrival timing,267,267,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate2,2.0,sccp,dependencies + arrival timing + buffer,267,267,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate2,2.0,sccp_plus,full model with the fluid buffer-loss term,267,267,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate2,2.0,t_count_only,T-count and average supply rate,267,267,1.0,0,0.0027,0.0037,1
+trotter_t8_l2_b32,trotter,rate4,4.0,deps_only,dependencies only (what T-depth sees),267,143,1.8671,0,0.6031,0.9101,0
+trotter_t8_l2_b32,trotter,rate4,4.0,deps_plus_count,dependencies + T-count,143,143,1.0,0,0.0107,0.035,1
+trotter_t8_l2_b32,trotter,rate4,4.0,deps_plus_throughput,dependencies + arrival timing,143,143,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate4,4.0,sccp,dependencies + arrival timing + buffer,143,143,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate4,4.0,sccp_plus,full model with the fluid buffer-loss term,143,143,1.0,0,0.0,0.0,1
+trotter_t8_l2_b32,trotter,rate4,4.0,t_count_only,T-count and average supply rate,143,143,1.0,0,0.0107,0.035,1
+trotter_t8_l2_b32,trotter,rate8,8.0,deps_only,dependencies only (what T-depth sees),141,95,1.4842,0,0.4288,0.8298,0
+trotter_t8_l2_b32,trotter,rate8,8.0,deps_plus_count,dependencies + T-count,130,95,1.3684,0,0.0335,0.0526,1
+trotter_t8_l2_b32,trotter,rate8,8.0,deps_plus_throughput,dependencies + arrival timing,134,95,1.4105,0,0.0097,0.0183,1
+trotter_t8_l2_b32,trotter,rate8,8.0,sccp,dependencies + arrival timing + buffer,125,95,1.3158,0,0.0097,0.0183,1
+trotter_t8_l2_b32,trotter,rate8,8.0,sccp_plus,full model with the fluid buffer-loss term,125,95,1.3158,0,0.0097,0.0183,1
+trotter_t8_l2_b32,trotter,rate8,8.0,t_count_only,T-count and average supply rate,142,95,1.4947,0,0.1209,0.4789,0

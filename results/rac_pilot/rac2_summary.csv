@@ -1,0 +1,8 @@
+regime,rate,cases,exhaustive_cases,regret_min_t_count_median,regret_min_t_depth_median,regret_best_static_median,regret_legacy_smooth_median,regret_local_resource_greedy_median,regret_share_aware_greedy_median,regret_best_uniform_median,regret_resource_aware_median,regret_min_t_count_mean,regret_min_t_depth_mean,regret_best_static_mean,regret_legacy_smooth_mean,regret_local_resource_greedy_mean,regret_share_aware_greedy_mean,regret_best_uniform_mean,regret_resource_aware_mean,regret_resource_aware_p90,regret_resource_aware_max,cases_with_headroom,headroom_captured_median,headroom_captured_mean,ours_beats_strongest_baseline,ours_heterogeneous_rate
+rate0.1,0.1,28,19,1.0,1.9325,1.0,1.9325,1.0,1.0,1.0,1.0,1.0,1.7575,1.0,1.7575,1.0,1.0,1.0,1.0,1.0,1.0,0,nan,nan,0,0.2143
+rate0.2,0.2,28,19,1.0,1.9285,1.0,1.9285,1.0,1.0,1.0,1.0,1.0,1.7528,1.0,1.7528,1.0,1.0,1.0,1.0,1.0,1.0,0,nan,nan,0,0.2143
+rate0.5,0.5,28,19,1.0,1.9169,1.0,1.9169,1.0,1.0,1.0,1.0,1.0,1.7363,1.0,1.7363,1.0,1.0,1.0,1.0,1.0,1.0,0,nan,nan,0,0.2143
+rate1,1.0,28,19,1.0,1.5842,1.0,1.5842,1.0,1.0,1.0,1.0,1.0263,1.5766,1.0251,1.5811,1.0411,1.0,1.0042,1.0031,1.0,1.0372,0,nan,nan,0,0.3214
+rate2,2.0,28,19,1.1936,1.222,1.0369,1.2479,1.1298,1.0,1.0,1.0,1.2292,1.3024,1.0839,1.3125,1.2124,1.017,1.0465,1.0203,1.0741,1.0947,7,1.0,-0.7143,4,0.8214
+rate4,4.0,28,19,1.6628,1.0,1.0,1.0172,1.0172,1.0,1.0,1.0,1.7182,1.1233,1.0813,1.131,1.1033,1.0182,1.0406,1.0073,1.0037,1.1271,3,-1.0,-1.5833,1,0.5
+rate8,8.0,28,19,2.1336,1.0,1.0,1.0059,1.0,1.0,1.0,1.0,2.2935,1.0392,1.0392,1.0452,1.038,1.0036,1.0079,1.0171,1.0138,1.3158,0,nan,nan,0,0.5357

@@ -1,0 +1,13 @@
+program,regime,rate,buffer,policy,profile,heterogeneous,t_count,t_depth,logical_depth,peak_demand,burstiness,ancilla_width,makespan,supply_stall_cycles,overflow,speedup_over_t_depth
+trotter_t4_l2_b32,rate2,2.0,32,min_t_depth,width16x8,0,512,8,24,64,3.0,64,267,255,0,1.0
+trotter_t4_l2_b32,rate2,2.0,32,min_t_count,width1x8,0,256,64,136,4,2.125,4,143,7,0,1.8671
+trotter_t4_l2_b32,rate2,2.0,32,resource_aware,width1x8,0,256,64,136,4,2.125,4,143,7,0,1.8671
+trotter_t4_l2_b32,rate2,2.0,32,reference,width1x8,0,256,64,136,4,2.125,4,143,7,0,1.8671
+qft_q5_t32,rate2,2.0,32,min_t_depth,width16x10,0,640,16,48,64,4.8,64,331,301,0,1.0
+qft_q5_t32,rate2,2.0,32,min_t_count,width1x10,0,320,128,272,4,3.4,4,279,7,190,1.1864
+qft_q5_t32,rate2,2.0,32,resource_aware,"width1x7,width4x2,width8x1",1,376,83,182,8,3.8723,8,209,35,20,1.5837
+qft_q5_t32,rate2,2.0,32,reference,"width1x4,width2x5,width8x1",1,384,79,174,8,3.625,8,203,58,0,1.6305
+reduction_tree_mult_w32_r8,rate4,4.0,32,min_t_depth,blocked4x7,0,1708,48,147,128,11.0164,128,439,417,0,1.0
+reduction_tree_mult_w32_r8,rate4,4.0,32,min_t_count,ripplex7,0,868,186,477,8,4.3963,8,484,7,1004,0.907
+reduction_tree_mult_w32_r8,rate4,4.0,32,resource_aware,"blocked2x1,blocked4x2,ripplex4",1,1228,94,259,96,20.2476,96,348,174,116,1.2615
+reduction_tree_mult_w32_r8,rate4,4.0,32,reference,"blocked4x3,ripplex4",1,1228,94,257,64,13.3941,64,348,174,116,1.2615

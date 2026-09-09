@@ -47,6 +47,53 @@ resource prices. Regime-aware recommendations strongly improve over
 `always_smooth` and capacity-aware fixed policies, and they become more
 competitive when delivery capacity is priced more aggressively.
 
+## Resource-Aware Compilation Go/No-Go Study
+
+A separate, self-contained study lives under `src/ftqc_delivery/rac/`,
+`experiments/rac/`, `results/rac_pilot/` and `figures/rac_pilot/`. It asks a
+different question from the rest of this repository.
+
+Everything above treats the circuit as given and asks how to *schedule* it.
+The go/no-go study leaves the circuit open: a program is a graph of decision
+sites, each site offers several semantically equivalent implementations with
+different T-count, T-depth and demand shape, and the compiler must choose one
+per site. The question is whether choosing by T-depth is wrong often enough,
+and by enough, to justify a new compiler mechanism.
+
+Its conclusion is recorded in `results/rac_pilot/GO_NO_GO_MEMO.md`.
+
+Key components:
+
+- `rac/supply.py`: factories with throughput, production latency, staggering
+  and a hard buffer cap, plus a stochastic variant whose distillations fail
+- `rac/execution.py`: cycle-accurate greedy execution under that supply, and
+  the previous study's static-schedule semantics for comparison
+- `rac/variants.py`, `rac/library.py`, `rac/programs.py`: implementation
+  variants, decision sites, and the pilot programs built from them
+- `rac/cost.py`: the supply-constrained critical path (SCCP), an analytic
+  cost model that never simulates
+- `rac/select.py`: the compilation policies, the greedy baselines, and the
+  exhaustive optimality reference
+- `rac/multiresource.py`: an exploratory extension in which magic states are
+  not fungible, used by the one follow-up direction the study recommends
+
+Run the study in order:
+
+```bash
+PYTHONPATH=src python experiments/rac/rac1_decision_reversal.py
+PYTHONPATH=src python experiments/rac/rac2_headroom.py
+PYTHONPATH=src python experiments/rac/rac3_ablation.py
+PYTHONPATH=src python experiments/rac/rac4_mechanism.py
+PYTHONPATH=src python experiments/rac/rac5_stress.py
+PYTHONPATH=src python experiments/rac/rac6_multiresource_probe.py
+PYTHONPATH=src python experiments/rac/rac7_cost_model_timing.py
+PYTHONPATH=src python experiments/rac/rac_plots.py
+PYTHONPATH=src python experiments/rac/rac_report.py
+```
+
+`rac_report.py` prints every number quoted in the memo, straight from the
+committed tables.
+
 ## Scope
 
 This repository focuses on compiler-level demand shaping and lightweight
