@@ -1,0 +1,489 @@
+kernel,control,setting,capacity_target,ccz_share,t_rate,ccz_rate,buffer,latency,p_success,seed,makespan_uniform_oracle,makespan_best_simple,best_simple_baseline,makespan_global_oracle,oracle_exhaustive,headroom_over_uniform_oracle,headroom_over_best_simple,oracle_heterogeneity,oracle_ccz_share_of_demand
+and_ladder_s2_l2,baseline,two banks,0.25,0.25,0.1818,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,baseline,two banks,0.25,0.5,0.0909,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,baseline,two banks,0.25,0.75,0.0909,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,baseline,two banks,0.5,0.25,0.3636,0.1667,32,0,1.0,0,27,27,uniform_min_teq,24,1,0.1111,0.1111,0.25,0.6
+and_ladder_s2_l2,baseline,two banks,0.5,0.5,0.2727,0.1667,32,0,1.0,0,27,27,uniform_min_teq,25,1,0.0741,0.0741,0.25,0.6
+and_ladder_s2_l2,baseline,two banks,0.5,0.75,0.0909,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,baseline,two banks,1.0,0.25,0.7273,0.1667,32,0,1.0,0,27,25,two_term_descent,22,1,0.1852,0.12,0.25,0.4615
+and_ladder_s2_l2,baseline,two banks,1.0,0.5,0.5455,0.3333,32,0,1.0,0,19,19,uniform_min_teq,19,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,baseline,two banks,1.0,0.75,0.2727,0.3333,32,0,1.0,0,19,19,uniform_min_teq,19,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,buffer,B=-1,0.5,0.5,0.2727,0.1667,-1,0,1.0,0,27,27,uniform_min_teq,25,1,0.0741,0.0741,0.25,0.6
+and_ladder_s2_l2,buffer,B=128,0.5,0.5,0.2727,0.1667,128,0,1.0,0,27,27,uniform_min_teq,25,1,0.0741,0.0741,0.25,0.6
+and_ladder_s2_l2,buffer,B=2,0.5,0.5,0.2727,0.1667,2,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,buffer,B=32,0.5,0.5,0.2727,0.1667,32,0,1.0,0,27,27,uniform_min_teq,25,1,0.0741,0.0741,0.25,0.6
+and_ladder_s2_l2,buffer,B=8,0.5,0.5,0.2727,0.1667,8,0,1.0,0,27,27,uniform_min_teq,25,1,0.0741,0.0741,0.25,0.6
+and_ladder_s2_l2,conversion,CCZ->2T only,0.25,0.25,0.1818,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,CCZ->2T only,0.25,0.5,0.0909,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,CCZ->2T only,0.25,0.75,0.0909,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,CCZ->2T only,0.5,0.25,0.3636,0.1667,32,0,1.0,0,27,27,uniform_min_teq,24,1,0.1111,0.1111,0.25,0.6
+and_ladder_s2_l2,conversion,CCZ->2T only,0.5,0.5,0.2727,0.1667,32,0,1.0,0,27,27,uniform_min_teq,25,1,0.0741,0.0741,0.25,0.6
+and_ladder_s2_l2,conversion,CCZ->2T only,0.5,0.75,0.0909,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,CCZ->2T only,1.0,0.25,0.7273,0.1667,32,0,1.0,0,27,25,two_term_descent,22,1,0.1852,0.12,0.25,0.4615
+and_ladder_s2_l2,conversion,CCZ->2T only,1.0,0.5,0.5455,0.3333,32,0,1.0,0,19,19,uniform_min_teq,19,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,CCZ->2T only,1.0,0.75,0.2727,0.3333,32,0,1.0,0,19,19,uniform_min_teq,19,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,both directions,0.25,0.25,0.1818,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,both directions,0.25,0.5,0.0909,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,both directions,0.25,0.75,0.0909,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,both directions,0.5,0.25,0.3636,0.1667,32,0,1.0,0,27,27,uniform_min_teq,24,1,0.1111,0.1111,0.25,0.6
+and_ladder_s2_l2,conversion,both directions,0.5,0.5,0.2727,0.1667,32,0,1.0,0,27,27,uniform_min_teq,25,1,0.0741,0.0741,0.25,0.6
+and_ladder_s2_l2,conversion,both directions,0.5,0.75,0.0909,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,both directions,1.0,0.25,0.7273,0.1667,32,0,1.0,0,27,25,two_term_descent,22,1,0.1852,0.12,0.25,0.4615
+and_ladder_s2_l2,conversion,both directions,1.0,0.5,0.5455,0.3333,32,0,1.0,0,19,19,uniform_min_teq,19,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,conversion,both directions,1.0,0.75,0.2727,0.3333,32,0,1.0,0,19,19,uniform_min_teq,19,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,failures,p=0.7 seed=0,0.5,0.5,0.1909,0.1167,32,0,0.7,0,27,27,uniform_min_teq,25,1,0.0741,0.0741,0.25,0.6
+and_ladder_s2_l2,failures,p=0.7 seed=1,0.5,0.5,0.1909,0.1167,32,0,0.7,1,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,failures,p=0.7 seed=2,0.5,0.5,0.1909,0.1167,32,0,0.7,2,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2,failures,p=0.9 seed=0,0.5,0.5,0.2455,0.15,32,0,0.9,0,33,32,two_term_descent,30,1,0.0909,0.0625,0.25,0.6
+and_ladder_s2_l2,failures,p=0.9 seed=1,0.5,0.5,0.2455,0.15,32,0,0.9,1,33,32,two_term_descent,30,1,0.0909,0.0625,0.25,0.6
+and_ladder_s2_l2,failures,p=0.9 seed=2,0.5,0.5,0.2455,0.15,32,0,0.9,2,33,33,uniform_min_teq,28,1,0.1515,0.1515,0.25,0.6
+and_ladder_s2_l2,failures,p=1 seed=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,27,27,uniform_min_teq,25,1,0.0741,0.0741,0.25,0.6
+and_ladder_s2_l2,latency,L=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,27,27,uniform_min_teq,25,1,0.0741,0.0741,0.25,0.6
+and_ladder_s2_l2,latency,L=10,0.5,0.5,0.2727,0.1667,32,10,1.0,0,37,37,uniform_min_teq,35,1,0.0541,0.0541,0.25,0.6
+and_ladder_s2_l2,latency,L=200,0.5,0.5,0.2727,0.1667,32,200,1.0,0,227,227,uniform_min_teq,225,1,0.0088,0.0088,0.25,0.6
+and_ladder_s2_l2,latency,L=50,0.5,0.5,0.2727,0.1667,32,50,1.0,0,77,77,uniform_min_teq,75,1,0.026,0.026,0.25,0.6
+and_ladder_s2_l2_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,27,27,uniform_min_teq,27,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,19,19,uniform_min_teq,19,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,19,19,uniform_min_teq,19,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,19,19,uniform_min_teq,19,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,18,18,uniform_min_teq,18,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,18,18,uniform_min_teq,18,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,18,18,uniform_min_teq,18,1,0.0,0.0,0.0,1.0
+and_ladder_s2_l2_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,69,69,uniform_min_teq,69,1,0.0,0.0,0.0,0.0
+and_ladder_s2_l2_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,69,69,uniform_min_teq,69,1,0.0,0.0,0.0,0.0
+and_ladder_s2_l2_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,69,69,uniform_min_teq,69,1,0.0,0.0,0.0,0.0
+and_ladder_s2_l2_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,41,41,uniform_min_teq,41,1,0.0,0.0,0.0,0.0
+and_ladder_s2_l2_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,41,41,uniform_min_teq,41,1,0.0,0.0,0.0,0.0
+and_ladder_s2_l2_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,41,41,uniform_min_teq,41,1,0.0,0.0,0.0,0.0
+and_ladder_s2_l2_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,30,30,uniform_min_teq,30,1,0.0,0.0,0.0,0.0
+and_ladder_s2_l2_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,30,30,uniform_min_teq,30,1,0.0,0.0,0.0,0.0
+and_ladder_s2_l2_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,30,30,uniform_min_teq,30,1,0.0,0.0,0.0,0.0
+heterostage_l3,baseline,two banks,0.25,0.25,0.1818,0.1667,32,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,baseline,two banks,0.25,0.5,0.0909,0.1667,32,0,1.0,0,399,399,min_weighted_count,399,1,0.0,0.0,0.0,1.0
+heterostage_l3,baseline,two banks,0.25,0.75,0.0909,0.1667,32,0,1.0,0,399,399,min_weighted_count,399,1,0.0,0.0,0.0,1.0
+heterostage_l3,baseline,two banks,0.5,0.25,0.3636,0.1667,32,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,baseline,two banks,0.5,0.5,0.2727,0.1667,32,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,baseline,two banks,0.5,0.75,0.0909,0.1667,32,0,1.0,0,399,399,min_weighted_count,399,1,0.0,0.0,0.0,1.0
+heterostage_l3,baseline,two banks,1.0,0.25,0.7273,0.1667,32,0,1.0,0,189,189,uniform_oracle,189,1,0.0,0.0,0.0,0.3827
+heterostage_l3,baseline,two banks,1.0,0.5,0.5455,0.3333,32,0,1.0,0,144,144,uniform_min_teq,144,1,0.0,0.0,0.0,0.697
+heterostage_l3,baseline,two banks,1.0,0.75,0.2727,0.3333,32,0,1.0,0,156,156,uniform_min_teq,156,1,0.0,0.0,0.0,0.697
+heterostage_l3,buffer,B=-1,0.5,0.5,0.2727,0.1667,-1,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,buffer,B=128,0.5,0.5,0.2727,0.1667,128,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,buffer,B=2,0.5,0.5,0.2727,0.1667,2,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,buffer,B=32,0.5,0.5,0.2727,0.1667,32,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,buffer,B=8,0.5,0.5,0.2727,0.1667,8,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,CCZ->2T only,0.25,0.25,0.1818,0.1667,32,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,CCZ->2T only,0.25,0.5,0.0909,0.1667,32,0,1.0,0,321,321,uniform_min_teq,321,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,CCZ->2T only,0.25,0.75,0.0909,0.1667,32,0,1.0,0,321,321,uniform_min_teq,321,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,CCZ->2T only,0.5,0.25,0.3636,0.1667,32,0,1.0,0,241,241,uniform_oracle,241,1,0.0,0.0,0.0,0.3827
+heterostage_l3,conversion,CCZ->2T only,0.5,0.5,0.2727,0.1667,32,0,1.0,0,273,273,uniform_oracle,273,1,0.0,0.0,0.0,0.3827
+heterostage_l3,conversion,CCZ->2T only,0.5,0.75,0.0909,0.1667,32,0,1.0,0,321,321,uniform_min_teq,321,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,CCZ->2T only,1.0,0.25,0.7273,0.1667,32,0,1.0,0,189,189,uniform_oracle,189,1,0.0,0.0,0.0,0.3827
+heterostage_l3,conversion,CCZ->2T only,1.0,0.5,0.5455,0.3333,32,0,1.0,0,144,144,uniform_min_teq,144,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,CCZ->2T only,1.0,0.75,0.2727,0.3333,32,0,1.0,0,152,152,uniform_min_teq,152,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,both directions,0.25,0.25,0.1818,0.1667,32,0,1.0,0,278,278,uniform_min_teq,278,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,both directions,0.25,0.5,0.0909,0.1667,32,0,1.0,0,321,321,uniform_min_teq,321,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,both directions,0.25,0.75,0.0909,0.1667,32,0,1.0,0,321,321,uniform_min_teq,321,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,both directions,0.5,0.25,0.3636,0.1667,32,0,1.0,0,241,241,uniform_oracle,241,1,0.0,0.0,0.0,0.3827
+heterostage_l3,conversion,both directions,0.5,0.5,0.2727,0.1667,32,0,1.0,0,261,261,uniform_min_teq,261,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,both directions,0.5,0.75,0.0909,0.1667,32,0,1.0,0,321,321,uniform_min_teq,321,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,both directions,1.0,0.25,0.7273,0.1667,32,0,1.0,0,180,180,uniform_oracle,180,1,0.0,0.0,0.0,0.3827
+heterostage_l3,conversion,both directions,1.0,0.5,0.5455,0.3333,32,0,1.0,0,136,136,uniform_min_teq,136,1,0.0,0.0,0.0,0.697
+heterostage_l3,conversion,both directions,1.0,0.75,0.2727,0.3333,32,0,1.0,0,152,152,uniform_min_teq,152,1,0.0,0.0,0.0,0.697
+heterostage_l3,failures,p=0.7 seed=0,0.5,0.5,0.1909,0.1167,32,0,0.7,0,333,333,uniform_min_teq,333,1,0.0,0.0,0.0,0.697
+heterostage_l3,failures,p=0.7 seed=1,0.5,0.5,0.1909,0.1167,32,0,0.7,1,381,381,uniform_min_teq,381,1,0.0,0.0,0.0,0.697
+heterostage_l3,failures,p=0.7 seed=2,0.5,0.5,0.1909,0.1167,32,0,0.7,2,417,417,uniform_min_teq,417,1,0.0,0.0,0.0,0.697
+heterostage_l3,failures,p=0.9 seed=0,0.5,0.5,0.2455,0.15,32,0,0.9,0,327,327,uniform_min_teq,327,1,0.0,0.0,0.0,0.697
+heterostage_l3,failures,p=0.9 seed=1,0.5,0.5,0.2455,0.15,32,0,0.9,1,315,315,uniform_min_teq,315,1,0.0,0.0,0.0,0.697
+heterostage_l3,failures,p=0.9 seed=2,0.5,0.5,0.2455,0.15,32,0,0.9,2,315,315,uniform_min_teq,315,1,0.0,0.0,0.0,0.697
+heterostage_l3,failures,p=1 seed=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,latency,L=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,279,279,uniform_min_teq,279,1,0.0,0.0,0.0,0.697
+heterostage_l3,latency,L=10,0.5,0.5,0.2727,0.1667,32,10,1.0,0,289,289,uniform_min_teq,289,1,0.0,0.0,0.0,0.697
+heterostage_l3,latency,L=200,0.5,0.5,0.2727,0.1667,32,200,1.0,0,479,479,uniform_min_teq,479,1,0.0,0.0,0.0,0.697
+heterostage_l3,latency,L=50,0.5,0.5,0.2727,0.1667,32,50,1.0,0,329,329,uniform_min_teq,329,1,0.0,0.0,0.0,0.697
+heterostage_l3_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+heterostage_l3_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+heterostage_l3_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+heterostage_l3_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,204,204,uniform_min_teq,204,1,0.0,0.0,0.0,1.0
+heterostage_l3_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,204,204,uniform_min_teq,204,1,0.0,0.0,0.0,1.0
+heterostage_l3_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,204,204,uniform_min_teq,204,1,0.0,0.0,0.0,1.0
+heterostage_l3_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,139,139,uniform_min_teq,139,1,0.0,0.0,0.0,1.0
+heterostage_l3_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,139,139,uniform_min_teq,139,1,0.0,0.0,0.0,1.0
+heterostage_l3_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,139,139,uniform_min_teq,139,1,0.0,0.0,0.0,1.0
+heterostage_l3_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,830,830,uniform_min_teq,830,1,0.0,0.0,0.0,0.0
+heterostage_l3_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,830,830,uniform_min_teq,830,1,0.0,0.0,0.0,0.0
+heterostage_l3_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,830,830,uniform_min_teq,830,1,0.0,0.0,0.0,0.0
+heterostage_l3_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,421,421,uniform_min_teq,421,1,0.0,0.0,0.0,0.0
+heterostage_l3_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,421,421,uniform_min_teq,421,1,0.0,0.0,0.0,0.0
+heterostage_l3_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,421,421,uniform_min_teq,421,1,0.0,0.0,0.0,0.0
+heterostage_l3_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,236,236,uniform_min_teq,236,1,0.0,0.0,0.0,0.0
+heterostage_l3_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,236,236,uniform_min_teq,236,1,0.0,0.0,0.0,0.0
+heterostage_l3_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,236,236,uniform_min_teq,236,1,0.0,0.0,0.0,0.0
+mixed_w32_c16_l1,baseline,two banks,0.25,0.25,0.1818,0.1667,32,0,1.0,0,363,363,uniform_oracle,363,1,0.0,0.0,0.0,0.697
+mixed_w32_c16_l1,baseline,two banks,0.25,0.5,0.0909,0.1667,32,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1,baseline,two banks,0.25,0.75,0.0909,0.1667,32,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1,baseline,two banks,0.5,0.25,0.3636,0.1667,32,0,1.0,0,285,285,uniform_oracle,285,1,0.0,0.0,0.0,0.3827
+mixed_w32_c16_l1,baseline,two banks,0.5,0.5,0.2727,0.1667,32,0,1.0,0,317,317,uniform_oracle,317,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,baseline,two banks,0.5,0.75,0.0909,0.1667,32,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1,baseline,two banks,1.0,0.25,0.7273,0.1667,32,0,1.0,0,244,244,uniform_oracle,244,1,0.0,0.0,0.0,0.375
+mixed_w32_c16_l1,baseline,two banks,1.0,0.5,0.5455,0.3333,32,0,1.0,0,209,209,uniform_min_teq,209,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1,baseline,two banks,1.0,0.75,0.2727,0.3333,32,0,1.0,0,209,209,uniform_min_teq,209,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1,buffer,B=-1,0.5,0.5,0.2727,0.1667,-1,0,1.0,0,309,309,uniform_oracle,309,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,buffer,B=128,0.5,0.5,0.2727,0.1667,128,0,1.0,0,309,309,uniform_oracle,309,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,buffer,B=2,0.5,0.5,0.2727,0.1667,2,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1,buffer,B=32,0.5,0.5,0.2727,0.1667,32,0,1.0,0,317,317,uniform_oracle,317,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,buffer,B=8,0.5,0.5,0.2727,0.1667,8,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1,conversion,CCZ->2T only,0.25,0.25,0.1818,0.1667,32,0,1.0,0,345,345,uniform_oracle,345,1,0.0,0.0,0.0,0.3827
+mixed_w32_c16_l1,conversion,CCZ->2T only,0.25,0.5,0.0909,0.1667,32,0,1.0,0,367,367,uniform_oracle,367,1,0.0,0.0,0.0,0.697
+mixed_w32_c16_l1,conversion,CCZ->2T only,0.25,0.75,0.0909,0.1667,32,0,1.0,0,367,367,uniform_oracle,367,1,0.0,0.0,0.0,0.697
+mixed_w32_c16_l1,conversion,CCZ->2T only,0.5,0.25,0.3636,0.1667,32,0,1.0,0,315,315,uniform_oracle,315,1,0.0,0.0,0.0,0.3827
+mixed_w32_c16_l1,conversion,CCZ->2T only,0.5,0.5,0.2727,0.1667,32,0,1.0,0,333,333,uniform_oracle,333,1,0.0,0.0,0.0,0.3827
+mixed_w32_c16_l1,conversion,CCZ->2T only,0.5,0.75,0.0909,0.1667,32,0,1.0,0,367,367,uniform_oracle,367,1,0.0,0.0,0.0,0.697
+mixed_w32_c16_l1,conversion,CCZ->2T only,1.0,0.25,0.7273,0.1667,32,0,1.0,0,243,243,uniform_oracle,243,1,0.0,0.0,0.0,0.375
+mixed_w32_c16_l1,conversion,CCZ->2T only,1.0,0.5,0.5455,0.3333,32,0,1.0,0,201,201,uniform_oracle,201,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,conversion,CCZ->2T only,1.0,0.75,0.2727,0.3333,32,0,1.0,0,209,209,uniform_min_teq,209,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1,conversion,both directions,0.25,0.25,0.1818,0.1667,32,0,1.0,0,342,342,uniform_oracle,342,1,0.0,0.0,0.0,0.697
+mixed_w32_c16_l1,conversion,both directions,0.25,0.5,0.0909,0.1667,32,0,1.0,0,362,362,uniform_oracle,362,1,0.0,0.0,0.0,0.697
+mixed_w32_c16_l1,conversion,both directions,0.25,0.75,0.0909,0.1667,32,0,1.0,0,362,362,uniform_oracle,362,1,0.0,0.0,0.0,0.697
+mixed_w32_c16_l1,conversion,both directions,0.5,0.25,0.3636,0.1667,32,0,1.0,0,299,299,uniform_oracle,299,1,0.0,0.0,0.0,0.3827
+mixed_w32_c16_l1,conversion,both directions,0.5,0.5,0.2727,0.1667,32,0,1.0,0,327,327,uniform_oracle,327,1,0.0,0.0,0.0,0.697
+mixed_w32_c16_l1,conversion,both directions,0.5,0.75,0.0909,0.1667,32,0,1.0,0,362,362,uniform_oracle,362,1,0.0,0.0,0.0,0.697
+mixed_w32_c16_l1,conversion,both directions,1.0,0.25,0.7273,0.1667,32,0,1.0,0,237,237,uniform_oracle,237,1,0.0,0.0,0.0,0.375
+mixed_w32_c16_l1,conversion,both directions,1.0,0.5,0.5455,0.3333,32,0,1.0,0,201,201,uniform_min_teq,201,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1,conversion,both directions,1.0,0.75,0.2727,0.3333,32,0,1.0,0,201,201,uniform_min_teq,201,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1,failures,p=0.7 seed=0,0.5,0.5,0.1909,0.1167,32,0,0.7,0,401,401,uniform_oracle,401,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,failures,p=0.7 seed=1,0.5,0.5,0.1909,0.1167,32,0,0.7,1,459,459,uniform_oracle,459,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,failures,p=0.7 seed=2,0.5,0.5,0.1909,0.1167,32,0,0.7,2,465,465,uniform_oracle,465,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,failures,p=0.9 seed=0,0.5,0.5,0.2455,0.15,32,0,0.9,0,357,357,uniform_oracle,357,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,failures,p=0.9 seed=1,0.5,0.5,0.2455,0.15,32,0,0.9,1,357,357,uniform_oracle,357,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,failures,p=0.9 seed=2,0.5,0.5,0.2455,0.15,32,0,0.9,2,351,351,uniform_oracle,351,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,failures,p=1 seed=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,317,317,uniform_oracle,317,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,latency,L=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,317,317,uniform_oracle,317,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,latency,L=10,0.5,0.5,0.2727,0.1667,32,10,1.0,0,327,327,uniform_oracle,327,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,latency,L=200,0.5,0.5,0.2727,0.1667,32,200,1.0,0,517,517,uniform_oracle,517,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1,latency,L=50,0.5,0.5,0.2727,0.1667,32,50,1.0,0,367,367,uniform_oracle,367,1,0.0,0.0,0.0,0.6296
+mixed_w32_c16_l1_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,399,399,uniform_min_teq,399,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,209,209,uniform_min_teq,209,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,209,209,uniform_min_teq,209,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,209,209,uniform_min_teq,209,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,183,183,uniform_min_teq,183,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,183,183,uniform_min_teq,183,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,183,183,uniform_min_teq,183,1,0.0,0.0,0.0,1.0
+mixed_w32_c16_l1_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,830,830,uniform_min_teq,830,1,0.0,0.0,0.0,0.0
+mixed_w32_c16_l1_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,830,830,uniform_min_teq,830,1,0.0,0.0,0.0,0.0
+mixed_w32_c16_l1_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,830,830,uniform_min_teq,830,1,0.0,0.0,0.0,0.0
+mixed_w32_c16_l1_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,433,433,uniform_min_teq,433,1,0.0,0.0,0.0,0.0
+mixed_w32_c16_l1_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,433,433,uniform_min_teq,433,1,0.0,0.0,0.0,0.0
+mixed_w32_c16_l1_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,433,433,uniform_min_teq,433,1,0.0,0.0,0.0,0.0
+mixed_w32_c16_l1_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,289,289,uniform_min_teq,289,1,0.0,0.0,0.0,0.0
+mixed_w32_c16_l1_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,289,289,uniform_min_teq,289,1,0.0,0.0,0.0,0.0
+mixed_w32_c16_l1_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,289,289,uniform_min_teq,289,1,0.0,0.0,0.0,0.0
+multiplier_w32_r4,baseline,two banks,0.25,0.25,0.1818,0.1667,32,0,1.0,0,561,471,two_term_descent,471,1,0.1604,0.0,0.3333,0.7222
+multiplier_w32_r4,baseline,two banks,0.25,0.5,0.0909,0.1667,32,0,1.0,0,561,561,uniform_min_teq,561,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4,baseline,two banks,0.25,0.75,0.0909,0.1667,32,0,1.0,0,561,561,uniform_min_teq,561,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4,baseline,two banks,0.5,0.25,0.3636,0.1667,32,0,1.0,0,509,449,two_term_descent,412,1,0.1906,0.0824,0.3333,0.5122
+multiplier_w32_r4,baseline,two banks,0.5,0.5,0.2727,0.1667,32,0,1.0,0,561,453,two_term_descent,453,1,0.1925,0.0,0.3333,0.5122
+multiplier_w32_r4,baseline,two banks,0.5,0.75,0.0909,0.1667,32,0,1.0,0,561,561,uniform_min_teq,561,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4,baseline,two banks,1.0,0.25,0.7273,0.1667,32,0,1.0,0,322,322,uniform_oracle,316,1,0.0186,0.0186,0.6667,0.3381
+multiplier_w32_r4,baseline,two banks,1.0,0.5,0.5455,0.3333,32,0,1.0,0,289,289,uniform_min_teq,246,1,0.1488,0.1488,0.3333,0.7222
+multiplier_w32_r4,baseline,two banks,1.0,0.75,0.2727,0.3333,32,0,1.0,0,289,289,uniform_min_teq,289,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4,buffer,B=-1,0.5,0.5,0.2727,0.1667,-1,0,1.0,0,561,453,two_term_descent,453,1,0.1925,0.0,0.3333,0.5122
+multiplier_w32_r4,buffer,B=128,0.5,0.5,0.2727,0.1667,128,0,1.0,0,561,453,two_term_descent,453,1,0.1925,0.0,0.3333,0.5122
+multiplier_w32_r4,buffer,B=2,0.5,0.5,0.2727,0.1667,2,0,1.0,0,561,508,two_term_descent,471,1,0.1604,0.0728,0.3333,0.7222
+multiplier_w32_r4,buffer,B=32,0.5,0.5,0.2727,0.1667,32,0,1.0,0,561,453,two_term_descent,453,1,0.1925,0.0,0.3333,0.5122
+multiplier_w32_r4,buffer,B=8,0.5,0.5,0.2727,0.1667,8,0,1.0,0,561,486,two_term_descent,471,1,0.1604,0.0309,0.3333,0.7222
+multiplier_w32_r4,conversion,CCZ->2T only,0.25,0.25,0.1818,0.1667,32,0,1.0,0,543,495,two_term_descent,484,1,0.1087,0.0222,0.3333,0.5122
+multiplier_w32_r4,conversion,CCZ->2T only,0.25,0.5,0.0909,0.1667,32,0,1.0,0,561,561,uniform_min_teq,519,1,0.0749,0.0749,0.3333,0.7222
+multiplier_w32_r4,conversion,CCZ->2T only,0.25,0.75,0.0909,0.1667,32,0,1.0,0,561,561,uniform_min_teq,519,1,0.0749,0.0749,0.3333,0.7222
+multiplier_w32_r4,conversion,CCZ->2T only,0.5,0.25,0.3636,0.1667,32,0,1.0,0,409,409,uniform_oracle,409,1,0.0,0.0,0.0,0.3478
+multiplier_w32_r4,conversion,CCZ->2T only,0.5,0.5,0.2727,0.1667,32,0,1.0,0,465,420,two_term_descent,420,1,0.0968,0.0,0.3333,0.5122
+multiplier_w32_r4,conversion,CCZ->2T only,0.5,0.75,0.0909,0.1667,32,0,1.0,0,561,561,uniform_min_teq,519,1,0.0749,0.0749,0.3333,0.7222
+multiplier_w32_r4,conversion,CCZ->2T only,1.0,0.25,0.7273,0.1667,32,0,1.0,0,328,328,uniform_oracle,316,1,0.0366,0.0366,0.6667,0.3381
+multiplier_w32_r4,conversion,CCZ->2T only,1.0,0.5,0.5455,0.3333,32,0,1.0,0,289,262,two_term_descent,246,1,0.1488,0.0611,0.3333,0.7222
+multiplier_w32_r4,conversion,CCZ->2T only,1.0,0.75,0.2727,0.3333,32,0,1.0,0,289,289,uniform_min_teq,289,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4,conversion,both directions,0.25,0.25,0.1818,0.1667,32,0,1.0,0,498,476,two_term_descent,476,1,0.0442,0.0,0.3333,0.7222
+multiplier_w32_r4,conversion,both directions,0.25,0.5,0.0909,0.1667,32,0,1.0,0,531,531,uniform_min_teq,531,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4,conversion,both directions,0.25,0.75,0.0909,0.1667,32,0,1.0,0,531,531,uniform_min_teq,531,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4,conversion,both directions,0.5,0.25,0.3636,0.1667,32,0,1.0,0,409,409,uniform_oracle,407,1,0.0049,0.0049,0.3333,0.5122
+multiplier_w32_r4,conversion,both directions,0.5,0.5,0.2727,0.1667,32,0,1.0,0,465,425,two_term_descent,425,1,0.086,0.0,0.3333,0.5122
+multiplier_w32_r4,conversion,both directions,0.5,0.75,0.0909,0.1667,32,0,1.0,0,531,531,uniform_min_teq,531,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4,conversion,both directions,1.0,0.25,0.7273,0.1667,32,0,1.0,0,328,328,uniform_oracle,316,1,0.0366,0.0366,0.3333,0.5
+multiplier_w32_r4,conversion,both directions,1.0,0.5,0.5455,0.3333,32,0,1.0,0,261,261,uniform_min_teq,251,1,0.0383,0.0383,0.3333,0.7222
+multiplier_w32_r4,conversion,both directions,1.0,0.75,0.2727,0.3333,32,0,1.0,0,274,274,uniform_min_teq,274,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4,failures,p=0.7 seed=0,0.5,0.5,0.1909,0.1167,32,0,0.7,0,747,615,two_term_descent,615,1,0.1767,0.0,0.3333,0.7222
+multiplier_w32_r4,failures,p=0.7 seed=1,0.5,0.5,0.1909,0.1167,32,0,0.7,1,819,680,two_term_descent,675,1,0.1758,0.0074,0.3333,0.7222
+multiplier_w32_r4,failures,p=0.7 seed=2,0.5,0.5,0.1909,0.1167,32,0,0.7,2,819,596,two_term_descent,596,1,0.2723,0.0,0.3333,0.5122
+multiplier_w32_r4,failures,p=0.9 seed=0,0.5,0.5,0.2455,0.15,32,0,0.9,0,627,486,two_term_descent,486,1,0.2249,0.0,0.3333,0.5122
+multiplier_w32_r4,failures,p=0.9 seed=1,0.5,0.5,0.2455,0.15,32,0,0.9,1,645,519,two_term_descent,519,1,0.1953,0.0,0.3333,0.5122
+multiplier_w32_r4,failures,p=0.9 seed=2,0.5,0.5,0.2455,0.15,32,0,0.9,2,633,482,two_term_descent,482,1,0.2385,0.0,0.3333,0.5122
+multiplier_w32_r4,failures,p=1 seed=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,561,453,two_term_descent,453,1,0.1925,0.0,0.3333,0.5122
+multiplier_w32_r4,latency,L=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,561,453,two_term_descent,453,1,0.1925,0.0,0.3333,0.5122
+multiplier_w32_r4,latency,L=10,0.5,0.5,0.2727,0.1667,32,10,1.0,0,571,463,two_term_descent,463,1,0.1891,0.0,0.3333,0.5122
+multiplier_w32_r4,latency,L=200,0.5,0.5,0.2727,0.1667,32,200,1.0,0,761,653,two_term_descent,653,1,0.1419,0.0,0.3333,0.5122
+multiplier_w32_r4,latency,L=50,0.5,0.5,0.2727,0.1667,32,50,1.0,0,611,503,two_term_descent,503,1,0.1768,0.0,0.3333,0.5122
+multiplier_w32_r4_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,561,561,uniform_min_teq,561,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,561,561,uniform_min_teq,561,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,561,561,uniform_min_teq,561,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,289,289,uniform_min_teq,289,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,289,289,uniform_min_teq,289,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,289,289,uniform_min_teq,289,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,228,228,uniform_min_teq,228,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,228,228,uniform_min_teq,228,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,228,228,uniform_min_teq,228,1,0.0,0.0,0.0,1.0
+multiplier_w32_r4_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,1374,1374,uniform_min_teq,1374,1,0.0,0.0,0.0,0.0
+multiplier_w32_r4_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,1374,1374,uniform_min_teq,1374,1,0.0,0.0,0.0,0.0
+multiplier_w32_r4_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,1374,1374,uniform_min_teq,1374,1,0.0,0.0,0.0,0.0
+multiplier_w32_r4_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,694,694,uniform_min_teq,694,1,0.0,0.0,0.0,0.0
+multiplier_w32_r4_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,694,694,uniform_min_teq,694,1,0.0,0.0,0.0,0.0
+multiplier_w32_r4_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,694,694,uniform_min_teq,694,1,0.0,0.0,0.0,0.0
+multiplier_w32_r4_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,420,420,uniform_min_teq,420,1,0.0,0.0,0.0,0.0
+multiplier_w32_r4_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,420,420,uniform_min_teq,420,1,0.0,0.0,0.0,0.0
+multiplier_w32_r4_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,420,420,uniform_min_teq,420,1,0.0,0.0,0.0,0.0
+oracle_bank_c16_l4,baseline,two banks,0.25,0.25,0.1818,0.1667,32,0,1.0,0,363,338,two_term_descent,338,1,0.0689,0.0,0.25,0.6
+oracle_bank_c16_l4,baseline,two banks,0.25,0.5,0.0909,0.1667,32,0,1.0,0,363,363,uniform_min_teq,363,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4,baseline,two banks,0.25,0.75,0.0909,0.1667,32,0,1.0,0,363,363,uniform_min_teq,363,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4,baseline,two banks,0.5,0.25,0.3636,0.1667,32,0,1.0,0,363,273,two_term_descent,273,1,0.2479,0.0,0.25,0.6
+oracle_bank_c16_l4,baseline,two banks,0.5,0.5,0.2727,0.1667,32,0,1.0,0,363,273,two_term_descent,273,1,0.2479,0.0,0.25,0.6
+oracle_bank_c16_l4,baseline,two banks,0.5,0.75,0.0909,0.1667,32,0,1.0,0,363,363,uniform_min_teq,363,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4,baseline,two banks,1.0,0.25,0.7273,0.1667,32,0,1.0,0,342,183,two_term_descent,183,1,0.4649,0.0,0.5,0.3333
+oracle_bank_c16_l4,baseline,two banks,1.0,0.5,0.5455,0.3333,32,0,1.0,0,186,141,two_term_descent,141,1,0.2419,0.0,0.25,0.6
+oracle_bank_c16_l4,baseline,two banks,1.0,0.75,0.2727,0.3333,32,0,1.0,0,186,186,uniform_min_teq,186,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4,buffer,B=-1,0.5,0.5,0.2727,0.1667,-1,0,1.0,0,363,273,two_term_descent,273,1,0.2479,0.0,0.25,0.6
+oracle_bank_c16_l4,buffer,B=128,0.5,0.5,0.2727,0.1667,128,0,1.0,0,363,273,two_term_descent,273,1,0.2479,0.0,0.25,0.6
+oracle_bank_c16_l4,buffer,B=2,0.5,0.5,0.2727,0.1667,2,0,1.0,0,363,273,two_term_descent,273,1,0.2479,0.0,0.25,0.6
+oracle_bank_c16_l4,buffer,B=32,0.5,0.5,0.2727,0.1667,32,0,1.0,0,363,273,two_term_descent,273,1,0.2479,0.0,0.25,0.6
+oracle_bank_c16_l4,buffer,B=8,0.5,0.5,0.2727,0.1667,8,0,1.0,0,363,273,two_term_descent,273,1,0.2479,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,CCZ->2T only,0.25,0.25,0.1818,0.1667,32,0,1.0,0,363,300,two_term_descent,300,1,0.1736,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,CCZ->2T only,0.25,0.5,0.0909,0.1667,32,0,1.0,0,363,360,proportional_split,360,1,0.0083,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,CCZ->2T only,0.25,0.75,0.0909,0.1667,32,0,1.0,0,363,360,proportional_split,360,1,0.0083,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,CCZ->2T only,0.5,0.25,0.3636,0.1667,32,0,1.0,0,353,269,proportional_split,269,1,0.238,0.0,0.5,0.3333
+oracle_bank_c16_l4,conversion,CCZ->2T only,0.5,0.5,0.2727,0.1667,32,0,1.0,0,363,273,two_term_descent,273,1,0.2479,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,CCZ->2T only,0.5,0.75,0.0909,0.1667,32,0,1.0,0,363,360,proportional_split,360,1,0.0083,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,CCZ->2T only,1.0,0.25,0.7273,0.1667,32,0,1.0,0,238,183,two_term_descent,183,1,0.2311,0.0,0.5,0.3333
+oracle_bank_c16_l4,conversion,CCZ->2T only,1.0,0.5,0.5455,0.3333,32,0,1.0,0,186,141,two_term_descent,141,1,0.2419,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,CCZ->2T only,1.0,0.75,0.2727,0.3333,32,0,1.0,0,186,181,proportional_split,175,1,0.0591,0.0331,0.25,0.6
+oracle_bank_c16_l4,conversion,both directions,0.25,0.25,0.1818,0.1667,32,0,1.0,0,322,300,two_term_descent,300,1,0.0683,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,both directions,0.25,0.5,0.0909,0.1667,32,0,1.0,0,345,345,uniform_min_teq,345,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4,conversion,both directions,0.25,0.75,0.0909,0.1667,32,0,1.0,0,345,345,uniform_min_teq,345,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4,conversion,both directions,0.5,0.25,0.3636,0.1667,32,0,1.0,0,291,255,two_term_descent,255,1,0.1237,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,both directions,0.5,0.5,0.2727,0.1667,32,0,1.0,0,309,267,two_term_descent,267,1,0.1359,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,both directions,0.5,0.75,0.0909,0.1667,32,0,1.0,0,345,345,uniform_min_teq,345,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4,conversion,both directions,1.0,0.25,0.7273,0.1667,32,0,1.0,0,238,183,two_term_descent,183,1,0.2311,0.0,0.5,0.3333
+oracle_bank_c16_l4,conversion,both directions,1.0,0.5,0.5455,0.3333,32,0,1.0,0,159,141,two_term_descent,141,1,0.1132,0.0,0.25,0.6
+oracle_bank_c16_l4,conversion,both directions,1.0,0.75,0.2727,0.3333,32,0,1.0,0,171,171,uniform_min_teq,171,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4,failures,p=0.7 seed=0,0.5,0.5,0.1909,0.1167,32,0,0.7,0,483,327,two_term_descent,327,1,0.323,0.0,0.25,0.6
+oracle_bank_c16_l4,failures,p=0.7 seed=1,0.5,0.5,0.1909,0.1167,32,0,0.7,1,525,375,two_term_descent,375,1,0.2857,0.0,0.25,0.6
+oracle_bank_c16_l4,failures,p=0.7 seed=2,0.5,0.5,0.1909,0.1167,32,0,0.7,2,537,399,two_term_descent,399,1,0.257,0.0,0.25,0.6
+oracle_bank_c16_l4,failures,p=0.9 seed=0,0.5,0.5,0.2455,0.15,32,0,0.9,0,411,321,two_term_descent,321,1,0.219,0.0,0.25,0.6
+oracle_bank_c16_l4,failures,p=0.9 seed=1,0.5,0.5,0.2455,0.15,32,0,0.9,1,423,309,two_term_descent,309,1,0.2695,0.0,0.25,0.6
+oracle_bank_c16_l4,failures,p=0.9 seed=2,0.5,0.5,0.2455,0.15,32,0,0.9,2,423,309,two_term_descent,309,1,0.2695,0.0,0.25,0.6
+oracle_bank_c16_l4,failures,p=1 seed=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,363,273,two_term_descent,273,1,0.2479,0.0,0.25,0.6
+oracle_bank_c16_l4,latency,L=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,363,273,two_term_descent,273,1,0.2479,0.0,0.25,0.6
+oracle_bank_c16_l4,latency,L=10,0.5,0.5,0.2727,0.1667,32,10,1.0,0,373,283,two_term_descent,283,1,0.2413,0.0,0.25,0.6
+oracle_bank_c16_l4,latency,L=200,0.5,0.5,0.2727,0.1667,32,200,1.0,0,563,473,two_term_descent,473,1,0.1599,0.0,0.25,0.6
+oracle_bank_c16_l4,latency,L=50,0.5,0.5,0.2727,0.1667,32,50,1.0,0,413,323,two_term_descent,323,1,0.2179,0.0,0.25,0.6
+oracle_bank_c16_l4_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,363,363,uniform_min_teq,363,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,363,363,uniform_min_teq,363,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,363,363,uniform_min_teq,363,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,186,186,uniform_min_teq,186,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,186,186,uniform_min_teq,186,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,186,186,uniform_min_teq,186,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,127,127,uniform_min_teq,127,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,127,127,uniform_min_teq,127,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,127,127,uniform_min_teq,127,1,0.0,0.0,0.0,1.0
+oracle_bank_c16_l4_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,890,890,uniform_min_teq,890,1,0.0,0.0,0.0,0.0
+oracle_bank_c16_l4_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,890,890,uniform_min_teq,890,1,0.0,0.0,0.0,0.0
+oracle_bank_c16_l4_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,890,890,uniform_min_teq,890,1,0.0,0.0,0.0,0.0
+oracle_bank_c16_l4_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,452,452,uniform_min_teq,452,1,0.0,0.0,0.0,0.0
+oracle_bank_c16_l4_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,452,452,uniform_min_teq,452,1,0.0,0.0,0.0,0.0
+oracle_bank_c16_l4_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,452,452,uniform_min_teq,452,1,0.0,0.0,0.0,0.0
+oracle_bank_c16_l4_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,253,253,uniform_min_teq,253,1,0.0,0.0,0.0,0.0
+oracle_bank_c16_l4_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,253,253,uniform_min_teq,253,1,0.0,0.0,0.0,0.0
+oracle_bank_c16_l4_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,253,253,uniform_min_teq,253,1,0.0,0.0,0.0,0.0
+qft_q4_b10,baseline,two banks,0.25,0.25,0.1818,0.1667,32,0,1.0,0,723,511,proportional_split,511,1,0.2932,0.0,0.3333,0.6667
+qft_q4_b10,baseline,two banks,0.25,0.5,0.0909,0.1667,32,0,1.0,0,723,615,two_term_descent,615,0,0.1494,0.0,0.1667,0.8333
+qft_q4_b10,baseline,two banks,0.25,0.75,0.0909,0.1667,32,0,1.0,0,723,615,two_term_descent,615,0,0.1494,0.0,0.1667,0.8333
+qft_q4_b10,baseline,two banks,0.5,0.25,0.3636,0.1667,32,0,1.0,0,670,450,proportional_split,404,1,0.397,0.1022,0.5,0.5
+qft_q4_b10,baseline,two banks,0.5,0.5,0.2727,0.1667,32,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+qft_q4_b10,baseline,two banks,0.5,0.75,0.0909,0.1667,32,0,1.0,0,723,615,two_term_descent,615,0,0.1494,0.0,0.1667,0.8333
+qft_q4_b10,baseline,two banks,1.0,0.25,0.7273,0.1667,32,0,1.0,0,370,324,two_term_descent,295,1,0.2027,0.0895,0.3333,0.3333
+qft_q4_b10,baseline,two banks,1.0,0.5,0.5455,0.3333,32,0,1.0,0,370,274,proportional_split,274,1,0.2595,0.0,0.3333,0.6667
+qft_q4_b10,baseline,two banks,1.0,0.75,0.2727,0.3333,32,0,1.0,0,370,330,two_term_descent,310,1,0.1622,0.0606,0.1667,0.8333
+qft_q4_b10,buffer,B=-1,0.5,0.5,0.2727,0.1667,-1,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+qft_q4_b10,buffer,B=128,0.5,0.5,0.2727,0.1667,128,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+qft_q4_b10,buffer,B=2,0.5,0.5,0.2727,0.1667,2,0,1.0,0,723,501,proportional_split,501,0,0.3071,0.0,0.3333,0.6667
+qft_q4_b10,buffer,B=32,0.5,0.5,0.2727,0.1667,32,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+qft_q4_b10,buffer,B=8,0.5,0.5,0.2727,0.1667,8,0,1.0,0,723,483,proportional_split,483,1,0.332,0.0,0.3333,0.6667
+qft_q4_b10,conversion,CCZ->2T only,0.25,0.25,0.1818,0.1667,32,0,1.0,0,490,490,uniform_oracle,490,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,CCZ->2T only,0.25,0.5,0.0909,0.1667,32,0,1.0,0,578,578,uniform_oracle,578,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,CCZ->2T only,0.25,0.75,0.0909,0.1667,32,0,1.0,0,578,578,uniform_oracle,578,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,CCZ->2T only,0.5,0.25,0.3636,0.1667,32,0,1.0,0,383,383,min_weighted_count,383,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,CCZ->2T only,0.5,0.5,0.2727,0.1667,32,0,1.0,0,431,431,uniform_oracle,431,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,CCZ->2T only,0.5,0.75,0.0909,0.1667,32,0,1.0,0,578,578,uniform_oracle,578,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,CCZ->2T only,1.0,0.25,0.7273,0.1667,32,0,1.0,0,297,297,min_weighted_count,285,1,0.0404,0.0404,0.1667,0.1667
+qft_q4_b10,conversion,CCZ->2T only,1.0,0.5,0.5455,0.3333,32,0,1.0,0,291,271,share_aware_greedy,262,1,0.0997,0.0332,0.3333,0.3333
+qft_q4_b10,conversion,CCZ->2T only,1.0,0.75,0.2727,0.3333,32,0,1.0,0,331,298,proportional_split,298,1,0.0997,0.0,0.3333,0.6667
+qft_q4_b10,conversion,both directions,0.25,0.25,0.1818,0.1667,32,0,1.0,0,490,490,uniform_oracle,490,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,both directions,0.25,0.5,0.0909,0.1667,32,0,1.0,0,578,578,uniform_oracle,578,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,both directions,0.25,0.75,0.0909,0.1667,32,0,1.0,0,578,578,uniform_oracle,578,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,both directions,0.5,0.25,0.3636,0.1667,32,0,1.0,0,383,383,min_weighted_count,383,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,both directions,0.5,0.5,0.2727,0.1667,32,0,1.0,0,431,431,uniform_oracle,431,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,both directions,0.5,0.75,0.0909,0.1667,32,0,1.0,0,578,578,uniform_oracle,578,1,0.0,0.0,0.0,0.0
+qft_q4_b10,conversion,both directions,1.0,0.25,0.7273,0.1667,32,0,1.0,0,297,297,min_weighted_count,280,1,0.0572,0.0572,0.1667,0.1667
+qft_q4_b10,conversion,both directions,1.0,0.5,0.5455,0.3333,32,0,1.0,0,291,269,proportional_split,262,1,0.0997,0.026,0.3333,0.3333
+qft_q4_b10,conversion,both directions,1.0,0.75,0.2727,0.3333,32,0,1.0,0,331,298,proportional_split,298,1,0.0997,0.0,0.3333,0.6667
+qft_q4_b10,failures,p=0.7 seed=0,0.5,0.5,0.1909,0.1167,32,0,0.7,0,981,639,proportional_split,636,1,0.3517,0.0047,0.5,0.5
+qft_q4_b10,failures,p=0.7 seed=1,0.5,0.5,0.1909,0.1167,32,0,0.7,1,1113,687,proportional_split,676,1,0.3926,0.016,0.5,0.5
+qft_q4_b10,failures,p=0.7 seed=2,0.5,0.5,0.1909,0.1167,32,0,0.7,2,1041,693,proportional_split,621,1,0.4035,0.1039,0.5,0.5
+qft_q4_b10,failures,p=0.9 seed=0,0.5,0.5,0.2455,0.15,32,0,0.9,0,807,537,proportional_split,495,1,0.3866,0.0782,0.5,0.5
+qft_q4_b10,failures,p=0.9 seed=1,0.5,0.5,0.2455,0.15,32,0,0.9,1,819,549,proportional_split,515,1,0.3712,0.0619,0.5,0.5
+qft_q4_b10,failures,p=0.9 seed=2,0.5,0.5,0.2455,0.15,32,0,0.9,2,801,555,proportional_split,507,1,0.367,0.0865,0.5,0.5
+qft_q4_b10,failures,p=1 seed=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+qft_q4_b10,latency,L=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+qft_q4_b10,latency,L=10,0.5,0.5,0.2727,0.1667,32,10,1.0,0,733,493,proportional_split,459,0,0.3738,0.069,0.5,0.5
+qft_q4_b10,latency,L=200,0.5,0.5,0.2727,0.1667,32,200,1.0,0,923,683,proportional_split,649,1,0.2969,0.0498,0.5,0.5
+qft_q4_b10,latency,L=50,0.5,0.5,0.2727,0.1667,32,50,1.0,0,773,533,proportional_split,499,1,0.3545,0.0638,0.5,0.5
+qft_q4_b10_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,723,723,uniform_min_teq,723,1,0.0,0.0,0.0,1.0
+qft_q4_b10_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,723,723,uniform_min_teq,723,1,0.0,0.0,0.0,1.0
+qft_q4_b10_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,723,723,uniform_min_teq,723,1,0.0,0.0,0.0,1.0
+qft_q4_b10_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,370,370,uniform_min_teq,370,1,0.0,0.0,0.0,1.0
+qft_q4_b10_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,370,370,uniform_min_teq,370,1,0.0,0.0,0.0,1.0
+qft_q4_b10_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,370,370,uniform_min_teq,370,1,0.0,0.0,0.0,1.0
+qft_q4_b10_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,271,271,uniform_min_teq,271,1,0.0,0.0,0.0,1.0
+qft_q4_b10_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,271,271,uniform_min_teq,271,1,0.0,0.0,0.0,1.0
+qft_q4_b10_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,271,271,uniform_min_teq,271,1,0.0,0.0,0.0,1.0
+qft_q4_b10_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,889,889,uniform_min_teq,889,1,0.0,0.0,0.0,0.0
+qft_q4_b10_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,889,889,uniform_min_teq,889,1,0.0,0.0,0.0,0.0
+qft_q4_b10_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,889,889,uniform_min_teq,889,1,0.0,0.0,0.0,0.0
+qft_q4_b10_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,461,461,uniform_min_teq,461,1,0.0,0.0,0.0,0.0
+qft_q4_b10_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,461,461,uniform_min_teq,461,1,0.0,0.0,0.0,0.0
+qft_q4_b10_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,461,461,uniform_min_teq,461,1,0.0,0.0,0.0,0.0
+qft_q4_b10_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,300,300,uniform_min_teq,300,1,0.0,0.0,0.0,0.0
+qft_q4_b10_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,300,300,uniform_min_teq,300,1,0.0,0.0,0.0,0.0
+qft_q4_b10_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,300,300,uniform_min_teq,300,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,baseline,two banks,0.25,0.25,0.1818,0.1667,32,0,1.0,0,483,363,two_term_descent,363,1,0.2484,0.0,0.25,0.75
+trotter_t2_l2_b10,baseline,two banks,0.25,0.5,0.0909,0.1667,32,0,1.0,0,483,442,two_term_descent,442,1,0.0849,0.0,0.25,0.75
+trotter_t2_l2_b10,baseline,two banks,0.25,0.75,0.0909,0.1667,32,0,1.0,0,483,442,two_term_descent,442,1,0.0849,0.0,0.25,0.75
+trotter_t2_l2_b10,baseline,two banks,0.5,0.25,0.3636,0.1667,32,0,1.0,0,450,243,proportional_split,243,1,0.46,0.0,0.5,0.5
+trotter_t2_l2_b10,baseline,two banks,0.5,0.5,0.2727,0.1667,32,0,1.0,0,483,302,proportional_split,302,1,0.3747,0.0,0.5,0.5
+trotter_t2_l2_b10,baseline,two banks,0.5,0.75,0.0909,0.1667,32,0,1.0,0,483,442,two_term_descent,442,1,0.0849,0.0,0.25,0.75
+trotter_t2_l2_b10,baseline,two banks,1.0,0.25,0.7273,0.1667,32,0,1.0,0,231,207,two_term_descent,205,1,0.1126,0.0097,0.25,0.25
+trotter_t2_l2_b10,baseline,two banks,1.0,0.5,0.5455,0.3333,32,0,1.0,0,246,175,proportional_split,175,1,0.2886,0.0,0.5,0.5
+trotter_t2_l2_b10,baseline,two banks,1.0,0.75,0.2727,0.3333,32,0,1.0,0,246,220,two_term_descent,210,1,0.1463,0.0455,0.25,0.75
+trotter_t2_l2_b10,buffer,B=-1,0.5,0.5,0.2727,0.1667,-1,0,1.0,0,483,302,proportional_split,302,1,0.3747,0.0,0.5,0.5
+trotter_t2_l2_b10,buffer,B=128,0.5,0.5,0.2727,0.1667,128,0,1.0,0,483,302,proportional_split,302,1,0.3747,0.0,0.5,0.5
+trotter_t2_l2_b10,buffer,B=2,0.5,0.5,0.2727,0.1667,2,0,1.0,0,483,302,proportional_split,302,1,0.3747,0.0,0.5,0.5
+trotter_t2_l2_b10,buffer,B=32,0.5,0.5,0.2727,0.1667,32,0,1.0,0,483,302,proportional_split,302,1,0.3747,0.0,0.5,0.5
+trotter_t2_l2_b10,buffer,B=8,0.5,0.5,0.2727,0.1667,8,0,1.0,0,483,302,proportional_split,302,1,0.3747,0.0,0.5,0.5
+trotter_t2_l2_b10,conversion,CCZ->2T only,0.25,0.25,0.1818,0.1667,32,0,1.0,0,317,317,uniform_oracle,317,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,CCZ->2T only,0.25,0.5,0.0909,0.1667,32,0,1.0,0,382,382,uniform_oracle,382,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,CCZ->2T only,0.25,0.75,0.0909,0.1667,32,0,1.0,0,382,382,uniform_oracle,382,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,CCZ->2T only,0.5,0.25,0.3636,0.1667,32,0,1.0,0,239,239,min_weighted_count,239,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,CCZ->2T only,0.5,0.5,0.2727,0.1667,32,0,1.0,0,273,273,uniform_oracle,273,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,CCZ->2T only,0.5,0.75,0.0909,0.1667,32,0,1.0,0,382,382,uniform_oracle,382,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,CCZ->2T only,1.0,0.25,0.7273,0.1667,32,0,1.0,0,184,184,min_weighted_count,183,1,0.0054,0.0054,0.25,0.25
+trotter_t2_l2_b10,conversion,CCZ->2T only,1.0,0.5,0.5455,0.3333,32,0,1.0,0,190,175,proportional_split,175,1,0.0789,0.0,0.5,0.5
+trotter_t2_l2_b10,conversion,CCZ->2T only,1.0,0.75,0.2727,0.3333,32,0,1.0,0,211,201,two_term_descent,200,1,0.0521,0.005,0.25,0.25
+trotter_t2_l2_b10,conversion,both directions,0.25,0.25,0.1818,0.1667,32,0,1.0,0,317,317,uniform_oracle,317,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,both directions,0.25,0.5,0.0909,0.1667,32,0,1.0,0,382,382,uniform_oracle,382,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,both directions,0.25,0.75,0.0909,0.1667,32,0,1.0,0,382,382,uniform_oracle,382,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,both directions,0.5,0.25,0.3636,0.1667,32,0,1.0,0,239,239,min_weighted_count,239,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,both directions,0.5,0.5,0.2727,0.1667,32,0,1.0,0,273,273,uniform_oracle,273,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,both directions,0.5,0.75,0.0909,0.1667,32,0,1.0,0,382,382,uniform_oracle,382,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10,conversion,both directions,1.0,0.25,0.7273,0.1667,32,0,1.0,0,184,184,min_weighted_count,179,1,0.0272,0.0272,0.25,0.25
+trotter_t2_l2_b10,conversion,both directions,1.0,0.5,0.5455,0.3333,32,0,1.0,0,190,175,proportional_split,171,1,0.1,0.0229,0.25,0.75
+trotter_t2_l2_b10,conversion,both directions,1.0,0.75,0.2727,0.3333,32,0,1.0,0,211,195,two_term_descent,195,1,0.0758,0.0,0.25,0.75
+trotter_t2_l2_b10,failures,p=0.7 seed=0,0.5,0.5,0.1909,0.1167,32,0,0.7,0,639,420,proportional_split,420,1,0.3427,0.0,0.5,0.5
+trotter_t2_l2_b10,failures,p=0.7 seed=1,0.5,0.5,0.1909,0.1167,32,0,0.7,1,687,445,proportional_split,445,1,0.3523,0.0,0.5,0.5
+trotter_t2_l2_b10,failures,p=0.7 seed=2,0.5,0.5,0.1909,0.1167,32,0,0.7,2,693,394,proportional_split,394,1,0.4315,0.0,0.5,0.5
+trotter_t2_l2_b10,failures,p=0.9 seed=0,0.5,0.5,0.2455,0.15,32,0,0.9,0,537,321,proportional_split,321,1,0.4022,0.0,0.5,0.5
+trotter_t2_l2_b10,failures,p=0.9 seed=1,0.5,0.5,0.2455,0.15,32,0,0.9,1,549,350,proportional_split,350,1,0.3625,0.0,0.5,0.5
+trotter_t2_l2_b10,failures,p=0.9 seed=2,0.5,0.5,0.2455,0.15,32,0,0.9,2,555,317,proportional_split,317,1,0.4288,0.0,0.5,0.5
+trotter_t2_l2_b10,failures,p=1 seed=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,483,302,proportional_split,302,1,0.3747,0.0,0.5,0.5
+trotter_t2_l2_b10,latency,L=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,483,302,proportional_split,302,1,0.3747,0.0,0.5,0.5
+trotter_t2_l2_b10,latency,L=10,0.5,0.5,0.2727,0.1667,32,10,1.0,0,493,312,proportional_split,312,1,0.3671,0.0,0.5,0.5
+trotter_t2_l2_b10,latency,L=200,0.5,0.5,0.2727,0.1667,32,200,1.0,0,683,502,proportional_split,502,1,0.265,0.0,0.5,0.5
+trotter_t2_l2_b10,latency,L=50,0.5,0.5,0.2727,0.1667,32,50,1.0,0,533,352,proportional_split,352,1,0.3396,0.0,0.5,0.5
+trotter_t2_l2_b10_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,483,483,uniform_min_teq,483,1,0.0,0.0,0.0,1.0
+trotter_t2_l2_b10_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,483,483,uniform_min_teq,483,1,0.0,0.0,0.0,1.0
+trotter_t2_l2_b10_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,483,483,uniform_min_teq,483,1,0.0,0.0,0.0,1.0
+trotter_t2_l2_b10_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,246,246,uniform_min_teq,246,1,0.0,0.0,0.0,1.0
+trotter_t2_l2_b10_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,246,246,uniform_min_teq,246,1,0.0,0.0,0.0,1.0
+trotter_t2_l2_b10_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,246,246,uniform_min_teq,246,1,0.0,0.0,0.0,1.0
+trotter_t2_l2_b10_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,167,167,uniform_min_teq,167,1,0.0,0.0,0.0,1.0
+trotter_t2_l2_b10_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,167,167,uniform_min_teq,167,1,0.0,0.0,0.0,1.0
+trotter_t2_l2_b10_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,167,167,uniform_min_teq,167,1,0.0,0.0,0.0,1.0
+trotter_t2_l2_b10_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,596,596,uniform_min_teq,596,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,596,596,uniform_min_teq,596,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,596,596,uniform_min_teq,596,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,304,304,uniform_min_teq,304,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,304,304,uniform_min_teq,304,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,304,304,uniform_min_teq,304,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,176,176,uniform_min_teq,176,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,176,176,uniform_min_teq,176,1,0.0,0.0,0.0,0.0
+trotter_t2_l2_b10_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,176,176,uniform_min_teq,176,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,baseline,two banks,0.25,0.25,0.1818,0.1667,32,0,1.0,0,723,483,proportional_split,483,1,0.332,0.0,0.3333,0.6667
+trotter_t3_l2_b10,baseline,two banks,0.25,0.5,0.0909,0.1667,32,0,1.0,0,723,615,two_term_descent,603,1,0.166,0.0195,0.1667,0.8333
+trotter_t3_l2_b10,baseline,two banks,0.25,0.75,0.0909,0.1667,32,0,1.0,0,723,615,two_term_descent,603,1,0.166,0.0195,0.1667,0.8333
+trotter_t3_l2_b10,baseline,two banks,0.5,0.25,0.3636,0.1667,32,0,1.0,0,670,450,proportional_split,363,1,0.4582,0.1933,0.5,0.5
+trotter_t3_l2_b10,baseline,two banks,0.5,0.5,0.2727,0.1667,32,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+trotter_t3_l2_b10,baseline,two banks,0.5,0.75,0.0909,0.1667,32,0,1.0,0,723,615,two_term_descent,603,1,0.166,0.0195,0.1667,0.8333
+trotter_t3_l2_b10,baseline,two banks,1.0,0.25,0.7273,0.1667,32,0,1.0,0,341,243,proportional_split,243,1,0.2874,0.0,0.3333,0.3333
+trotter_t3_l2_b10,baseline,two banks,1.0,0.5,0.5455,0.3333,32,0,1.0,0,366,246,proportional_split,231,1,0.3689,0.061,0.5,0.5
+trotter_t3_l2_b10,baseline,two banks,1.0,0.75,0.2727,0.3333,32,0,1.0,0,366,302,two_term_descent,302,1,0.1749,0.0,0.3333,0.6667
+trotter_t3_l2_b10,buffer,B=-1,0.5,0.5,0.2727,0.1667,-1,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+trotter_t3_l2_b10,buffer,B=128,0.5,0.5,0.2727,0.1667,128,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+trotter_t3_l2_b10,buffer,B=2,0.5,0.5,0.2727,0.1667,2,0,1.0,0,723,483,proportional_split,483,1,0.332,0.0,0.3333,0.6667
+trotter_t3_l2_b10,buffer,B=32,0.5,0.5,0.2727,0.1667,32,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+trotter_t3_l2_b10,buffer,B=8,0.5,0.5,0.2727,0.1667,8,0,1.0,0,723,483,proportional_split,483,1,0.332,0.0,0.3333,0.6667
+trotter_t3_l2_b10,conversion,CCZ->2T only,0.25,0.25,0.1818,0.1667,32,0,1.0,0,472,472,uniform_oracle,472,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,CCZ->2T only,0.25,0.5,0.0909,0.1667,32,0,1.0,0,574,574,uniform_oracle,574,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,CCZ->2T only,0.25,0.75,0.0909,0.1667,32,0,1.0,0,574,574,uniform_oracle,574,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,CCZ->2T only,0.5,0.25,0.3636,0.1667,32,0,1.0,0,352,352,min_weighted_count,352,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,CCZ->2T only,0.5,0.5,0.2727,0.1667,32,0,1.0,0,405,405,uniform_oracle,405,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,CCZ->2T only,0.5,0.75,0.0909,0.1667,32,0,1.0,0,574,574,uniform_oracle,574,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,CCZ->2T only,1.0,0.25,0.7273,0.1667,32,0,1.0,0,237,237,min_weighted_count,237,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,CCZ->2T only,1.0,0.5,0.5455,0.3333,32,0,1.0,0,223,223,uniform_oracle,214,1,0.0404,0.0404,0.5,0.5
+trotter_t3_l2_b10,conversion,CCZ->2T only,1.0,0.75,0.2727,0.3333,32,0,1.0,0,266,266,uniform_oracle,266,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,both directions,0.25,0.25,0.1818,0.1667,32,0,1.0,0,472,472,uniform_oracle,472,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,both directions,0.25,0.5,0.0909,0.1667,32,0,1.0,0,574,574,uniform_oracle,574,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,both directions,0.25,0.75,0.0909,0.1667,32,0,1.0,0,574,574,uniform_oracle,574,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,both directions,0.5,0.25,0.3636,0.1667,32,0,1.0,0,352,352,min_weighted_count,352,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,both directions,0.5,0.5,0.2727,0.1667,32,0,1.0,0,405,405,uniform_oracle,405,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,both directions,0.5,0.75,0.0909,0.1667,32,0,1.0,0,574,574,uniform_oracle,574,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,both directions,1.0,0.25,0.7273,0.1667,32,0,1.0,0,237,237,min_weighted_count,237,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,conversion,both directions,1.0,0.5,0.5455,0.3333,32,0,1.0,0,223,223,uniform_oracle,216,1,0.0314,0.0314,0.1667,0.1667
+trotter_t3_l2_b10,conversion,both directions,1.0,0.75,0.2727,0.3333,32,0,1.0,0,266,266,uniform_oracle,266,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10,failures,p=0.7 seed=0,0.5,0.5,0.1909,0.1167,32,0,0.7,0,981,639,proportional_split,636,1,0.3517,0.0047,0.5,0.5
+trotter_t3_l2_b10,failures,p=0.7 seed=1,0.5,0.5,0.1909,0.1167,32,0,0.7,1,1113,687,proportional_split,676,1,0.3926,0.016,0.5,0.5
+trotter_t3_l2_b10,failures,p=0.7 seed=2,0.5,0.5,0.1909,0.1167,32,0,0.7,2,1041,693,proportional_split,592,1,0.4313,0.1457,0.5,0.5
+trotter_t3_l2_b10,failures,p=0.9 seed=0,0.5,0.5,0.2455,0.15,32,0,0.9,0,807,537,proportional_split,482,1,0.4027,0.1024,0.5,0.5
+trotter_t3_l2_b10,failures,p=0.9 seed=1,0.5,0.5,0.2455,0.15,32,0,0.9,1,819,549,proportional_split,515,1,0.3712,0.0619,0.5,0.5
+trotter_t3_l2_b10,failures,p=0.9 seed=2,0.5,0.5,0.2455,0.15,32,0,0.9,2,801,555,proportional_split,478,1,0.4032,0.1387,0.5,0.5
+trotter_t3_l2_b10,failures,p=1 seed=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+trotter_t3_l2_b10,latency,L=0,0.5,0.5,0.2727,0.1667,32,0,1.0,0,723,483,proportional_split,449,1,0.379,0.0704,0.5,0.5
+trotter_t3_l2_b10,latency,L=10,0.5,0.5,0.2727,0.1667,32,10,1.0,0,733,493,proportional_split,459,1,0.3738,0.069,0.5,0.5
+trotter_t3_l2_b10,latency,L=200,0.5,0.5,0.2727,0.1667,32,200,1.0,0,923,683,proportional_split,649,1,0.2969,0.0498,0.5,0.5
+trotter_t3_l2_b10,latency,L=50,0.5,0.5,0.2727,0.1667,32,50,1.0,0,773,533,proportional_split,499,1,0.3545,0.0638,0.5,0.5
+trotter_t3_l2_b10_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,723,723,uniform_min_teq,723,1,0.0,0.0,0.0,1.0
+trotter_t3_l2_b10_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,723,723,uniform_min_teq,723,1,0.0,0.0,0.0,1.0
+trotter_t3_l2_b10_pooled,pooled,pooled into CCZ,0.25,1.0,0.0,0.1667,32,0,1.0,0,723,723,uniform_min_teq,723,1,0.0,0.0,0.0,1.0
+trotter_t3_l2_b10_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,366,366,uniform_min_teq,366,1,0.0,0.0,0.0,1.0
+trotter_t3_l2_b10_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,366,366,uniform_min_teq,366,1,0.0,0.0,0.0,1.0
+trotter_t3_l2_b10_pooled,pooled,pooled into CCZ,0.5,1.0,0.0,0.3333,32,0,1.0,0,366,366,uniform_min_teq,366,1,0.0,0.0,0.0,1.0
+trotter_t3_l2_b10_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,247,247,uniform_min_teq,247,1,0.0,0.0,0.0,1.0
+trotter_t3_l2_b10_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,247,247,uniform_min_teq,247,1,0.0,0.0,0.0,1.0
+trotter_t3_l2_b10_pooled,pooled,pooled into CCZ,1.0,1.0,0.0,0.5,32,0,1.0,0,247,247,uniform_min_teq,247,1,0.0,0.0,0.0,1.0
+trotter_t3_l2_b10_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,889,889,uniform_min_teq,889,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,889,889,uniform_min_teq,889,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10_pooled,pooled,pooled into T,0.25,0.0,0.2727,0.0,32,0,1.0,0,889,889,uniform_min_teq,889,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,451,451,uniform_min_teq,451,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,451,451,uniform_min_teq,451,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10_pooled,pooled,pooled into T,0.5,0.0,0.5455,0.0,32,0,1.0,0,451,451,uniform_min_teq,451,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,252,252,uniform_min_teq,252,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,252,252,uniform_min_teq,252,1,0.0,0.0,0.0,0.0
+trotter_t3_l2_b10_pooled,pooled,pooled into T,1.0,0.0,1.0,0.0,32,0,1.0,0,252,252,uniform_min_teq,252,1,0.0,0.0,0.0,0.0

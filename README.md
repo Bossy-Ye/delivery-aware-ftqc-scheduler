@@ -94,6 +94,44 @@ PYTHONPATH=src python experiments/rac/rac_report.py
 `rac_report.py` prints every number quoted in the memo, straight from the
 committed tables.
 
+## Non-Fungible Magic States: T + CCZ Selection Study
+
+A second, self-contained study lives under `src/ftqc_delivery/mrc/`,
+`experiments/mrc/`, `results/mrc_pilot/` and `figures/mrc_pilot/`. It follows
+directly from the NO-GO above.
+
+The go/no-go study found no exploitable headroom when a program's magic states
+all come from one pool. This study splits the pool. Real machines run T
+factories and CCZ factories, and one logical operation can often be realised
+from either, so selecting implementations becomes a question of which factory
+to load. The question is whether choosing that globally, and differently for
+different sites, beats simple uniform and per-site policies.
+
+Its conclusion is recorded in `results/mrc_pilot/EVIDENCE_MEMO.md`.
+
+Key components:
+
+- `mrc/resources.py`: two factory banks with literature-anchored footprints and
+  periods, bounded buffers, distillation failures, and the real conversions
+  between the resources
+- `mrc/execution.py`: cycle-accurate execution with per-resource stocks
+- `mrc/library.py`: implementation variants that draw on different banks, each
+  with its published source
+- `mrc/kernels.py`: 24 kernels spanning family, size and concurrency
+- `mrc/policies.py`: eight policies, and an exact optimality reference that
+  exploits the interchangeability of sites within a stage
+
+Run the study in order:
+
+```bash
+PYTHONPATH=src python experiments/mrc/mrc1_headroom.py
+PYTHONPATH=src python experiments/mrc/mrc2_controls.py
+PYTHONPATH=src python experiments/mrc/mrc3_scaling.py
+PYTHONPATH=src python experiments/mrc/mrc4_sensitivity.py
+PYTHONPATH=src python experiments/mrc/mrc_plots.py
+PYTHONPATH=src python experiments/mrc/mrc_report.py
+```
+
 ## Scope
 
 This repository focuses on compiler-level demand shaping and lightweight
