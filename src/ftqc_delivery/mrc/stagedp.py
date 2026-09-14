@@ -26,7 +26,7 @@ from ftqc_delivery.rac.variants import Assignment, ProgramSpace, Site
 
 from .execution import critical_path, execute, resource_counts
 from .kernels import decision_sites
-from .policies import Outcome, _finish, feasible_names, symmetric_groups
+from .policies import uniform_assignments, Outcome, _finish, feasible_names, symmetric_groups
 from .resources import Machine
 
 
@@ -194,6 +194,7 @@ def select_stage_dp(
     mode: str = "analytic",
     refine: int = 0,
     frontier_limit: int = 64,
+    include_uniform: bool = False,
 ) -> Outcome:
     """Choose implementations by dynamic programming over stages and buffer state.
 
@@ -202,6 +203,11 @@ def select_stage_dp(
     ``analytic`` uses the two-term model with carried stock. ``refine`` keeps
     that many best DP solutions and picks among them by one full simulation
     each, which bounds the price of the analytic model's blind spots.
+    ``include_uniform`` adds every uniform assignment to the finalists, so the
+    result is never worse than the best uniform plan at the cost of a handful
+    of extra simulations; the stage costs carry stock but not factory phase
+    across stage boundaries, and on long serial chains that approximation can
+    otherwise lose to a uniform plan.
     """
 
     start = time.perf_counter()
@@ -233,14 +239,19 @@ def select_stage_dp(
 
     frontier.sort(key=lambda item: item[0])
     finalists = frontier[: max(1, refine)] if refine else frontier[:1]
-    best_assignment: Assignment | None = None
-    best_value = None
-    simulations = 0
+    candidates: list[tuple[float | None, Assignment]] = []
     for predicted, _, history in finalists:
         assignment = program.default_assignment()
         for choice in history:
             assignment.update(choice)
-        if refine:
+        candidates.append((predicted, assignment))
+    if include_uniform:
+        candidates.extend((None, uniform) for uniform in uniform_assignments(program, machine))
+    best_assignment: Assignment | None = None
+    best_value = None
+    simulations = 0
+    for predicted, assignment in candidates:
+        if refine or predicted is None:
             value = execute(program.instantiate(assignment), machine).makespan
             simulations += 1
         else:
@@ -248,5 +259,5 @@ def select_stage_dp(
         if best_value is None or value < best_value:
             best_value, best_assignment = value, assignment
     assert best_assignment is not None
-    label = f"stage_dp_{mode}" + (f"_r{refine}" if refine else "")
+    label = f"stage_dp_{mode}" + (f"_r{refine}" if refine else "") + ("_u" if include_uniform else "")
     return _finish(label, program, best_assignment, machine, start, evaluations=evaluations, simulations=simulations)

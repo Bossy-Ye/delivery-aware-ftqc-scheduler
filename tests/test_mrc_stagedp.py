@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import pytest
+
 from ftqc_delivery.mrc.execution import execute
 from ftqc_delivery.mrc.kernels import modular_exponentiation, oracle_bank, trotter_layers
 from ftqc_delivery.mrc.policies import best_oracle, select_uniform_oracle
@@ -47,3 +49,20 @@ def test_stage_dp_is_never_worse_than_uniform_on_a_serial_kernel():
     optimum = best_oracle(program, machine).makespan
     assert dp <= uniform
     assert dp <= 1.05 * optimum
+
+
+def test_stage_dp_with_uniform_finalists_is_never_worse_than_the_best_uniform_plan():
+    from ftqc_delivery.mrc.extract import build_external
+    from ftqc_delivery.mrc.policies import run_policy
+    from ftqc_delivery.mrc.resources import coupled_machine
+    from ftqc_delivery.mrc.stagedp import select_stage_dp
+
+    pytest.importorskip("qmpa")
+    program = build_external("qmpa_add8", drop_cliffords=False).program
+    machine = coupled_machine("C", 400, 0.5)
+    uniform = run_policy("uniform_oracle", program, machine)
+    plain = select_stage_dp(program, machine, mode="analytic", refine=5)
+    guarded = select_stage_dp(program, machine, mode="analytic", refine=5, include_uniform=True)
+    assert guarded.makespan <= uniform.makespan
+    assert guarded.makespan <= plain.makespan
+    assert guarded.policy == "stage_dp_analytic_r5_u"

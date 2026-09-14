@@ -167,6 +167,12 @@ The external run needs `qmpa` (github.com/Alan-Robertson/qmpa) and
 `qualtran` installed; both are independently authored arithmetic libraries and
 their circuits are reported separately from the synthetic kernels.
 
+Outcome: HOLD. The mechanism survives coupled provisioning and is traced on
+real programs, but on independently authored arithmetic it is rare and small
+(median headroom zero, 9% of cases above 5%, none on serial chains), and the
+selector only ties the best simple policy there. The memo lists what would
+change the decision either way.
+
 ## Scope
 
 This repository focuses on compiler-level demand shaping and lightweight

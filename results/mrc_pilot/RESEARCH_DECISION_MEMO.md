@@ -172,14 +172,112 @@ equivalence assumption.
   front end so qualtran's own markers drive the sites; and an OpenQASM 3
   front end with annotations for uncompute intent.
 
-## 7. External workloads (phase 7, `mrc8_external.csv`)
+## 7. External workloads (phase 7, `mrc8_external.csv`, `mrc8_sites.csv`)
 
-PENDING_MRC8
+Nineteen programs from two independently authored libraries (eight qmpa
+circuits: adders, multipliers, dividers; eleven qualtran bloqs: adders,
+subtractor, controlled and constant adders, two comparators, modular add,
+subtract, negate and controlled add), 28 machines each (the synthetic grid's
+20 independent-bank machines plus 8 coupled B/C machines), 532 cases,
+Cliffords kept. Optima are proven exactly in 163 cases (the programs with at
+most eight sites); elsewhere the reference is the best assignment found by the
+search and every policy, so headroom is a lower bound on the optimum's and
+selector regrets are relative to that reference. Nothing was arranged: the
+extractor found the sites, and the machines are the ones the synthetic study
+used.
 
-## 8. Decision
+- Structure. All Toffolis are compute/uncompute pairs, so every site has two
+  variants (one CCZ or 4 T). Thirteen of nineteen programs are serial chains
+  of width 1 (every adder, the comparator against a constant, modular add,
+  subtract and negate, controlled modular add); the multipliers and dividers
+  have width 2; GreaterThan has width 4.
+- Headroom over the best of seven simple policies: mean 0.9%, median 0.0%,
+  p90 4.2%, max 14.8%; above 5% in 48 of 532 cases (9%), above 10% in 6 of
+  532 (1%, all GreaterThan). Over the best uniform plan: mean 1.1%. qmpa:
+  mean 1.3%, above 5% in 35 of 224, none above 10%. qualtran: mean 0.7%,
+  above 5% in 13 of 308.
+- Every width-1 program has exactly zero headroom on all 28 machines. Headroom
+  appears only where a stage holds two or more parallel sites: divider 5.4%
+  (proven exact, identical on 13 of 20 independent-bank machines) and 8.6%,
+  multipliers up to 5.2%, GreaterThan mean 4.5% and up to 14.8%. The coupled
+  models show the same pattern (B: above 5% in 5 of 57; C: 8 of 95).
+- Mechanism on real programs, verified by tracing: parallel sites in a wide
+  stage contend for a small CCZ bank and the optimum sends some of them to the
+  T bank. GreaterThan on 20 T factories and 1 CCZ factory: the best uniform
+  plan is all-4T at 108 cycles with 18 T stalls; the reference runs the two
+  4-wide stages as 2 CCZ + 2 T and the serial tail on CCZ, 92 cycles. Divider:
+  moving one site of a 2-wide stage to T removes all 8 CCZ stalls (92 to 87).
+  This is the intra-stage partitioning form of the mechanism; the temporal
+  alternation across stages that drives the synthetic modexp kernels does not
+  arise here because these programs' stages are single sites.
+- The simplest static rule (one implementation per family, fewest
+  T-equivalents, i.e. CCZ everywhere) is the best simple policy in 497 of 532
+  cases.
+- Selector on external programs: the stage DP as evaluated in phase 5 has mean
+  regret 1.022 and exceeds 5% in 82 cases, and it is poor on the coupled
+  machines (mean 1.04 on B, 1.07 on C; stage-local simulation worse at 1.066):
+  the stage costs carry stock but not factory phase, and over 30 to 100
+  single-site stages the error compounds. Adding the uniform plans as
+  finalists (`include_uniform`, evaluated from stored makespans because
+  finalists are ranked by exact simulation) gives mean 1.007, p90 1.027, max
+  1.094, above 5% in 26 of 532, never worse than uniform; it beats the best
+  simple policy in 39 cases and loses in 19, and captures on average 47%
+  (median 56%) of the available gain on the 48 cases with more than 5%
+  headroom. On external programs the selector is at parity with the best
+  simple policy and recovers about half of the tail.
+- Sensitivity, resource layers only (Cliffords dropped; six programs on the
+  quick grid): the 42 cases (six programs, seven machines each, none with a proven optimum) show more headroom than with Cliffords kept: mean 3.5%, median 0.4%, p90 9.3%, max 21.4%, above 5% in 11 of 42 and above 10% in 3. Without the Clifford critical path the chains become supply-bound, so even the 32-bit adder gains up to 10% (5.3% on the independent-bank machines) and the multiplier and comparator reach 19% and 21% (qmpa_add32 max 10.0%, qmpa_div6 max 15.8%, qmpa_mul6 max 19.1%, qt_cadd8 max 9.0%, qt_gt8 max 21.4%, qt_modadd8 max 2.5%). The primary numbers above are the conservative ones; the effect grows as Clifford cost shrinks relative to magic-state delivery, which is the direction real lattice-surgery Clifford costs point when they are far below one cycle per gate, but this run is a small grid and its references are search-based.
 
-PENDING_DECISION
+## 8. Decision: HOLD
+
+Not GO: on independently authored arithmetic the phenomenon is rare and
+small. The median headroom is zero, 9% of cases exceed 5%, 1% exceed 10%, and
+every serial-chain program shows none at all. The synthetic figures (25% of
+cases failing local selection, gains up to 46%) are not representative of
+these programs and cannot be used to claim prevalence. The selector is not yet
+convincing: it needs the uniform guard to avoid losing, and with it ties the
+best simple policy on external programs while recovering half of the tail.
+The novelty claim is conditional on a full-text reading of Harvest.
+
+Not NO_GO: the mechanism is real, was traced on real programs, survives
+coupled provisioning at fixed area with literature parameters and without
+unusual settings, is exactly zero in every null control, and the extractor
+finds the sites in two independent libraries without hand-arrangement,
+agreeing with qualtran's explicit markers on every pair.
+
+What would turn HOLD into GO, in order:
+
+1. An external workload class with wide Toffoli stages showing at least 10%
+   headroom under the coupled models: parallel-prefix (Draper) adders,
+   multi-operand adders, batches of Toffoli-count rotation synthesis, QROM and
+   unary iteration. Run them through the extractor unchanged.
+2. A second family with different signatures at the same site (rotations:
+   phase-gradient vs Toffoli-count vs Clifford+T synthesis), to show the
+   problem is not the AND/Toffoli special case.
+3. A selector that carries factory phase across stages (or a rolling-horizon
+   simulation) with mean regret at most 1.02 on the external cases and a
+   clear win over the best simple policy on the tail.
+4. Harvest read in full and the audit updated.
+
+What would turn HOLD into NO_GO: item 1 giving a median below 5% on
+wide-stage external programs under coupled machines, or Harvest already
+selecting among implementations per operation.
 
 ## 9. Venue ceiling
 
-PENDING_VENUE
+- On today's evidence: a QCE or TQE-style paper on T/CCZ implementation
+  selection under coupled provisioning, with the exact oracles, the coupled
+  models, the traced mechanism, the extractor and honest external numbers.
+  Modest and defensible.
+- CGO becomes plausible only with items 1 to 3 above: an implementable
+  selector that beats simple policies on external workloads where the
+  headroom exists, framed as site extraction, equivalence records and
+  resource signatures.
+- PLDI is out of reach on the current evidence. The phenomenon is rare on real
+  programs, the formal content is an instance of module selection with flow
+  resources rather than a new compiler abstraction, and the novelty
+  statement is conditional. Reaching it would need the general formulation
+  to deliver something beyond the instance (a compositional cost calculus
+  with a guarantee, or a bound showing local selection can be arbitrarily
+  bad with a matching selector), two resource families, and external
+  workloads where the effect is common rather than occasional.
