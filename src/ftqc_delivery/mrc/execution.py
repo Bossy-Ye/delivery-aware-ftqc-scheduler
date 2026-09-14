@@ -77,6 +77,7 @@ class Trace:
     stalls: dict[str, int] = field(default_factory=dict)
     overflow: dict[str, int] = field(default_factory=dict)
     conversions: dict[str, int] = field(default_factory=dict)
+    final_stock: dict[str, int] = field(default_factory=dict)
     demand_series: dict[str, list[int]] = field(default_factory=dict)
     arrival_series: dict[str, list[int]] = field(default_factory=dict)
     stock_series: dict[str, list[int]] = field(default_factory=dict)
@@ -119,9 +120,7 @@ def execute(
     order = dag.topological_order()
     kind = {node_id: resource_of(dag.op_type(node_id)) for node_id in order}
     needed = {value for value in kind.values() if value is not None}
-    producible = set(machine.resources)
-    for conversion in machine.conversions:
-        producible.add(conversion.target)
+    producible = set(machine.producible)
     missing = needed - producible
     if missing:
         raise RuntimeError(
@@ -158,7 +157,7 @@ def execute(
         bank.resource: bank.arrival_series(horizon, seed=machine.seed)
         for bank in machine.banks
     }
-    stock = {resource: 0 for resource in producible}
+    stock = {resource: machine.initial(resource) for resource in producible}
     consumed = {resource: 0 for resource in producible}
     stalls = {resource: 0 for resource in producible}
     overflow = {resource: 0 for resource in producible}
@@ -170,6 +169,7 @@ def execute(
     conversions_run = {label: 0 for label in conversion_labels.values()}
     pending: dict[int, list[tuple[str, int, str]]] = {}
     in_flight = {label: 0 for label in conversion_labels.values()}
+    pending_outputs = {resource: 0 for resource in producible}
 
     demand_series = {resource: [] for resource in producible}
     arrival_series = {resource: [] for resource in producible}
@@ -181,11 +181,26 @@ def execute(
     cycle = 0
     last_finish = 0
     limit = cycle_limit if cycle_limit is not None else 200 * (total + 1) + 200_000
+    # A stall this long cannot be a legitimate wait: the longest one is a
+    # buffer filling behind a conversion, which is bounded by inputs times the
+    # slowest period plus the conversion latency. Failing here names the
+    # deadlock instead of spinning to the cycle limit.
+    slowest = max([bank.period for bank in machine.banks] + [1])
+    idle_limit = 5_000 + 50 * (
+        slowest * max([c.inputs for c in machine.conversions] + [1])
+        + max([c.latency for c in machine.conversions] + [0])
+        + max([bank.latency for bank in machine.banks] + [0])
+    )
 
     while completed < total:
         cycle += 1
         if cycle > limit:
             raise RuntimeError(f"execution of {dag.name!r} exceeded {limit} cycles")
+        if cycle - last_finish > idle_limit and not any(in_flight.values()):
+            raise RuntimeError(
+                f"execution of {dag.name!r} stalled: no node finished for {idle_limit} cycles "
+                f"on {machine.name!r} (stock {stock})"
+            )
         if cycle >= horizon:
             horizon *= 4
             arrivals = {
@@ -195,6 +210,7 @@ def execute(
 
         for node_id in finishing.pop(cycle, ()):
             completed += 1
+            last_finish = cycle
             for successor in successors[node_id]:
                 remaining[successor] -= 1
                 if remaining[successor] == 0:
@@ -206,15 +222,15 @@ def execute(
         for resource, count, label in pending.pop(cycle, ()):
             arrived[resource] += count
             in_flight[label] -= 1
+            pending_outputs[resource] -= count
 
         for resource in producible:
-            bank = machine.bank(resource)
+            capacity = machine.buffer(resource)
             stock[resource] += arrived[resource]
-            if bank is not None and not bank.unbounded_buffer:
-                if stock[resource] > bank.buffer_capacity:
-                    overflow[resource] += stock[resource] - bank.buffer_capacity
-                    arrived[resource] -= stock[resource] - bank.buffer_capacity
-                    stock[resource] = bank.buffer_capacity
+            if capacity >= 0 and stock[resource] > capacity:
+                overflow[resource] += stock[resource] - capacity
+                arrived[resource] -= stock[resource] - capacity
+                stock[resource] = capacity
 
         _run_conversions(
             machine,
@@ -223,6 +239,7 @@ def execute(
             ready,
             pending,
             in_flight,
+            pending_outputs,
             conversions_run,
             cycle,
         )
@@ -281,6 +298,7 @@ def execute(
         stalls=stalls,
         overflow=overflow,
         conversions=conversions_run,
+        final_stock=dict(stock),
         demand_series=demand_series,
         arrival_series=arrival_series,
         stock_series=stock_series,
@@ -288,29 +306,62 @@ def execute(
 
 
 def _run_conversions(
-    machine, labels, stock, ready, pending, in_flight, counters, cycle
+    machine, labels, stock, ready, pending, in_flight, pending_outputs, counters, cycle
 ) -> None:
-    """Start any conversions that would unblock a starved resource.
+    """Start conversions.
 
-    A conversion is worth starting when the target has work waiting that it
-    cannot serve, and the source has more stock than its own waiting work
-    needs. Both conditions are checked against the queues as they stand, so the
-    controller never starves one resource to feed another.
+    A proactive conversion (a distiller) runs whenever its inputs are in stock,
+    a unit is free, and the target buffer has room for what is already in
+    flight plus this batch, so a pipeline keeps the buffer topped up but never
+    produces into a full one.
+
+    An on-demand conversion (a catalysis unit) starts only when the target has
+    work waiting that it cannot serve, and the source has more stock than its
+    own waiting work needs, so it never starves one resource to feed another.
     """
 
-    for conversion in machine.conversions:
+    # Proactive units that share a source take turns going first, so a scarce
+    # stream is arbitrated round-robin rather than hoarded by whichever
+    # distiller happens to be listed first.
+    ordered = list(machine.conversions)
+    if len(ordered) > 1:
+        shift = cycle % len(ordered)
+        ordered = ordered[shift:] + ordered[:shift]
+    for conversion in ordered:
         label = labels[conversion]
+        target = conversion.target
+        if conversion.proactive:
+            capacity = machine.buffer(target)
+            while (
+                in_flight[label] < conversion.concurrency
+                and stock.get(conversion.source, 0) >= conversion.inputs
+                and (
+                    capacity < 0
+                    or stock.get(target, 0) + pending_outputs.get(target, 0) + conversion.outputs
+                    <= capacity
+                )
+            ):
+                stock[conversion.source] -= conversion.inputs
+                in_flight[label] += 1
+                pending_outputs[target] = pending_outputs.get(target, 0) + conversion.outputs
+                pending.setdefault(cycle + conversion.latency, []).append(
+                    (target, conversion.outputs, label)
+                )
+                counters[label] += 1
+            continue
+
         while in_flight[label] < conversion.concurrency:
-            target_waiting = len(ready.get(conversion.target, ()))
-            if target_waiting == 0 or stock.get(conversion.target, 0) > 0:
+            target_waiting = len(ready.get(target, ()))
+            if target_waiting == 0 or stock.get(target, 0) > 0:
                 break
             source_waiting = len(ready.get(conversion.source, ()))
             if stock.get(conversion.source, 0) - conversion.inputs < source_waiting:
                 break
             stock[conversion.source] -= conversion.inputs
             in_flight[label] += 1
+            pending_outputs[target] = pending_outputs.get(target, 0) + conversion.outputs
             pending.setdefault(cycle + conversion.latency, []).append(
-                (conversion.target, conversion.outputs, label)
+                (target, conversion.outputs, label)
             )
             counters[label] += 1
 

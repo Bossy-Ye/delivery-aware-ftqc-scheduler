@@ -39,9 +39,12 @@ from functools import lru_cache
 from math import ceil
 
 
+RAW = "RAW"
 T = "T"
 CCZ = "CCZ"
-RESOURCES = (T, CCZ)
+#: RAW is the level-1 magic-state stream that distillers consume; circuits
+#: never consume it directly. T and CCZ are the distilled products.
+RESOURCES = (RAW, T, CCZ)
 
 UNBOUNDED = -1
 
@@ -201,6 +204,45 @@ class Conversion:
     concurrency: int = 1
     tiles: int = 0
     source_note: str = ""
+    #: A proactive conversion runs whenever inputs are available and the target
+    #: buffer has room, like a distillation pipeline; an on-demand one runs only
+    #: when the target is starved, like a catalysis unit.
+    proactive: bool = False
+
+
+#: A 15-to-1 distiller turning fifteen level-1 T states into one usable T
+#: state, on 11 tiles in 11 logical cycles (Litinski 2019, arXiv:1808.02892).
+T_DISTILLER_15_TO_1 = Conversion(
+    source=RAW,
+    target=T,
+    inputs=15,
+    outputs=1,
+    latency=11,
+    concurrency=1,
+    tiles=11,
+    source_note="Litinski 2019 (arXiv:1808.02892), 15-to-1 block: 11 tiles, 11 cycles",
+    proactive=True,
+)
+
+#: Gidney & Fowler's CCZ factory consumes eight level-1 T states and yields one
+#: CCZ on 12d x 6d in 5.5d code cycles; period rounded up to 6.
+CCZ_DISTILLER_8_TO_1 = Conversion(
+    source=RAW,
+    target=CCZ,
+    inputs=8,
+    outputs=1,
+    latency=6,
+    concurrency=1,
+    tiles=72,
+    source_note="Gidney & Fowler 2019 (arXiv:1812.01238), 8 T -> 1 CCZ, 72 tiles, 5.5d",
+    proactive=True,
+)
+
+#: Level-1 (raw) T supply feeding the distillers. The footprint and period are
+#: an assumption in the cultivation/injection class (Gidney, Shutty & Jones
+#: 2024, arXiv:2409.17595, report T states "as cheap as CNOT gates"); they are
+#: swept in the coupled-provisioning study rather than trusted.
+RAW_REFERENCE = {"tiles": 2, "period": 2}
 
 
 #: One |CCZ> plus a catalyst becomes two |T> states (Gidney & Fowler 2019).
@@ -237,11 +279,61 @@ class Machine:
     name: str = ""
     seed: int = 0
     extra_tiles: int = 0
+    #: Buffer capacities for resources that have no bank of their own because
+    #: they are produced only by conversions.
+    buffers: tuple[tuple[str, int], ...] = ()
+    #: Which coupling model built this machine, for tables.
+    model: str = "A"
+    #: States already in each buffer when execution starts. Used to evaluate a
+    #: stage of a program from the buffer state its predecessor left behind.
+    initial_stock: tuple[tuple[str, int], ...] = ()
 
     def __post_init__(self) -> None:
         seen = [bank.resource for bank in self.banks]
         if len(set(seen)) != len(seen):
             raise ValueError("each resource may have at most one bank")
+
+    def initial(self, resource: str) -> int:
+        """Return the stock of ``resource`` present when execution starts."""
+
+        for name, count in self.initial_stock:
+            if name == resource:
+                return count
+        return 0
+
+    def with_initial_stock(self, stock: dict[str, int]) -> "Machine":
+        """Return a copy of this machine starting with the given buffer contents."""
+
+        from dataclasses import replace
+
+        return replace(
+            self,
+            initial_stock=tuple(
+                (resource, min(int(count), self.buffer(resource)) if self.buffer(resource) >= 0 else int(count))
+                for resource, count in sorted(stock.items())
+            ),
+        )
+
+    def buffer(self, resource: str) -> int:
+        """Return the buffer capacity for ``resource`` (``UNBOUNDED`` if none)."""
+
+        bank = self.bank(resource)
+        if bank is not None:
+            return bank.buffer_capacity
+        for name, capacity in self.buffers:
+            if name == resource:
+                return capacity
+        return 32
+
+    @property
+    def producible(self) -> tuple[str, ...]:
+        """Return every resource the machine can deliver, by bank or conversion."""
+
+        names = [bank.resource for bank in self.banks]
+        for conversion in self.conversions:
+            if conversion.target not in names:
+                names.append(conversion.target)
+        return tuple(name for name in RESOURCES if name in names)
 
     def bank(self, resource: str) -> FactoryBank | None:
         """Return the bank producing ``resource``, if the machine has one."""
@@ -258,10 +350,45 @@ class Machine:
         return tuple(resource for resource in RESOURCES if self.bank(resource))
 
     def rate(self, resource: str) -> float:
-        """Return the expected production rate of ``resource``."""
+        """Return the expected steady-state delivery rate of ``resource``.
+
+        For a resource with its own bank this is the bank's rate. For one
+        produced only by conversions it is the conversions' throughput, capped
+        by the share of the source stream they can draw: when several
+        distillers pull from the same raw stream, the stream is divided in
+        proportion to how much each could consume. Catalysis units are
+        on-demand and are not counted as steady-state supply.
+        """
 
         bank = self.bank(resource)
-        return bank.rate if bank else 0.0
+        if bank is not None:
+            return bank.rate
+        total = 0.0
+        for conversion in self.conversions:
+            if conversion.target != resource or not conversion.proactive:
+                continue
+            total += self._conversion_rate(conversion)
+        return total
+
+    def _conversion_rate(self, conversion: "Conversion") -> float:
+        """Return the steady-state output rate of one proactive conversion."""
+
+        capacity = conversion.concurrency * conversion.outputs / conversion.latency
+        siblings = [
+            other
+            for other in self.conversions
+            if other.source == conversion.source and other.proactive
+        ]
+        draws = {
+            other: other.concurrency * other.inputs / other.latency for other in siblings
+        }
+        total_draw = sum(draws.values())
+        supply = self.rate(conversion.source)
+        if total_draw <= 0:
+            return 0.0
+        share = supply * draws[conversion] / total_draw
+        fed = min(draws[conversion], share) / conversion.inputs * conversion.outputs
+        return min(capacity, fed)
 
     @property
     def factory_tiles(self) -> int:
@@ -272,6 +399,16 @@ class Machine:
             + sum(conversion.tiles * conversion.concurrency for conversion in self.conversions)
             + self.extra_tiles
         )
+
+    @property
+    def distiller_counts(self) -> dict[str, int]:
+        """Return how many proactive conversion units feed each resource."""
+
+        counts: dict[str, int] = {}
+        for conversion in self.conversions:
+            if conversion.proactive:
+                counts[conversion.target] = counts.get(conversion.target, 0) + conversion.concurrency
+        return counts
 
     @property
     def imbalance(self) -> float:
@@ -291,7 +428,7 @@ class Machine:
     def describe(self) -> str:
         """Return a compact identifier for tables and plot labels."""
 
-        parts = [bank.describe() for bank in self.banks]
+        parts = [f"model{self.model}"] + [bank.describe() for bank in self.banks]
         if self.conversions:
             parts.append("conv:" + "+".join(
                 f"{c.inputs}{c.source}->{c.outputs}{c.target}" for c in self.conversions
@@ -441,3 +578,140 @@ def _earliest_cycle(
             if running >= needed:
                 return cycle
         horizon *= 2
+
+
+def _scaled(conversion: Conversion, concurrency: int) -> Conversion:
+    """Return ``conversion`` with a different number of units."""
+
+    return Conversion(
+        source=conversion.source,
+        target=conversion.target,
+        inputs=conversion.inputs,
+        outputs=conversion.outputs,
+        latency=conversion.latency,
+        concurrency=max(0, int(concurrency)),
+        tiles=conversion.tiles,
+        source_note=conversion.source_note,
+        proactive=conversion.proactive,
+    )
+
+
+def coupled_machine(
+    model: str,
+    tiles: int,
+    ccz_share: float,
+    buffer_capacity: int = 32,
+    raw_period: int | None = None,
+    raw_tiles: int | None = None,
+    raw_buffer: int = 64,
+    raw_scale: float = 1.0,
+    seed: int = 0,
+) -> Machine:
+    """Return a machine under one of three provisioning models at a fixed area.
+
+    ``tiles`` is the total factory area, held fixed so that no model is
+    quietly given more hardware than another. ``ccz_share`` is the fraction of
+    the *distiller* area devoted to CCZ production.
+
+    Model ``A``
+        The independent reference: standalone T and CCZ banks whose outputs
+        are unrelated, as in the earlier study.
+    Model ``B``
+        Shared upstream production. A single bank of level-1 T states feeds
+        15-to-1 T distillers and 8-to-1 CCZ distillers that draw from the same
+        stream, so the two products compete for one raw supply and neither can
+        be dialled independently of the other. The raw bank's area comes out of
+        the same budget.
+    Model ``C``
+        Model B plus the catalyzed one-CCZ-to-two-T conversion, one unit per
+        CCZ distiller, so CCZ output can also serve T demand at a lossy rate.
+
+    ``raw_scale`` sizes the raw stream relative to what the distillers could
+    consume: 1.0 exactly covers them, below 1.0 makes them compete for it.
+    ``raw_tiles=0`` is the literature-faithful reading in which level-1
+    production sits inside each factory's published footprint, so the shared
+    stream costs no extra area; the default charges for it separately, which
+    is conservative against the coupled models.
+    """
+
+    if model not in ("A", "B", "C"):
+        raise ValueError(f"unknown coupling model {model!r}")
+    if tiles <= 0:
+        raise ValueError("tiles must be positive")
+    if not 0.0 <= ccz_share <= 1.0:
+        raise ValueError("ccz_share must lie in [0, 1]")
+
+    t_tiles = int(FACTORY_REFERENCE[T]["tiles"])
+    ccz_tiles = int(FACTORY_REFERENCE[CCZ]["tiles"])
+    raw_period = RAW_REFERENCE["period"] if raw_period is None else raw_period
+    raw_tiles = RAW_REFERENCE["tiles"] if raw_tiles is None else raw_tiles
+
+    def split(area: int) -> tuple[int, int]:
+        ccz_count = int(round(ccz_share * area / ccz_tiles))
+        t_count = int(round((1.0 - ccz_share) * area / t_tiles))
+        if 0.0 < ccz_share < 1.0:
+            ccz_count = max(1, ccz_count)
+            t_count = max(1, t_count)
+        elif ccz_share == 0.0:
+            ccz_count, t_count = 0, max(1, t_count)
+        else:
+            ccz_count, t_count = max(1, ccz_count), 0
+        return t_count, ccz_count
+
+    if model == "A":
+        t_count, ccz_count = split(tiles)
+        return build_machine(
+            t_factories=t_count,
+            ccz_factories=ccz_count,
+            buffer_capacity=buffer_capacity,
+            seed=seed,
+            name=f"A_tiles{tiles}_ccz{ccz_share:g}",
+        )
+
+    # Models B and C: distillers plus the raw bank that feeds them, all within
+    # the same area. Iterate to a fixed point on the area left for distillers.
+    distiller_area = tiles
+    for _ in range(12):
+        t_count, ccz_count = split(distiller_area)
+        raw_demand = (
+            t_count * T_DISTILLER_15_TO_1.inputs / T_DISTILLER_15_TO_1.latency
+            + ccz_count * CCZ_DISTILLER_8_TO_1.inputs / CCZ_DISTILLER_8_TO_1.latency
+        )
+        raw_count = max(1, ceil(raw_demand * raw_period * raw_scale))
+        catalysis_tiles = CATALYZED_CCZ_TO_T.tiles * ccz_count if model == "C" else 0
+        remaining = tiles - raw_count * raw_tiles - catalysis_tiles
+        if remaining == distiller_area:
+            break
+        distiller_area = max(t_tiles, remaining)
+
+    t_count, ccz_count = split(distiller_area)
+    raw_demand = (
+        t_count * T_DISTILLER_15_TO_1.inputs / T_DISTILLER_15_TO_1.latency
+        + ccz_count * CCZ_DISTILLER_8_TO_1.inputs / CCZ_DISTILLER_8_TO_1.latency
+    )
+    raw_count = max(1, ceil(raw_demand * raw_period * raw_scale))
+
+    raw_bank = FactoryBank(
+        resource=RAW,
+        count=raw_count,
+        period=raw_period,
+        latency=0,
+        buffer_capacity=raw_buffer,
+        tiles_per_factory=raw_tiles,
+    )
+    conversions: list[Conversion] = []
+    if t_count > 0:
+        conversions.append(_scaled(T_DISTILLER_15_TO_1, t_count))
+    if ccz_count > 0:
+        conversions.append(_scaled(CCZ_DISTILLER_8_TO_1, ccz_count))
+    if model == "C" and ccz_count > 0:
+        conversions.append(_scaled(CATALYZED_CCZ_TO_T, ccz_count))
+
+    return Machine(
+        banks=(raw_bank,),
+        conversions=tuple(conversions),
+        name=f"{model}_tiles{tiles}_ccz{ccz_share:g}_raw{raw_period}x{raw_scale:g}",
+        seed=seed,
+        buffers=((T, buffer_capacity), (CCZ, buffer_capacity)),
+        model=model,
+    )

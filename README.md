@@ -132,6 +132,41 @@ PYTHONPATH=src python experiments/mrc/mrc_plots.py
 PYTHONPATH=src python experiments/mrc/mrc_report.py
 ```
 
+### Is it a compiler problem? (phases 1-8)
+
+The follow-up investigation asks whether the T/CCZ result is an instance of a
+general compiler problem: semantically equivalent implementations with
+different, non-fungible resource signatures, where local selection fails. Its
+decision is recorded in `results/mrc_pilot/RESEARCH_DECISION_MEMO.md`, and the
+prior-work audit in `results/mrc_pilot/NOVELTY_AUDIT.md`.
+
+Additional components:
+
+- `mrc/resources.py`: `coupled_machine` builds three provisioning models at a
+  fixed factory area: independent banks (A), one raw level-1 stream feeding
+  15-to-1 T and 8-to-1 CCZ distillers (B), and B plus catalysed CCZ-to-2T
+  units (C)
+- `mrc/stagedp.py`: the stage-wise dynamic-programming selector over
+  (stage, carried buffer state) with Pareto pruning; analytic or stage-local
+  simulated stage costs
+- `mrc/extract.py`: decision-site extraction from gate streams (qmpa and
+  qualtran adapters), including symbolic recognition of compute/uncompute
+  pairs and the per-site record of variants, sources, signatures, ancillas
+  and equivalence assumptions
+
+Experiments, in order:
+
+```bash
+PYTHONPATH=src python experiments/mrc/mrc5_coupled.py      # coupled provisioning
+PYTHONPATH=src python experiments/mrc/mrc6_explain.py      # when does local selection fail
+PYTHONPATH=src python experiments/mrc/mrc7_selector.py     # stage-DP selector vs proven optima
+PYTHONPATH=src python experiments/mrc/mrc8_external.py     # external qmpa/qualtran workloads
+```
+
+The external run needs `qmpa` (github.com/Alan-Robertson/qmpa) and
+`qualtran` installed; both are independently authored arithmetic libraries and
+their circuits are reported separately from the synthetic kernels.
+
 ## Scope
 
 This repository focuses on compiler-level demand shaping and lightweight

@@ -39,7 +39,7 @@ from ftqc_delivery.rac.variants import Assignment, ProgramSpace, Site
 
 from .execution import critical_path, execute, resource_counts
 from .kernels import assignment_space, decision_sites
-from .resources import CCZ, T, FactoryBank, Machine
+from .resources import CCZ, T, Conversion, FactoryBank, Machine
 
 #: One CCZ state is worth two T states through the catalyzed transformation.
 T_EQUIVALENT = {T: 1.0, CCZ: 2.0}
@@ -80,9 +80,7 @@ def feasible_names(site: Site, machine: Machine) -> list[str]:
     they always choose from the same set.
     """
 
-    producible = set(machine.resources)
-    for conversion in machine.conversions:
-        producible.add(conversion.target)
+    producible = set(machine.producible)
     names = []
     for name in site.variant_names:
         dag = site.variant(name).fragment.to_dag(name)
@@ -118,13 +116,19 @@ def two_term_bound(dag, machine: Machine, clifford_weight: int = 1) -> float:
     bound = float(critical_path(dag, clifford_weight))
     for resource, count in counts.items():
         bank = machine.bank(resource)
-        if bank is None:
-            if machine.rate(resource) <= 0 and not any(
-                conversion.target == resource for conversion in machine.conversions
-            ):
-                return float("inf")
+        if bank is not None:
+            bound = max(bound, float(bank.earliest_cycle_for(count, seed=machine.seed)))
             continue
-        bound = max(bound, float(bank.earliest_cycle_for(count, seed=machine.seed)))
+        rate = machine.rate(resource)
+        producers = [c for c in machine.conversions if c.target == resource]
+        if not producers:
+            return float("inf")
+        if rate <= 0:
+            continue
+        lead = min(c.latency for c in producers)
+        source_bank = machine.bank(producers[0].source)
+        lead += source_bank.first_output if source_bank else 0
+        bound = max(bound, lead + count / rate)
     return bound
 
 
@@ -178,10 +182,24 @@ def uniform_assignments(
     return assignments
 
 
+def _consumes_resources(site: Site) -> bool:
+    return any(
+        resource_counts(variant.fragment.to_dag(variant.name)) for variant in site.variants
+    )
+
+
 def concurrent_site_counts(program: ProgramSpace) -> dict[str, int]:
-    """Return how many sites can be live at the same time as each site."""
+    """Return how many resource-consuming sites can be live alongside each site.
+
+    Only sites with a variant that consumes magic states count towards a
+    site's share of the supply: a Clifford gate that happens to be
+    incomparable with a site does not compete with it for factories. Programs
+    extracted with their Cliffords kept would otherwise divide the machine by
+    hundreds for a site that has one real competitor.
+    """
 
     ids = [site.site_id for site in program.sites]
+    consuming = {site.site_id for site in program.sites if _consumes_resources(site)}
     index = {site_id: position for position, site_id in enumerate(ids)}
     successors: dict[str, set[str]] = {site_id: set() for site_id in ids}
     indegree = {site_id: 0 for site_id in ids}
@@ -209,12 +227,14 @@ def concurrent_site_counts(program: ProgramSpace) -> dict[str, int]:
             collected |= reach[successor]
         reach[site_id] = collected
 
+    consuming_index = {index[site_id] for site_id in consuming}
     counts: dict[str, int] = {}
     for site_id in ids:
         ordered = reach[site_id] | {
             index[other] for other in ids if index[site_id] in reach[other]
         }
-        counts[site_id] = len(ids) - len(ordered)
+        concurrent = consuming_index - ordered - {index[site_id]}
+        counts[site_id] = 1 + len(concurrent)
     return counts
 
 
@@ -311,7 +331,17 @@ def select_local_sim_greedy(program: ProgramSpace, machine: Machine) -> Outcome:
 
 
 def _scaled_machine(machine: Machine, share: int) -> Machine:
-    """Return the machine divided by ``share`` concurrent consumers."""
+    """Return the machine divided by ``share`` concurrent consumers.
+
+    Buffers are divided too, but never below what the largest conversion
+    drawing on that resource needs as input: a 15-to-1 distiller behind a
+    buffer of two raw states would wait forever, and the point of the scaled
+    machine is to price a site's share of the supply, not to deadlock it.
+    """
+
+    floor: dict[str, int] = {}
+    for c in machine.conversions:
+        floor[c.source] = max(floor.get(c.source, 1), c.inputs)
 
     banks = []
     for bank in machine.banks:
@@ -324,18 +354,35 @@ def _scaled_machine(machine: Machine, share: int) -> Machine:
                 buffer_capacity=(
                     bank.buffer_capacity
                     if bank.unbounded_buffer
-                    else max(1, bank.buffer_capacity // share)
+                    else max(floor.get(bank.resource, 1), bank.buffer_capacity // share)
                 ),
                 tiles_per_factory=bank.tiles_per_factory,
                 p_success=bank.p_success,
                 stagger=bank.stagger,
             )
         )
+    conversions = tuple(
+        Conversion(
+            source=c.source,
+            target=c.target,
+            inputs=c.inputs,
+            outputs=c.outputs,
+            latency=c.latency,
+            concurrency=max(1, round(c.concurrency / share)),
+            tiles=c.tiles,
+            source_note=c.source_note,
+            proactive=c.proactive,
+        )
+        for c in machine.conversions
+    )
     return Machine(
         banks=tuple(banks),
-        conversions=machine.conversions,
+        conversions=conversions,
         name=f"{machine.name}/share{share}",
         seed=machine.seed,
+        buffers=tuple((r, max(floor.get(r, 1), cap // share)) for r, cap in machine.buffers),
+        model=machine.model,
+        initial_stock=machine.initial_stock,
     )
 
 
@@ -805,216 +852,4 @@ def best_oracle(
         limit=0,
         search_budget=time_budget,
         extra_seeds=extra_seeds,
-    )
-
-
-def _dominant_resource(site: Site, name: str) -> str | None:
-    """Return the resource a variant draws on, if it draws on exactly one."""
-
-    counts = resource_counts(site.variant(name).fragment.to_dag(name))
-    present = [resource for resource, count in counts.items() if count > 0]
-    return present[0] if len(present) == 1 else None
-
-
-def select_proportional_split(program: ProgramSpace, machine: Machine) -> Outcome:
-    """Split interchangeable sites between the banks in proportion to their rates.
-
-    This is the obvious thing to try once the resources are known to be
-    non-fungible, and it needs no search and no simulation: for each group of
-    interchangeable sites, send a fraction of them to the CCZ bank equal to the
-    CCZ bank's share of total T-equivalent capacity, and the rest to the T
-    bank, picking the cheapest single-resource implementation on each side. If
-    this captures the available headroom then nothing more elaborate is
-    justified.
-    """
-
-    start = time.perf_counter()
-    capacity = machine.rate(T) + T_EQUIVALENT[CCZ] * machine.rate(CCZ)
-    ccz_fraction = (
-        T_EQUIVALENT[CCZ] * machine.rate(CCZ) / capacity if capacity > 0 else 0.0
-    )
-
-    assignment: Assignment = program.default_assignment()
-    for site in program.sites:
-        allowed = feasible_names(site, machine)
-        if allowed:
-            assignment[site.site_id] = allowed[0]
-
-    for group in symmetric_groups(program):
-        template = group[0]
-        allowed = feasible_names(template, machine) or list(template.variant_names)
-        cheapest: dict[str, str] = {}
-        for name in allowed:
-            resource = _dominant_resource(template, name)
-            if resource is None:
-                continue
-            counts = resource_counts(template.variant(name).fragment.to_dag(name))
-            incumbent = cheapest.get(resource)
-            if incumbent is None or t_equivalents(counts) < t_equivalents(
-                resource_counts(template.variant(incumbent).fragment.to_dag(incumbent))
-            ):
-                cheapest[resource] = name
-
-        if CCZ not in cheapest or T not in cheapest:
-            only = cheapest.get(CCZ) or cheapest.get(T) or allowed[0]
-            for site in group:
-                assignment[site.site_id] = only
-            continue
-
-        on_ccz = int(round(len(group) * ccz_fraction))
-        for index, site in enumerate(group):
-            assignment[site.site_id] = cheapest[CCZ] if index < on_ccz else cheapest[T]
-
-    return _finish("proportional_split", program, assignment, machine, start)
-
-
-SELECTORS = {
-    "uniform_min_teq": select_uniform_min_teq,
-    "min_weighted_count": select_min_weighted_count,
-    "uniform_oracle": select_uniform_oracle,
-    "two_term_descent": select_two_term_descent,
-    "local_sim_greedy": select_local_sim_greedy,
-    "share_aware_greedy": select_share_aware_greedy,
-    "proportional_split": select_proportional_split,
-    "sim_descent": select_sim_descent,
-}
-
-
-def run_policy(policy: str, program: ProgramSpace, machine: Machine) -> Outcome:
-    """Run one named policy end to end."""
-
-    if policy not in SELECTORS:
-        raise ValueError(f"unknown policy {policy!r}")
-    return SELECTORS[policy](program, machine)
-
-
-def heterogeneity(program: ProgramSpace, assignment: Assignment) -> float:
-    """Return how far an assignment departs from compiling each family uniformly.
-
-    A library-style compiler picks one implementation per *family*, so an
-    assignment that gives adders one implementation and rotations another is
-    still uniform in the sense that matters. What this measures is mixing
-    *within* a family: the fraction of sites whose variant differs from the
-    most common variant among the sites of its own family. That is exactly the
-    freedom the uniform baselines do not have.
-    """
-
-    sites = decision_sites(program)
-    if not sites:
-        return 0.0
-    by_family: dict[str, list[str]] = {}
-    for site in sites:
-        by_family.setdefault(site.family, []).append(assignment[site.site_id])
-    deviating = 0
-    for picks in by_family.values():
-        most_common = max(set(picks), key=picks.count)
-        deviating += len(picks) - picks.count(most_common)
-    return deviating / len(sites)
-
-
-def space_time(
-    program: ProgramSpace,
-    assignment: Assignment,
-    machine: Machine,
-    makespan: int,
-    data_tiles: int,
-) -> int:
-    """Return makespan times the tiles the machine and program occupy.
-
-    The factory banks are charged, so a policy cannot look good by assuming a
-    factory it does not pay for, and the ancillas the chosen implementations
-    need are charged too.
-    """
-
-    return makespan * (machine.factory_tiles + data_tiles + program.ancillas(assignment))
-
-
-def symmetric_groups(program: ProgramSpace) -> list[list[Site]]:
-    """Group decision sites that are interchangeable in the program graph.
-
-    Two sites are interchangeable when they have the same predecessors, the
-    same successors and the same variant set, which in the staged kernels means
-    they sit in the same stage and offer the same implementations. Swapping the
-    choices of two such sites cannot change the makespan, so the optimum over
-    all assignments equals the optimum over multisets of choices per group.
-    """
-
-    predecessors: dict[str, set[str]] = {site.site_id: set() for site in program.sites}
-    successors: dict[str, set[str]] = {site.site_id: set() for site in program.sites}
-    for source, target in program.edges:
-        successors[source].add(target)
-        predecessors[target].add(source)
-
-    groups: dict[tuple, list[Site]] = {}
-    for site in decision_sites(program):
-        signature = (
-            tuple(sorted(predecessors[site.site_id])),
-            tuple(sorted(successors[site.site_id])),
-            site.variant_names,
-        )
-        groups.setdefault(signature, []).append(site)
-    return [sorted(group, key=lambda site: site.site_id) for group in groups.values()]
-
-
-def symmetric_space(program: ProgramSpace, machine: Machine) -> int:
-    """Return how many assignments remain after collapsing interchangeable sites."""
-
-    from math import comb
-
-    total = 1
-    for group in symmetric_groups(program):
-        names = feasible_names(group[0], machine) or list(group[0].variant_names)
-        total *= comb(len(group) + len(names) - 1, len(names) - 1) if len(names) > 1 else 1
-    return total
-
-
-def symmetric_oracle(
-    program: ProgramSpace, machine: Machine, limit: int = 200_000
-) -> Outcome | None:
-    """Return the exact optimum, enumerating multisets rather than assignments.
-
-    Returns ``None`` when even the collapsed space exceeds ``limit``. When it
-    returns an outcome, that outcome is the true global optimum: the reduction
-    is exact, not a heuristic.
-    """
-
-    from itertools import combinations_with_replacement
-
-    start = time.perf_counter()
-    groups = symmetric_groups(program)
-    if not groups:
-        return None
-    if symmetric_space(program, machine) > limit:
-        return None
-
-    choices = []
-    for group in groups:
-        names = feasible_names(group[0], machine) or list(group[0].variant_names)
-        choices.append(list(combinations_with_replacement(names, len(group))))
-
-    base = program.default_assignment()
-    for site in program.sites:
-        allowed = feasible_names(site, machine)
-        if allowed:
-            base[site.site_id] = allowed[0]
-
-    best_assignment, best_cost, simulations = None, None, 0
-    for combination in product(*choices):
-        assignment = dict(base)
-        for group, picks in zip(groups, combination):
-            for site, name in zip(group, picks):
-                assignment[site.site_id] = name
-        cost = _makespan(program, assignment, machine)
-        simulations += 1
-        if best_cost is None or cost < best_cost:
-            best_cost, best_assignment = cost, dict(assignment)
-    assert best_assignment is not None
-    return _finish(
-        "global_oracle",
-        program,
-        best_assignment,
-        machine,
-        start,
-        simulations=simulations,
-        exhaustive=True,
     )
