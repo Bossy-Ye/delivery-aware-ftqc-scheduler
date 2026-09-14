@@ -83,3 +83,32 @@ def test_raw_states_are_never_consumed_by_operations():
     trace = execute(fan("CCZ", 6), machine, record_trace=True)
     assert trace.consumed[RAW] == 0
     assert trace.consumed[CCZ] == 6
+
+
+def test_scaled_machine_keeps_buffers_large_enough_for_its_conversions():
+    from ftqc_delivery.mrc.policies import _scaled_machine
+    from ftqc_delivery.mrc.resources import coupled_machine
+
+    machine = coupled_machine("B", 400, 0.5)
+    scaled = _scaled_machine(machine, 200)
+    largest_input = max(c.inputs for c in machine.conversions)
+    for bank in scaled.banks:
+        needed = max([c.inputs for c in scaled.conversions if c.source == bank.resource] + [1])
+        assert bank.buffer_capacity >= needed
+    for resource, capacity in scaled.buffers:
+        needed = max([c.inputs for c in scaled.conversions if c.source == resource] + [1])
+        assert capacity >= needed
+    assert largest_input >= 8
+
+
+def test_share_counts_only_magic_consuming_sites():
+    from ftqc_delivery.mrc.extract import GateRecord, extract
+    from ftqc_delivery.mrc.policies import concurrent_site_counts
+
+    # Two independent Toffolis plus many independent CNOTs: each Toffoli has
+    # one competitor for the factories, however many Cliffords are live.
+    stream = [GateRecord("Toffoli", (0, 1, 2)), GateRecord("Toffoli", (3, 4, 5))]
+    stream += [GateRecord("CNOT", (10 + 2 * i, 11 + 2 * i)) for i in range(20)]
+    program = extract(stream, name="wide", drop_cliffords=False).program
+    counts = concurrent_site_counts(program)
+    assert counts["g00000"] == 2 and counts["g00001"] == 2
