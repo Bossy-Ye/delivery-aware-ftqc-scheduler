@@ -173,6 +173,40 @@ real programs, but on independently authored arithmetic it is rare and small
 selector only ties the best simple policy there. The memo lists what would
 change the decision either way.
 
+## Stateful-Oracle Go/No-Go (MARS-Q question)
+
+A third, self-contained study under `experiments/marsq/` and
+`results/marsq_go_nogo/` asks one decisive question: is there enough
+state-dependent optimisation headroom to justify building a new stateful
+implementation-selection compiler?
+
+Its decision is **NO_GO**, recorded in
+`results/marsq_go_nogo/GO_NO_GO_MEMO.md`. The design and thresholds were
+frozen in `results/marsq_go_nogo/EXPERIMENT_CONTRACT.md` before the decisive
+run and were not changed afterwards.
+
+Additional components:
+
+- `mrc/corpus.py`: a frozen corpus of 22 programs from three independently
+  authored sources (qmpa, qualtran, QASMBench), with an OpenQASM 2 front end
+  that raises on any gate it does not model rather than dropping it
+- `mrc/features.py`: structural measurement and target/control classification
+  from program structure alone, with no machine and no policy involved
+- `mrc/oracle.py`: the stateful oracle, exact where affordable and otherwise
+  an iterated search, always reported alongside a provable lower bound on
+  what any assignment could reach
+
+```bash
+PYTHONPATH=src python experiments/marsq/marsq_features.py   # structure, before any policy
+PYTHONPATH=src python experiments/marsq/marsq_screen.py     # cheap screening gate
+PYTHONPATH=src python experiments/marsq/marsq_matrix.py     # the full frozen matrix
+PYTHONPATH=src python experiments/marsq/marsq_ablate.py     # why the oracle wins when it wins
+PYTHONPATH=src python experiments/marsq/marsq_gates.py      # the frozen gate table
+```
+
+The corpus needs `qmpa`, `qualtran` and a QASMBench checkout; point
+`QASMBENCH_ROOT` at the latter.
+
 ## Scope
 
 This repository focuses on compiler-level demand shaping and lightweight
