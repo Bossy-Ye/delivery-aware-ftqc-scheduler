@@ -22,7 +22,13 @@ SIMPLE_POOL = (
     "share_aware_greedy",
     "proportional_split",
 )
-ALL_POLICIES = (P0, P1, P2) + SIMPLE_POOL
+#: An existing state-aware search kept as a reference column. It is not part
+#: of P3: it scores candidates with full state-carrying simulations, so it is
+#: not a "simple, non-stateful" baseline. It is reported because whether a
+#: cheap existing method already reaches the oracle decides whether a new
+#: algorithm is needed at all.
+EXISTING_SEARCH = "sim_descent"
+ALL_POLICIES = (P0, P1, P2) + SIMPLE_POOL + (EXISTING_SEARCH,)
 
 #: Deterministic seed for every randomised component.
 SEED = 20260920

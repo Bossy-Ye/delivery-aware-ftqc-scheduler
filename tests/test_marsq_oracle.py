@@ -174,3 +174,49 @@ def test_qasm_angles_are_classified_by_cost():
         )
         names = [gate.name for gate in corpus.qasm_gate_stream(path)]
     assert names == ["Z", "S", "T", "ZPowGate"]
+
+
+def test_stage_resets_remove_exactly_the_carried_state():
+    """With resets each stage restarts empty, so the total can only grow."""
+
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "experiments" / "marsq"))
+    from marsq_ablate import execute_with_stage_resets, myopic_stage_exact
+
+    from ftqc_delivery.mrc.execution import execute as run
+
+    program = extract(
+        [
+            GateRecord("Toffoli", (0, 1, 2)),
+            GateRecord("Toffoli", (0, 1, 2)),
+            GateRecord("Toffoli", (2, 3, 4)),
+            GateRecord("Toffoli", (2, 3, 4)),
+        ],
+        name="two_stage",
+    ).program
+    machine = machine_for_capacity(0.5, 0.5)
+    assignment = program.default_assignment()
+    carried = run(program.instantiate(assignment), machine).makespan
+    reset = execute_with_stage_resets(program, assignment, machine)
+    assert reset >= carried
+
+    myopic = myopic_stage_exact(program, machine)
+    assert set(myopic) >= {site.site_id for site in decision_sites(program)}
+    assert run(program.instantiate(myopic), machine).makespan > 0
+
+
+def test_executor_reports_a_stall_instead_of_spinning():
+    """A machine that can never deliver must fail loudly, not hang."""
+
+    from ftqc_delivery.mrc.resources import Conversion, FactoryBank, Machine
+
+    program = _one_and()
+    starved = Machine(
+        banks=(FactoryBank(resource="RAW", count=1, period=1, buffer_capacity=1),),
+        conversions=(Conversion(source="RAW", target=CCZ, inputs=8, outputs=1, latency=1),),
+    )
+    with pytest.raises(RuntimeError, match="stalled|exceeded"):
+        execute(program.instantiate({**program.default_assignment(), **{
+            decision_sites(program)[0].site_id: "ccz"}}), starved)

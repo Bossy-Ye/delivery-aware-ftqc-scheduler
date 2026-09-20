@@ -12,7 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from common_marsq import ALL_POLICIES, P0, P1, P2, SEED, SIMPLE_POOL, ratio
+from common_marsq import ALL_POLICIES, EXISTING_SEARCH, P0, P1, P2, SEED, SIMPLE_POOL, ratio
 
 from ftqc_delivery.mrc.corpus import BY_NAME, build_workload
 from ftqc_delivery.mrc.execution import execute
@@ -31,6 +31,7 @@ CASE_FIELDS = [
     *[f"makespan_{policy}" for policy in ALL_POLICIES],
     "makespan_best_simple", "best_simple_policy",
     "makespan_best_non_stateful", "best_non_stateful_policy",
+    "residual_headroom_vs_existing_search",
     "makespan_stagedp", "seconds_stagedp",
     "makespan_oracle", "oracle_status", "oracle_seconds", "oracle_simulations", "lower_bound",
     "headroom_vs_best_non_stateful", "residual_headroom_vs_stagedp",
@@ -81,7 +82,7 @@ def run_case(
         machine,
         exact_time_budget=exact_time_budget,
         search_budget=search_budget,
-        extra_seeds=(stagedp.assignment,),
+        extra_seeds=(stagedp.assignment, outcomes[EXISTING_SEARCH].assignment),
         seed=SEED,
     )
 
@@ -108,6 +109,10 @@ def run_case(
         "best_simple_policy": best_simple,
         "makespan_best_non_stateful": best_non_stateful,
         "best_non_stateful_policy": best_non_stateful_policy,
+        "residual_headroom_vs_existing_search": round(
+            ratio(outcomes[EXISTING_SEARCH].makespan - oracle.makespan,
+                  outcomes[EXISTING_SEARCH].makespan), 4
+        ),
         "makespan_stagedp": stagedp.makespan,
         "seconds_stagedp": round(stagedp_seconds, 3),
         "makespan_oracle": oracle.makespan,
