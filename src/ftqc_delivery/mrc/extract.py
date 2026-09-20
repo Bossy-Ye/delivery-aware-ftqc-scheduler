@@ -48,7 +48,15 @@ from typing import Iterable, Sequence
 
 from ftqc_delivery.rac.variants import FragmentBuilder, ProgramSpace, Site, Variant
 
-from .library import AND_CCZ, AND_T4, TOF_T7_D1, TOF_T7_D3, Realisation, _emit_and
+from .library import (
+    AND_CCZ,
+    AND_T4,
+    TOF_T7_D1,
+    TOF_T7_D3,
+    Realisation,
+    _emit_and,
+    rotation_variants,
+)
 
 
 @dataclass(frozen=True)
@@ -90,6 +98,8 @@ class Extraction:
     gate_count: int = 0
     toffoli_count: int = 0
     paired_count: int = 0
+    rotation_count: int = 0
+    t_gate_count: int = 0
     pairing: str = "structural"
     explicit_pairs: int = 0
     structural_pairs: int = 0
@@ -105,6 +115,8 @@ class Extraction:
             "decision_sites": len(deciding),
             "paired_sites": self.paired_count,
             "standalone_sites": sum(1 for site in self.sites if site.family == "toffoli"),
+            "rotation_sites": self.rotation_count,
+            "t_gate_sites": self.t_gate_count,
             "variants_per_site": round(
                 sum(len(site.variants) for site in deciding) / max(1, len(deciding)), 2
             ),
@@ -135,17 +147,28 @@ UNCOMPUTE_SOURCE = (
 )
 
 #: Gates whose action on the computational basis leaves every line unchanged.
-DIAGONAL_GATES = {"z", "s", "sdg", "t", "tdg", "cz", "ccz", "rz", "phase", "p", "cphase", "cp"}
+DIAGONAL_GATES = {
+    "z", "s", "sdg", "t", "tdg", "cz", "ccz", "rz", "phase", "p", "cphase", "cp",
+    "zpowgate", "rzviaphasegradient", "zpowconstviaphasegradient",
+}
 #: Gates that flip exactly their last line.
 FLIP_LAST_GATES = {"x", "cx", "cnot", "ccx", "toffoli", "ccnot", "mcx"}
+#: Single-qubit z-rotations whose synthesis is itself a compiler choice.
+ROTATION_GATES = {"rz", "zpowgate", "zpow", "rzviaphasegradient", "zpowconstviaphasegradient"}
+#: A bare T gate: one T state, no alternative implementation.
+T_GATES = {"t", "tgate", "tdg", "tdggate"}
+
 #: Spellings used by cirq and qualtran for the gates the analysis models.
 GATE_ALIASES = {
     "_paulix": "x", "xgate": "x", "xpowgate": "x",
-    "_pauliz": "z", "zgate": "z", "zpowgate": "z", "spowgate": "s", "tpowgate": "t",
+    "_pauliz": "z", "zgate": "z", "spowgate": "s",
     "cxpowgate": "cnot", "cxgate": "cnot", "cx": "cnot",
     "czpowgate": "cz", "czgate": "cz",
     "ccxpowgate": "toffoli", "ccx": "toffoli", "ccnot": "toffoli", "ccxgate": "toffoli",
     "cczpowgate": "ccz", "cczgate": "ccz",
+    "tgate": "t", "tdggate": "tdg", "_paulitgate": "t",
+    "zpow": "zpowgate", "rzgate": "rz",
+    "twobitswap": "swap", "hadamard": "h", "sgate": "s",
 }
 
 
@@ -326,13 +349,54 @@ def has_markers(gates: Sequence[GateRecord]) -> bool:
     return any(gate.role is not None for gate in gates)
 
 
-def extract(gates: Iterable[GateRecord], name: str = "program", drop_cliffords: bool = False) -> Extraction:
+def _rotation_site(site_id: str, bits: int) -> Site:
+    """Return a rotation decision site at ``bits`` of precision."""
+
+    return Site(site_id=site_id, family="rotation", variants=rotation_variants(site_id, bits))
+
+
+def _t_gate_site(site_id: str) -> Site:
+    """Return a site for a bare T gate: one T state, no choice of factory."""
+
+    builder = FragmentBuilder(prefix=f"{site_id}_")
+    source = builder.add("Clifford")
+    consumed = builder.add_layer("T", 1, [source])
+    builder.add("Clifford", consumed)
+    return Site(
+        site_id=site_id,
+        family="tgate",
+        variants=(
+            Variant(
+                name="t_state",
+                family="tgate",
+                fragment=builder.finish(ancillas=0, notes="one T gate consumes one T state"),
+                notes="one T gate consumes one T state",
+            ),
+        ),
+    )
+
+
+def extract(
+    gates: Iterable[GateRecord],
+    name: str = "program",
+    drop_cliffords: bool = False,
+    rotation_bits: int | None = None,
+) -> Extraction:
     """Turn a gate stream into a program whose Toffolis are decision sites.
 
     ``drop_cliffords`` removes single-qubit and CNOT gates from the dependency
     graph entirely; dependencies then run Toffoli to Toffoli through the qubit
     lines. This keeps the extracted program small enough for the exact
     reference on modest circuits, at the cost of the Clifford critical path.
+
+    ``rotation_bits`` turns single-qubit z-rotations into decision sites
+    synthesised to that many bits of precision, offering the rotation
+    implementations of :func:`rotation_variants` (Ross-Selinger T synthesis,
+    Toffoli-count synthesis, phase-gradient addition, the latter two with
+    their Toffolis drawn from either bank). Bare T gates become
+    single-variant sites consuming one T state each, since a T gate has no
+    alternative implementation. Left as ``None`` both are Clifford glue, which
+    is the behaviour every earlier experiment relied on.
     """
 
     records = list(gates)
@@ -353,10 +417,16 @@ def extract(gates: Iterable[GateRecord], name: str = "program", drop_cliffords: 
     last_on_line: dict[int, set[str]] = {}
     depth_of: dict[str, int] = {}
     toffolis = 0
+    rotations = 0
+    t_gates = 0
 
     for index, gate in enumerate(records):
         toffoli = is_toffoli(gate)
-        if not toffoli and drop_cliffords:
+        consuming = toffoli or (
+            rotation_bits is not None
+            and canonical_name(gate.name) in (ROTATION_GATES | T_GATES)
+        )
+        if not consuming and drop_cliffords:
             # The gate is not a site, but dependencies still flow through it:
             # every line it touches now depends on everything any of its lines
             # depended on, so a Toffoli reached through a chain of CNOTs keeps
@@ -369,6 +439,7 @@ def extract(gates: Iterable[GateRecord], name: str = "program", drop_cliffords: 
             continue
         site_id = f"g{index:05d}"
         role = "clifford"
+        canonical = canonical_name(gate.name)
         if toffoli:
             toffolis += 1
             if index in pairs:
@@ -380,6 +451,14 @@ def extract(gates: Iterable[GateRecord], name: str = "program", drop_cliffords: 
             else:
                 role = "toffoli"
                 site = Site(site_id=site_id, family="toffoli", variants=_toffoli_variants(site_id, STANDALONE))
+        elif rotation_bits is not None and canonical in ROTATION_GATES:
+            role = "rotation"
+            rotations += 1
+            site = _rotation_site(site_id, rotation_bits)
+        elif rotation_bits is not None and canonical in T_GATES:
+            role = "tgate"
+            t_gates += 1
+            site = _t_gate_site(site_id)
         else:
             site = _clifford_site(site_id, gate.name)
         sites.append(site)
@@ -394,6 +473,25 @@ def extract(gates: Iterable[GateRecord], name: str = "program", drop_cliffords: 
         for q in gate.qubits:
             last_on_line[q] = {site_id}
 
+        if role in ("rotation", "tgate"):
+            extracted.append(
+                ExtractedSite(
+                    site_id=site_id,
+                    family=role,
+                    index=index,
+                    qubits=gate.qubits,
+                    depth=depth,
+                    variants=tuple(v.name for v in site.variants),
+                    sources=tuple(v.notes for v in site.variants),
+                    ancillas=tuple(v.fragment.ancillas for v in site.variants),
+                    paired_with=None,
+                    equivalence=(
+                        "every variant realises the same z-rotation to the stated precision"
+                        if role == "rotation"
+                        else "a T gate consumes exactly one T state; no alternative implementation"
+                    ),
+                )
+            )
         if toffoli:
             partner = pairs.get(index)
             if role == "and_uncompute":
@@ -439,6 +537,8 @@ def extract(gates: Iterable[GateRecord], name: str = "program", drop_cliffords: 
         gate_count=len(records),
         toffoli_count=toffolis,
         paired_count=2 * len(pairs),
+        rotation_count=rotations,
+        t_gate_count=t_gates,
         pairing=pairing,
         explicit_pairs=len(pairs) if pairing == "explicit" else 0,
         structural_pairs=len(structural),
@@ -500,6 +600,28 @@ def qmpa_divider(bits: int):
     return circuit
 
 
+def _zpow_name(gate) -> str:
+    """Return what a z-rotation of this exponent actually costs.
+
+    cirq keeps every diagonal single-qubit gate as a ``ZPowGate``, so the
+    exponent, not the class, says whether the gate is free. Exponents that are
+    multiples of a half turn are Clifford (Z, S and their inverses); a quarter
+    turn is exactly a T gate and consumes one T state; anything else is a
+    genuine rotation whose synthesis is a compiler choice. Treating the
+    Clifford cases as rotations would invent magic-state demand that a real
+    compiler never pays.
+    """
+
+    exponent = float(getattr(gate, "exponent", 1.0)) % 2.0
+    for clifford in (0.0, 0.5, 1.0, 1.5, 2.0):
+        if abs(exponent - clifford) < 1e-9:
+            return "Z" if clifford in (1.0,) else ("S" if clifford in (0.5, 1.5) else "I")
+    for t_like in (0.25, 1.75, 0.75, 1.25):
+        if abs(exponent - t_like) < 1e-9:
+            return "T"
+    return "ZPowGate"
+
+
 def qualtran_gate_stream(bloq) -> list[GateRecord]:
     """Return a qualtran bloq, flattened to leaf gates, as a gate stream.
 
@@ -520,6 +642,8 @@ def qualtran_gate_stream(bloq) -> list[GateRecord]:
         if kind == "And":
             role = "uncompute" if getattr(gate, "uncompute", False) else "compute"
             stream.append(GateRecord("Toffoli", lines, role=role))
+        elif kind in ("ZPowGate", "_PauliZ", "Rz") and len(lines) == 1:
+            stream.append(GateRecord(_zpow_name(gate), lines))
         elif kind == "TwoBitCSwap":
             ctrl, x, y = lines
             stream.append(GateRecord("CNOT", (y, x)))

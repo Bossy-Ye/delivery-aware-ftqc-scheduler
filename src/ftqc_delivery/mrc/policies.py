@@ -291,6 +291,42 @@ def select_min_weighted_count(program: ProgramSpace, machine: Machine) -> Outcom
     return _finish("min_weighted_count", program, assignment, machine, start)
 
 
+def _fixed_preference(program: ProgramSpace, machine: Machine, prefer: str) -> Assignment:
+    """Return the assignment that always builds a site the same way.
+
+    ``prefer`` is the resource the compiler insists on. Where a site has no
+    variant drawing on it, the fewest-T-equivalent feasible variant is used
+    instead, so the policy is always well defined.
+    """
+
+    assignment: Assignment = {}
+    for site in program.sites:
+        names = feasible_names(site, machine) or list(site.variant_names)
+        scored = []
+        for name in names:
+            counts = resource_counts(site.variant(name).fragment.to_dag(name))
+            uses = counts.get(prefer, 0) > 0
+            scored.append((0 if uses else 1, t_equivalents(counts), name))
+        assignment[site.site_id] = min(scored)[2] if scored else site.variants[0].name
+    return assignment
+
+
+def select_fixed_t(program: ProgramSpace, machine: Machine) -> Outcome:
+    """Return the T-only compilation: every site built from T states."""
+
+    start = time.perf_counter()
+    assignment = _fixed_preference(program, machine, T)
+    return _finish("fixed_t", program, assignment, machine, start)
+
+
+def select_fixed_ccz(program: ProgramSpace, machine: Machine) -> Outcome:
+    """Return the direct compilation: every eligible site consumes a CCZ state."""
+
+    start = time.perf_counter()
+    assignment = _fixed_preference(program, machine, CCZ)
+    return _finish("fixed_ccz", program, assignment, machine, start)
+
+
 def select_uniform_oracle(program: ProgramSpace, machine: Machine) -> Outcome:
     """Return the fastest uniform implementation, found by simulation."""
 
@@ -645,6 +681,8 @@ def select_proportional_split(program: ProgramSpace, machine: Machine) -> Outcom
 
 
 SELECTORS = {
+    "fixed_t": select_fixed_t,
+    "fixed_ccz": select_fixed_ccz,
     "uniform_min_teq": select_uniform_min_teq,
     "min_weighted_count": select_min_weighted_count,
     "uniform_oracle": select_uniform_oracle,
