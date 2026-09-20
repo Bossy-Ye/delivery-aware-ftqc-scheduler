@@ -180,6 +180,9 @@ def execute(
     total = len(order)
     cycle = 0
     last_finish = 0
+    # Separate from last_finish, which defines the makespan: this one only
+    # tracks whether the simulation is still making progress, for the guard.
+    last_progress = 0
     limit = cycle_limit if cycle_limit is not None else 200 * (total + 1) + 200_000
     # A stall this long cannot be a legitimate wait: the longest one is a
     # buffer filling behind a conversion, which is bounded by inputs times the
@@ -196,7 +199,7 @@ def execute(
         cycle += 1
         if cycle > limit:
             raise RuntimeError(f"execution of {dag.name!r} exceeded {limit} cycles")
-        if cycle - last_finish > idle_limit and not any(in_flight.values()):
+        if cycle - last_progress > idle_limit and not any(in_flight.values()):
             raise RuntimeError(
                 f"execution of {dag.name!r} stalled: no node finished for {idle_limit} cycles "
                 f"on {machine.name!r} (stock {stock})"
@@ -210,7 +213,7 @@ def execute(
 
         for node_id in finishing.pop(cycle, ()):
             completed += 1
-            last_finish = cycle
+            last_progress = cycle
             for successor in successors[node_id]:
                 remaining[successor] -= 1
                 if remaining[successor] == 0:
