@@ -207,6 +207,34 @@ PYTHONPATH=src python experiments/marsq/marsq_gates.py      # the frozen gate ta
 The corpus needs `qmpa`, `qualtran` and a QASMBench checkout; point
 `QASMBENCH_ROOT` at the latter.
 
+## Temporal-Transform Go/No-Go
+
+A fourth study under `experiments/temporal/` and
+`results/temporal_transform_go_nogo/` asks whether a semantics-preserving
+transformation can cut FT execution time by reshaping *when* magic states are
+demanded, without changing T-count.
+
+Its decision is **NO_GO**, recorded in
+`results/temporal_transform_go_nogo/GO_NO_GO_MEMO.md`, with the design frozen
+beforehand in the same directory's `EXPERIMENT_CONTRACT.md`.
+
+`mrc/transform.py` adds two semantics-preserving transformations that change
+only the dependency graph: commutation-aware lowering, which drops the
+read-after-read edges that line-contact lowering invents, and pacing, which
+chains magic-consuming sites so that at most k are ever in flight. Both keep
+the gate list, the T-count and the CCZ-count exactly.
+
+One finding is useful beyond that study: line-contact lowering overstates the
+critical path of real programs by up to 87%, so the commutation-aware graph is
+the better default for future work.
+
+```bash
+PYTHONPATH=src python experiments/temporal/validate.py    # equivalence evidence
+PYTHONPATH=src python experiments/temporal/screen.py      # cheap screening gate
+PYTHONPATH=src python experiments/temporal/matrix.py      # the full frozen matrix
+PYTHONPATH=src python experiments/temporal/mechanism.py   # why it helps, and why not
+```
+
 ## Scope
 
 This repository focuses on compiler-level demand shaping and lightweight
