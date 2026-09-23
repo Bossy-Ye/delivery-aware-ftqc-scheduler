@@ -1,0 +1,45 @@
+workload,source,transformation,equivalence_method,equivalent,T_count_original,T_count_transformed,CCZ_count_original,CCZ_count_transformed,gates,qubits,edges_conventional,edges_transformed,notes
+qmpa_draper8,qmpa,commuting,structural,True,0,0,8,8,30,24,29,29,all unordered pairs commute
+qmpa_draper8,qmpa,pacing,edge-superset,True,0,0,8,8,30,24,29,29,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qmpa_draper16,qmpa,commuting,structural,True,0,0,16,16,62,48,61,61,all unordered pairs commute
+qmpa_draper16,qmpa,pacing,edge-superset,True,0,0,16,16,62,48,61,61,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qmpa_mul6,qmpa,commuting,structural,True,0,0,93,93,420,38,787,1128,all unordered pairs commute
+qmpa_mul6,qmpa,pacing,edge-superset,True,0,0,93,93,420,38,787,1128,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qmpa_mul8,qmpa,commuting,structural,True,0,0,164,164,736,50,1394,1993,all unordered pairs commute
+qmpa_mul8,qmpa,pacing,edge-superset,True,0,0,164,164,736,50,1394,1993,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qmpa_div6,qmpa,commuting,structural,True,0,0,18,18,95,27,162,253,all unordered pairs commute
+qmpa_div6,qmpa,pacing,edge-superset,True,0,0,18,18,95,27,162,253,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_aliassamp8,qualtran,commuting,structural,True,0,0,33,33,374,82,660,1052,all unordered pairs commute
+qt_aliassamp8,qualtran,pacing,edge-superset,True,0,0,33,33,374,82,660,1052,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_aliassamp16,qualtran,commuting,structural,True,0,0,39,39,473,87,871,1373,all unordered pairs commute
+qt_aliassamp16,qualtran,pacing,edge-superset,True,0,0,39,39,473,87,871,1373,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_qft6,qualtran,commuting,statevector,True,244,244,15,15,54,21,81,141,all unordered pairs commute; max amplitude deviation 8.17e-10 over 3 random linear extensions
+qt_qft6,qualtran,pacing,edge-superset,True,244,244,15,15,54,21,81,141,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_qft8,qualtran,commuting,structural,True,606,606,28,28,96,36,148,260,all unordered pairs commute
+qt_qft8,qualtran,pacing,edge-superset,True,606,606,28,28,96,36,148,260,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_qpe3,qualtran,commuting,statevector,True,8,8,10,10,37,14,50,81,all unordered pairs commute; max amplitude deviation 6.10e-09 over 3 random linear extensions
+qt_qpe3,qualtran,pacing,edge-superset,True,8,8,10,10,37,14,50,81,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_prepunif6,qualtran,commuting,unitary,True,80,80,5,5,43,11,57,90,all unordered pairs commute; max amplitude deviation 1.76e-16 over 3 random linear extensions
+qt_prepunif6,qualtran,pacing,edge-superset,True,80,80,5,5,43,11,57,90,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qb_qram_n20,qasmbench,commuting,statevector,True,0,0,14,14,41,20,65,91,all unordered pairs commute; max amplitude deviation 0.00e+00 over 3 random linear extensions
+qb_qram_n20,qasmbench,pacing,edge-superset,True,0,0,14,14,41,20,65,91,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qb_sat_n11,qasmbench,commuting,unitary,True,0,0,22,22,91,11,144,248,all unordered pairs commute; max amplitude deviation 2.22e-16 over 3 random linear extensions
+qb_sat_n11,qasmbench,pacing,edge-superset,True,0,0,22,22,91,11,144,248,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qb_sat_n7,qasmbench,commuting,unitary,True,0,0,6,6,40,7,52,73,all unordered pairs commute; max amplitude deviation 2.22e-16 over 3 random linear extensions
+qb_sat_n7,qasmbench,pacing,edge-superset,True,0,0,6,6,40,7,52,73,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qb_multiplier_n15,qasmbench,commuting,statevector,True,0,0,18,18,70,15,132,199,all unordered pairs commute; max amplitude deviation 0.00e+00 over 3 random linear extensions
+qb_multiplier_n15,qasmbench,pacing,edge-superset,True,0,0,18,18,70,15,132,199,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qb_multiply_n13,qasmbench,commuting,statevector,True,0,0,6,6,14,13,17,16,all unordered pairs commute; max amplitude deviation 0.00e+00 over 3 random linear extensions
+qb_multiply_n13,qasmbench,pacing,edge-superset,True,0,0,6,6,14,13,17,16,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qb_sqrt_n18,qasmbench,commuting,statevector,True,0,0,65,65,480,18,775,1219,all unordered pairs commute; max amplitude deviation 4.67e-09 over 3 random linear extensions
+qb_sqrt_n18,qasmbench,pacing,edge-superset,True,0,0,65,65,480,18,775,1219,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_add16,qualtran,commuting,structural,True,0,0,15,15,117,47,201,342,all unordered pairs commute
+qt_add16,qualtran,pacing,edge-superset,True,0,0,15,15,117,47,201,342,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_modadd8,qualtran,commuting,structural,True,0,0,31,31,279,68,491,820,all unordered pairs commute
+qt_modadd8,qualtran,pacing,edge-superset,True,0,0,31,31,279,68,491,820,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_multiand10,qualtran,commuting,statevector,True,0,0,9,9,9,19,8,8,all unordered pairs commute; max amplitude deviation 0.00e+00 over 3 random linear extensions
+qt_multiand10,qualtran,pacing,edge-superset,True,0,0,9,9,9,19,8,8,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_qrom16x5,qualtran,commuting,statevector,True,0,0,14,14,76,22,155,202,all unordered pairs commute; max amplitude deviation 0.00e+00 over 3 random linear extensions
+qt_qrom16x5,qualtran,pacing,edge-superset,True,0,0,14,14,76,22,155,202,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
+qt_halfgt8,qualtran,commuting,structural,True,0,0,8,8,78,28,109,110,all unordered pairs commute
+qt_halfgt8,qualtran,pacing,edge-superset,True,0,0,8,8,78,28,109,110,"pacing only adds edges to an acyclic graph, so every schedule of the result was already legal"
