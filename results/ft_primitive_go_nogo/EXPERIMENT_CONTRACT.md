@@ -181,8 +181,9 @@ NO_GO if any of:
 * decisions almost always agree: in at least 90% of communicating realistic
   instances, A and C differ on under 5% of decisions;
 * B_fixed recovers at least 95% of the oracle benefit on the realistic set;
-* inversions only in constructed examples: clean-pattern inversions exist but G1
-  fails on the workloads;
+* inversions only in constructed examples: clean-pattern inversions exist but no
+  communicating workload instance, in any regime class, has decision
+  disagreement >= 10% together with `F_A / F_C` >= 1.1;
 * small improvement: median `F_A / F_C` < 1.25 in every realistic regime;
 * prohibitive overhead: G4 fails in more than half of the instances where C wins.
 
@@ -191,6 +192,14 @@ threshold (B_fixed recovers 80-95%), confined to near-term/idealised regimes, or
 only moderate (median ratio 1.25-10).
 
 Precedence: a NO_GO trigger overrides HOLD; GO needs every G criterion.
+
+Amendment (recorded before any calibration result was read): the
+"only constructed" trigger originally read "clean-pattern inversions exist but G1
+fails on the workloads". That conflated two outcomes the brief separates:
+inversions on real workloads confined to near-term or idealised regimes are
+"narrow hardware regimes" (HOLD), not "only artificial examples" (NO_GO). The
+trigger now requires that no real workload shows the inversion in any regime.
+All GO criteria are unchanged.
 
 ## 9b. Mechanism ablations (added before any calibration result was read)
 
