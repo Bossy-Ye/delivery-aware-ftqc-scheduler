@@ -1,0 +1,80 @@
+{
+  "openqasm": {
+    "regions": 47,
+    "local": 41,
+    "present_absent": 4,
+    "divergent": 0,
+    "identical": 0,
+    "loop": 2,
+    "novel_conditional_pairs": 3,
+    "programs": 11,
+    "families": 11,
+    "programs_with_any_divergent": 0,
+    "programs_with_multi_qubit_conditionals": 2
+  },
+  "qasmbench": {
+    "regions": 49,
+    "local": 48,
+    "present_absent": 1,
+    "divergent": 0,
+    "identical": 0,
+    "loop": 0,
+    "novel_conditional_pairs": 0,
+    "programs": 5,
+    "families": 5,
+    "programs_with_any_divergent": 0,
+    "programs_with_multi_qubit_conditionals": 1
+  },
+  "veriqbench": {
+    "regions": 333310,
+    "local": 333310,
+    "present_absent": 0,
+    "divergent": 0,
+    "identical": 0,
+    "loop": 0,
+    "novel_conditional_pairs": 0,
+    "programs": 203,
+    "families": 7,
+    "programs_with_any_divergent": 0,
+    "programs_with_multi_qubit_conditionals": 0
+  },
+  "mqtbench": {
+    "regions": 256,
+    "local": 256,
+    "present_absent": 0,
+    "divergent": 0,
+    "identical": 0,
+    "loop": 0,
+    "novel_conditional_pairs": 0,
+    "programs": 12,
+    "families": 3,
+    "programs_with_any_divergent": 0,
+    "programs_with_multi_qubit_conditionals": 0
+  },
+  "qualtran": {
+    "regions": 132,
+    "local": 0,
+    "present_absent": 132,
+    "divergent": 0,
+    "identical": 0,
+    "loop": 0,
+    "novel_conditional_pairs": 56,
+    "programs": 10,
+    "families": 10,
+    "programs_with_any_divergent": 0,
+    "programs_with_multi_qubit_conditionals": 10
+  },
+  "ALL": {
+    "regions": 333794,
+    "local": 333655,
+    "present_absent": 137,
+    "divergent": 0,
+    "identical": 0,
+    "loop": 2,
+    "novel_conditional_pairs": 59,
+    "programs": 241,
+    "families": 36,
+    "programs_with_any_divergent": 0,
+    "programs_with_multi_qubit_conditionals": 13
+  }
+}
