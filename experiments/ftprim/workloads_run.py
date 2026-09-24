@@ -43,9 +43,17 @@ def regimes(fits: dict, spec: list):
     for reg in spec:
         name, f = by[(reg["code"], reg["p"], reg["ratio"])]
         d = f["derived"]
+        # A non-local CNOT contains the local gate plus the ebit operations, so it
+        # cannot be cheaper; a negative fitted difference is statistical noise and
+        # is clamped to zero (and flagged) rather than rewarding remote gates.
+        e_local = max(d["e_local"], 0.0)
+        e_remote = max(d["e_remote"], e_local)
+        clamped = int(d["e_remote"] < e_local or d["e_local"] < 0 or d["e_tel"] < 0 or d["s_mem"] < 0)
         yield dict(regime=f"{name}|rho={reg['rho']:g}", regime_class=reg["regime_class"], code=f["code"],
-                   d=f["d"], n=f["n"], p=f["p"], ratio=f["ratio"], rho=reg["rho"]), O.Costs(
-            e_remote=d["e_remote"], e_local=d["e_local"], e_tel=d["e_tel"], s_mem=d["s_mem"],
+                   d=f["d"], n=f["n"], p=f["p"], ratio=f["ratio"], rho=reg["rho"], costs_clamped=clamped,
+                   e_remote=e_remote, e_local=e_local, e_tel=max(d["e_tel"], 0.0),
+                   s_mem=max(d["s_mem"], 0.0)), O.Costs(
+            e_remote=e_remote, e_local=e_local, e_tel=max(d["e_tel"], 0.0), s_mem=max(d["s_mem"], 0.0),
             n=f["n"], rho=float(reg["rho"]))
 
 

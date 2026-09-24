@@ -87,8 +87,14 @@ def workload_summary(rows, realistic_kstar_spread):
     for reg, rs in sorted(by_regime.items()):
         ratios = [ratio(r) for r in rs]
         dis = [r["decision_disagreement"] for r in rs]
+        # Upper bound on the ratio from the solver's proven lower bound on C.
+        bound_ratios = [r["A_fail_sum"] / r["c_bound_fail_sum"]
+                        if isinstance(r.get("c_bound_fail_sum"), float) and r["c_bound_fail_sum"] > 0
+                        else ratio(r) for r in rs]
         per_regime[reg] = dict(
             workloads=len(rs), median_failure_ratio=statistics.median(ratios), max_failure_ratio=max(ratios),
+            median_failure_ratio_upper_bound=statistics.median(bound_ratios),
+            solver_optimal_share=sum(1 for r in rs if r["c_status"] in ("OPTIMAL", "TRIVIAL")) / len(rs),
             share_disagree_ge_10pct=sum(d >= 0.10 for d in dis) / len(rs),
             median_disagreement=statistics.median(dis),
             g1_in_regime=sum(d >= 0.10 for d in dis) / len(rs) >= 0.5,
@@ -144,8 +150,9 @@ def workload_summary(rows, realistic_kstar_spread):
 
 
 def verdict(clean, kstar, wl, slack_rows):
-    real_kstars = [v["oneway"]["k"] for v in kstar.values()
-                   if v.get("oneway", {}).get("cls") == "realistic" and v["oneway"]["k"] is not None]
+    # A regime whose failure objective never teleports within k <= 30 counts as 31.
+    real_kstars = [(v["oneway"]["k"] or 31) for v in kstar.values()
+                   if v.get("oneway", {}).get("cls") == "realistic"]
     spread = (max(real_kstars) / min(real_kstars)) if real_kstars else float("nan")
     rec = wl["best_fixed_recovery"]
     hw = wl["hardware_conditioned_recovery"]
