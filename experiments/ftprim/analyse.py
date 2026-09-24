@@ -74,8 +74,11 @@ def workload_summary(rows, realistic_kstar_spread):
     res = dict(instances=len(rows), communicating_instances=len(comm), realistic_instances=len(real),
                communicating_workloads=sorted({r["workload"] for r in comm}))
 
+    # Criteria use the expected number of logical faults (fail_sum), which equals
+    # the failure-probability ratio in the rare-failure regime programs run in and
+    # does not saturate for long programs (contract section 9 clarification).
     def ratio(r):
-        return r["A_fail_prob"] / r["C_fail_prob"] if r["C_fail_prob"] > 0 else 1.0
+        return r["A_fail_sum"] / r["C_fail_sum"] if r["C_fail_sum"] > 0 else 1.0
 
     by_regime = defaultdict(list)
     for r in real:
@@ -98,7 +101,7 @@ def workload_summary(rows, realistic_kstar_spread):
     g2_regimes = [k for k, v in per_regime.items() if v["g1_in_regime"] and v["g3_in_regime"]]
     median_by_regime = {k: v["median_failure_ratio"] for k, v in per_regime.items()}
 
-    wins = [r for r in real if r["C_fail_prob"] < r["A_fail_prob"] * 0.99]
+    wins = [r for r in real if r["C_fail_sum"] < r["A_fail_sum"] * 0.99]
     ok = [r for r in wins if r["C_ebit_pairs"] <= 3 * max(r["A_ebit_pairs"], 1)
           and r["C_run_rounds"] <= 2 * r["A_run_rounds"]]
     g4_share = len(ok) / len(wins) if wins else 1.0
@@ -107,8 +110,8 @@ def workload_summary(rows, realistic_kstar_spread):
         num = den = 0.0
         for r in real:
             K = select(r)
-            num += r["A_fail_prob"] - r[f"B{K}_fail_prob"]
-            den += r["A_fail_prob"] - r["C_fail_prob"]
+            num += r["A_fail_sum"] - r[f"B{K}_fail_sum"]
+            den += r["A_fail_sum"] - r["C_fail_sum"]
         return (num / den) if den > 1e-15 else float("nan"), den
 
     fixed = {K: recovery(lambda r, K=K: K)[0] for K in KS}
@@ -117,7 +120,7 @@ def workload_summary(rows, realistic_kstar_spread):
     total_benefit = recovery(lambda r: 1)[1]
     per_reg_K = {}
     for reg, rs in by_regime.items():
-        per_reg_K[reg] = min(KS, key=lambda K: (sum(r[f"B{K}_fail_prob"] for r in rs), K))
+        per_reg_K[reg] = min(KS, key=lambda K: (sum(r[f"B{K}_fail_sum"] for r in rs), K))
     hw_rec = recovery(lambda r: per_reg_K[r["regime"]])[0]
     paper_rec = recovery(lambda r: 10)[0]
 

@@ -155,7 +155,12 @@ solver time and status. "Communicating" workloads have at least 10 non-local CNO
 under the static partition.
 
 Benefit of C over A: `F_A / F_C`. Threshold recovery:
-`sum(F_A - F_B) / sum(F_A - F_C)` over the instances considered.
+`sum(F_A - F_B) / sum(F_A - F_C)` over the instances considered. Here F is the
+expected number of logical faults of the program (the sum of calibrated
+contributions). It equals the failure probability when failures are rare,
+which is where a program is run, and unlike `1 - exp(-sum)` it does not saturate
+for long programs at d = 5 or 7. `1 - exp(-sum)` is reported alongside.
+(Clarification recorded before any calibration result was read.)
 
 GO requires all of:
 * **G1** disagreement: in at least 50% of (communicating workload x realistic

@@ -69,6 +69,8 @@ def _decision_disagreement(w, homes, a_loc, c_loc) -> float:
 def run_workload(entry, fits, spec, slack, limits, out_rows, traj_dir, workers=1):
     w = W.load(entry)
     homes = W.initial_partition(w)
+    if isinstance(slack, float):
+        slack = max(1, int(np.ceil(slack * max(homes.count(0), homes.count(1)))))
     cap = O.capacities(w.nq, homes, slack)
     static = O.static_loc(w, homes)
     remote0 = sum(1 for a, b in w.gates if homes[a] != homes[b])
@@ -151,6 +153,8 @@ def main() -> None:
     ap.add_argument("--spec", required=True, help="WORKLOAD_REGIMES.json")
     ap.add_argument("--names", default="")
     ap.add_argument("--slack", type=int, default=1)
+    ap.add_argument("--slack-frac", type=float, default=None,
+                    help="capacity slack as a fraction of the larger home count (sensitivity run)")
     ap.add_argument("--procs", type=int, default=4)
     ap.add_argument("--limits", default='{"ebits": 120, "tiebreak": 20, "failure": 60}')
     args = ap.parse_args()
@@ -159,18 +163,20 @@ def main() -> None:
     spec = json.loads(Path(args.spec).read_text())
     limits = json.loads(args.limits)
     outdir = Path(args.outdir)
-    traj = outdir / f"trajectories_slack{args.slack}"
+    slack = args.slack if args.slack_frac is None else args.slack_frac
+    tag = str(args.slack) if args.slack_frac is None else f"{round(100 * args.slack_frac)}pct"
+    traj = outdir / f"trajectories_slack{tag}"
     traj.mkdir(parents=True, exist_ok=True)
     names = [n for n in args.names.split(",") if n]
     entries = [e for e in W.WORKLOADS if not names or e[0] in names]
     rows = []
     with ProcessPoolExecutor(args.procs) as pool:
-        futs = [pool.submit(_job, (e, fits, spec, args.slack, limits, traj)) for e in entries]
+        futs = [pool.submit(_job, (e, fits, spec, slack, limits, traj)) for e in entries]
         for fut in as_completed(futs):
             name, r, sec = fut.result()
             rows.extend(r)
             rows.sort(key=lambda x: (x["workload"], x["regime"]))
-            write_csv_rows(outdir / f"WORKLOADS_slack{args.slack}.csv", rows, list(rows[0]))
+            write_csv_rows(outdir / f"WORKLOADS_slack{tag}.csv", rows, list(rows[0]))
             print(f"{name}: {sec:.0f}s ({len(r)} rows)", flush=True)
 
 
