@@ -1,0 +1,304 @@
+[
+ {
+  "circuit": "adder_n28",
+  "device": "grid_16_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": true,
+  "error": null,
+  "seconds": 0.25,
+  "calls": {
+   "compile_multi_gate": 5
+  },
+  "decisions": 0,
+  "teleport_chosen": 0,
+  "ops": {
+   "CatEnt": 5,
+   "CatDisEnt": 5
+  },
+  "ebits_by_circuit_cost": 5,
+  "first_decisions": []
+ },
+ {
+  "circuit": "adder_n28",
+  "device": "grid_16_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": false,
+  "error": null,
+  "seconds": 0.29,
+  "calls": {
+   "get_teleport": 4,
+   "circuit_cost": 12
+  },
+  "decisions": 4,
+  "teleport_chosen": 2,
+  "ops": {
+   "CatEnt": 4,
+   "CatDisEnt": 4,
+   "Teleport": 2
+  },
+  "ebits_by_circuit_cost": 6,
+  "first_decisions": [
+   [
+    "6",
+    "4"
+   ],
+   [
+    "10",
+    "11"
+   ],
+   [
+    "6",
+    "10"
+   ],
+   [
+    "6",
+    "6"
+   ]
+  ]
+ },
+ {
+  "circuit": "ghz_n40",
+  "device": "grid_32_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": true,
+  "error": null,
+  "seconds": 0.11,
+  "calls": {
+   "compile_multi_gate": 1
+  },
+  "decisions": 0,
+  "teleport_chosen": 0,
+  "ops": {
+   "CatEnt": 1,
+   "CatDisEnt": 1
+  },
+  "ebits_by_circuit_cost": 1,
+  "first_decisions": []
+ },
+ {
+  "circuit": "ghz_n40",
+  "device": "grid_32_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": false,
+  "error": null,
+  "seconds": 0.12,
+  "calls": {
+   "get_teleport": 1,
+   "circuit_cost": 3
+  },
+  "decisions": 1,
+  "teleport_chosen": 0,
+  "ops": {
+   "CatEnt": 1,
+   "CatDisEnt": 1
+  },
+  "ebits_by_circuit_cost": 1,
+  "first_decisions": [
+   [
+    "1",
+    "1"
+   ]
+  ]
+ },
+ {
+  "circuit": "ising_n34",
+  "device": "grid_32_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": true,
+  "error": null,
+  "seconds": 0.2,
+  "calls": {
+   "compile_multi_gate": 2
+  },
+  "decisions": 0,
+  "teleport_chosen": 0,
+  "ops": {
+   "CatEnt": 2,
+   "CatDisEnt": 2
+  },
+  "ebits_by_circuit_cost": 2,
+  "first_decisions": []
+ },
+ {
+  "circuit": "ising_n34",
+  "device": "grid_32_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": false,
+  "error": null,
+  "seconds": 0.21,
+  "calls": {
+   "get_teleport": 1,
+   "circuit_cost": 3
+  },
+  "decisions": 1,
+  "teleport_chosen": 0,
+  "ops": {
+   "CatEnt": 2,
+   "CatDisEnt": 2
+  },
+  "ebits_by_circuit_cost": 2,
+  "first_decisions": [
+   [
+    "3",
+    "2"
+   ]
+  ]
+ },
+ {
+  "circuit": "dnn_n33",
+  "device": "grid_32_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": true,
+  "error": null,
+  "seconds": 0.46,
+  "calls": {
+   "compile_multi_gate": 6
+  },
+  "decisions": 0,
+  "teleport_chosen": 0,
+  "ops": {
+   "CatEnt": 6,
+   "CatDisEnt": 6
+  },
+  "ebits_by_circuit_cost": 6,
+  "first_decisions": []
+ },
+ {
+  "circuit": "dnn_n33",
+  "device": "grid_32_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": false,
+  "error": null,
+  "seconds": 0.49,
+  "calls": {
+   "get_teleport": 3,
+   "circuit_cost": 9
+  },
+  "decisions": 3,
+  "teleport_chosen": 1,
+  "ops": {
+   "CatEnt": 6,
+   "CatDisEnt": 6,
+   "Teleport": 1
+  },
+  "ebits_by_circuit_cost": 7,
+  "first_decisions": [
+   [
+    "6",
+    "5"
+   ],
+   [
+    "7",
+    "36"
+   ],
+   [
+    "7",
+    "7"
+   ]
+  ]
+ },
+ {
+  "circuit": "cat_n35",
+  "device": "grid_32_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": true,
+  "error": null,
+  "seconds": 0.14,
+  "calls": {
+   "compile_multi_gate": 1
+  },
+  "decisions": 0,
+  "teleport_chosen": 0,
+  "ops": {
+   "CatEnt": 1,
+   "CatDisEnt": 1
+  },
+  "ebits_by_circuit_cost": 1,
+  "first_decisions": []
+ },
+ {
+  "circuit": "cat_n35",
+  "device": "grid_32_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": false,
+  "error": null,
+  "seconds": 0.1,
+  "calls": {
+   "get_teleport": 1,
+   "circuit_cost": 3
+  },
+  "decisions": 1,
+  "teleport_chosen": 0,
+  "ops": {
+   "CatEnt": 1,
+   "CatDisEnt": 1
+  },
+  "ebits_by_circuit_cost": 1,
+  "first_decisions": [
+   [
+    "1",
+    "1"
+   ]
+  ]
+ },
+ {
+  "circuit": "knn_n41",
+  "device": "grid_32_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": true,
+  "error": null,
+  "seconds": 0.2,
+  "calls": {
+   "compile_multi_gate": 6
+  },
+  "decisions": 0,
+  "teleport_chosen": 0,
+  "ops": {
+   "CatEnt": 6,
+   "CatDisEnt": 6
+  },
+  "ebits_by_circuit_cost": 6,
+  "first_decisions": []
+ },
+ {
+  "circuit": "knn_n41",
+  "device": "grid_32_4",
+  "n_nodes": 2,
+  "use_tel": true,
+  "gate_grouping": false,
+  "error": null,
+  "seconds": 0.29,
+  "calls": {
+   "get_teleport": 2,
+   "circuit_cost": 6
+  },
+  "decisions": 2,
+  "teleport_chosen": 0,
+  "ops": {
+   "CatEnt": 36,
+   "CatDisEnt": 36
+  },
+  "ebits_by_circuit_cost": 36,
+  "first_decisions": [
+   [
+    "27",
+    "26"
+   ],
+   [
+    "36",
+    "36"
+   ]
+  ]
+ }
+]
