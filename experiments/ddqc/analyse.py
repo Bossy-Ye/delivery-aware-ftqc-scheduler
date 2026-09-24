@@ -114,11 +114,16 @@ def main() -> None:
         by_config[(r["program"], int(r["qpus"]), int(r["capacity"]), r["topology"])].append(r)
     dependent = defaultdict(int)
     configs = defaultdict(int)
+    base_programs: dict = {}
     for (name, k, cap, topology), sub in by_config.items():
         if len(sub) < 2:
             continue
         network = build_network(k, cap, topology)
-        programs = {r["probability"]: build_program(name, r["probability"]) for r in sub}
+        # The lowered program is the same at every probability; only the
+        # branch weights change, so build once and reweight.
+        if name not in base_programs:
+            base_programs[name] = build_program(name, 0.5)
+        programs = {r["probability"]: base_programs[name].with_probability(r["probability"]) for r in sub}
         placements = {r["probability"]: np.array([int(c) for c in r["expected_placement"]]) for r in sub}
         classes = 0
         is_dependent = False
