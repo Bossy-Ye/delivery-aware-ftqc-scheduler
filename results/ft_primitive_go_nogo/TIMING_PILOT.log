@@ -1,0 +1,29 @@
+SC3 R    k= 1 p=0.001 r=10 dets=   64 errs= 21/3000 ms/shot=    0.05
+SC3 R    k= 2 p=0.001 r=10 dets=   88 errs= 34/3000 ms/shot=    0.19
+SC3 R    k= 4 p=0.001 r=10 dets=  136 errs= 48/3000 ms/shot=    0.84
+SC3 T    k= 1 p=0.001 r=10 dets=  120 errs= 36/3000 ms/shot=    0.28
+SC3 T    k= 2 p=0.001 r=10 dets=  144 errs= 41/3000 ms/shot=    0.70
+SC3 T    k= 4 p=0.001 r=10 dets=  192 errs= 52/3000 ms/shot=    2.46
+SC3 T_rt k= 1 p=0.001 r=10 dets=  176 errs= 52/3000 ms/shot=    0.82
+SC3 T_rt k= 2 p=0.001 r=10 dets=  200 errs= 63/3000 ms/shot=    1.51
+SC3 MEM  k=12 p=0.001 r=10 dets=  136 errs= 23/3000 ms/shot=    0.05
+SC5 R    k= 1 p=0.001 r=10 dets=  192 errs=  1/600 ms/shot=    0.35
+SC5 R    k= 2 p=0.001 r=10 dets=  264 errs=  2/600 ms/shot=    1.40
+SC5 R    k= 4 p=0.001 r=10 dets=  408 errs=  3/600 ms/shot=    8.14
+SC5 T    k= 1 p=0.001 r=10 dets=  360 errs=  1/600 ms/shot=    2.27
+SC5 T    k= 2 p=0.001 r=10 dets=  432 errs=  2/600 ms/shot=    6.48
+SC5 T    k= 4 p=0.001 r=10 dets=  576 errs=  4/600 ms/shot=   38.00
+SC5 T_rt k= 1 p=0.001 r=10 dets=  528 errs=  1/600 ms/shot=    9.20
+SC5 T_rt k= 2 p=0.001 r=10 dets=  600 errs=  2/600 ms/shot=   19.43
+SC5 MEM  k=12 p=0.001 r=10 dets=  408 errs=  1/600 ms/shot=    0.40
+SC7 R    k= 1 p=0.001 r=10 dets=  384 errs=  0/150 ms/shot=    1.18
+SC7 R    k= 2 p=0.001 r=10 dets=  528 errs=  0/150 ms/shot=    3.99
+SC7 R    k= 4 p=0.001 r=10 dets=  816 errs=  0/150 ms/shot=   29.17
+SC7 T    k= 1 p=0.001 r=10 dets=  720 errs=  0/150 ms/shot=    8.11
+SC7 T    k= 2 p=0.001 r=10 dets=  864 errs=  0/150 ms/shot=   23.02
+SC7 T    k= 4 p=0.001 r=10 dets= 1152 errs=  0/150 ms/shot=  150.96
+SC7 T_rt k= 1 p=0.001 r=10 dets= 1056 errs=  0/150 ms/shot=   28.39
+SC7 T_rt k= 2 p=0.001 r=10 dets= 1200 errs=  0/150 ms/shot=   61.77
+SC7 MEM  k=12 p=0.001 r=10 dets=  816 errs=  0/150 ms/shot=    1.50
+[[18,4,4]] BB R    k= 1 p=0.001 r=10 dets=  144 errs=  4/150 ms/shot=    6.78
+[[18,4,4]] BB T    k= 1 p=0.001 r=10 dets=  270 errs=  8/150 ms/shot=   84.44

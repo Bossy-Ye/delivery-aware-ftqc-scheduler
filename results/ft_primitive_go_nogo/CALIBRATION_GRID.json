@@ -1,0 +1,2342 @@
+[
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 3,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 30,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 3,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 30,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 3,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.1,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.2,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.4,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.2,
+"k": 4
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 2.4,
+"k": 8
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.8,
+"k": 1
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "T_rt",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 1.6,
+"k": 2
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 0
+},
+{
+"code": "SC3",
+"p": 0.003,
+"ratio": 30,
+"strategy": "MEM",
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.05,
+"rounds": 12
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1.5,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6.0,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 24.0,
+"k": 4
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 8,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 17,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_rt",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 30,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 0
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 12
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1.5,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6.0,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 24.0,
+"k": 4
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 8,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 17,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 3,
+"strategy": "T_rt",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 30,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 3,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 0
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 3,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 12
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1.5,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6.0,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 24.0,
+"k": 4
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 8,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 17,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_rt",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 30,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 0
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 12
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1.5,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6.0,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 24.0,
+"k": 4
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 8,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 17,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 30,
+"strategy": "T_rt",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 30,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 30,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 0
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 30,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 12
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1.5,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6.0,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 24.0,
+"k": 4
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 8,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 17,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T_rt",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 30,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 0
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 12
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1.5,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6.0,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 3,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 24.0,
+"k": 4
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 8,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 3,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 17,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 3,
+"strategy": "T_rt",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 30,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 3,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 0
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 3,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 12
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1.5,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6.0,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 24.0,
+"k": 4
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 8,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 17,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T_rt",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 30,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 0
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 12
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1.5,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6.0,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 30,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 24.0,
+"k": 4
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 8,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 30,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 17,
+"k": 2
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 30,
+"strategy": "T_rt",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 30,
+"k": 1
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 30,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 0
+},
+{
+"code": "SC5",
+"p": 0.002,
+"ratio": 30,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 1,
+"rounds": 12
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 100,
+"max_shots": 200000,
+"cost_hint": 4,
+"k": 1
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 100,
+"max_shots": 150000,
+"cost_hint": 60,
+"k": 1
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 100,
+"max_shots": 200000,
+"cost_hint": 16,
+"k": 2
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 100,
+"max_shots": 150000,
+"cost_hint": 120,
+"k": 2
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 100,
+"max_shots": 300000,
+"cost_hint": 5,
+"rounds": 0
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 100,
+"max_shots": 300000,
+"cost_hint": 5,
+"rounds": 12
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 100,
+"max_shots": 200000,
+"cost_hint": 4,
+"k": 1
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 100,
+"max_shots": 150000,
+"cost_hint": 60,
+"k": 1
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 100,
+"max_shots": 200000,
+"cost_hint": 16,
+"k": 2
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 100,
+"max_shots": 150000,
+"cost_hint": 120,
+"k": 2
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 100,
+"max_shots": 300000,
+"cost_hint": 5,
+"rounds": 0
+},
+{
+"code": "SC7",
+"p": 0.001,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 100,
+"max_shots": 300000,
+"cost_hint": 5,
+"rounds": 12
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 10,
+"k": 1
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 100000,
+"cost_hint": 60,
+"k": 1
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 1,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 20,
+"k": 2
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 100000,
+"cost_hint": 120,
+"k": 2
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_rt",
+"target_errors": 200,
+"max_shots": 60000,
+"cost_hint": 150,
+"k": 1
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 2,
+"rounds": 0
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 1,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 2,
+"rounds": 12
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 10,
+"k": 1
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 100000,
+"cost_hint": 60,
+"k": 1
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 10,
+"strategy": "R",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 20,
+"k": 2
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T",
+"target_errors": 200,
+"max_shots": 100000,
+"cost_hint": 120,
+"k": 2
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_rt",
+"target_errors": 200,
+"max_shots": 60000,
+"cost_hint": 150,
+"k": 1
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 2,
+"rounds": 0
+},
+{
+"code": "[[18,4,4]] BB",
+"p": 0.001,
+"ratio": 10,
+"strategy": "MEM",
+"target_errors": 200,
+"max_shots": 300000,
+"cost_hint": 2,
+"rounds": 12
+}
+]

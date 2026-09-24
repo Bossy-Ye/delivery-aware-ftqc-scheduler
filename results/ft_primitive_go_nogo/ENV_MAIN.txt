@@ -1,0 +1,9 @@
+mqt-bench==2.3.0
+networkx==3.6.1
+numpy==2.4.6
+ortools==9.15.6755
+qiskit==2.5.2
+qiskit-aer==0.17.2
+qiskit-qasm3-import==0.6.0
+scipy==1.17.1
+scipy-openblas32==0.3.34.237.0
