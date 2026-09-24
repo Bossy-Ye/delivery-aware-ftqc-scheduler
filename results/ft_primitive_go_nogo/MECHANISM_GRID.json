@@ -1,0 +1,362 @@
+[
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbell",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbell",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbsm",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbsm",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbell_qbsm",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbell_qbsm",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbell",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbell",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbsm",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbsm",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbell_qbsm",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbell_qbsm",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T_qbell",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T_qbell",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T_qbsm",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T_qbsm",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T_qbell_qbsm",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 1,
+"strategy": "T_qbell_qbsm",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T_qbell",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T_qbell",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T_qbsm",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T_qbsm",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T_qbell_qbsm",
+"k": 1,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.3
+},
+{
+"code": "SC3",
+"p": 0.002,
+"ratio": 10,
+"strategy": "T_qbell_qbsm",
+"k": 2,
+"target_errors": 400,
+"max_shots": 2000000,
+"cost_hint": 0.6
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbell",
+"k": 1,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 3
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbell",
+"k": 2,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbsm",
+"k": 1,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 3
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbsm",
+"k": 2,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbell_qbsm",
+"k": 1,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 3
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 1,
+"strategy": "T_qbell_qbsm",
+"k": 2,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbell",
+"k": 1,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 3
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbell",
+"k": 2,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbsm",
+"k": 1,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 3
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbsm",
+"k": 2,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbell_qbsm",
+"k": 1,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 3
+},
+{
+"code": "SC5",
+"p": 0.001,
+"ratio": 10,
+"strategy": "T_qbell_qbsm",
+"k": 2,
+"target_errors": 200,
+"max_shots": 500000,
+"cost_hint": 6
+}
+]

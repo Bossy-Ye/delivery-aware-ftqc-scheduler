@@ -192,6 +192,20 @@ only moderate (median ratio 1.25-10).
 
 Precedence: a NO_GO trigger overrides HOLD; GO needs every G criterion.
 
+## 9b. Mechanism ablations (added before any calibration result was read)
+
+Brief section 10. Run after the calibration grid, never used for decisions:
+teleport variants with noiseless Bell-pair block initialisation and settling
+(`T_qbell`: removes the extra decoding volume), with a noiseless logical Bell-state
+measurement and feed-forward (`T_qbsm`), and both (`T_qbell_qbsm`), at k = 1, 2
+for SC d=3 (p = 1e-3, 2e-3) and SC d=5 (p = 1e-3), p_ebit/p in {1, 10}
+(`MECHANISM_GRID.json`, 36 circuits, same stopping rules as section 3). The
+teleport overhead a_T - a_R is split into the parts these ablations remove.
+Ebit-noise sensitivity, code family, waiting for entanglement, parallel link
+generation (rho divided by the number of links), the number of future
+interactions k and the return need come from the main grid and the clean-pattern
+analysis.
+
 ## 10. Pilots run before freezing (disclosed)
 
 * Smoke test (d = 3, 5 at p = 3e-3, p_ebit = 10p, TMCBS primitives): whole-

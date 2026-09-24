@@ -184,3 +184,65 @@ def code_by_name(name: str):
     if name.startswith("SC"):
         return tmcbs.surface_code(int(name[2:]))
     return tmcbs.bb_code(name)
+
+
+# --------------------------------------------------------------------------- #
+# Mechanism ablations (not used for decisions).
+# --------------------------------------------------------------------------- #
+_NOISE_ATTRS = ("p_after_clifford_depolarization", "p_after_reset_flip_probability",
+                "p_before_measure_flip_probability", "p_before_round_data_depolarization")
+
+
+class _Quiet:
+    """Temporarily zero the builder's circuit-level noise (ebit noise is separate)."""
+
+    def __init__(self, builder, active: bool):
+        self.b, self.active, self.saved = builder, active, {}
+
+    def __enter__(self):
+        if self.active:
+            for a in _NOISE_ATTRS:
+                self.saved[a] = getattr(self.b, a)
+                setattr(self.b, a, 0.0)
+
+    def __exit__(self, *exc):
+        for a, v in self.saved.items():
+            setattr(self.b, a, v)
+
+
+def teleport_ablation(code, p: float, p_ebit: float, k: int, *, quiet_bell_blocks: bool = False,
+                      quiet_bsm: bool = False) -> Pattern:
+    """Strategy T with parts of the teleport made noiseless.
+
+    ``quiet_bell_blocks``: the Bell-pair blocks' initialisation and settling
+    rounds are noiseless (removes the extra decoding volume they add).
+    ``quiet_bsm``: the logical Bell-state measurement and its feed-forward are
+    noiseless (removes the extra measurements and corrections).
+    The ebit layer that builds the logical Bell pair keeps ``p_ebit``.
+    """
+    A, M, A2, B = 0, 1, 2, 3
+    b = make_builder(code, 4, p, ebits=True)
+    b.initQubits(A, errors=True)
+    with _Quiet(b, quiet_bell_blocks):
+        b.initQubits(M)
+        b.initQubits(A2)
+    b.initQubits(B)
+    b.prepareEbits(transError=p_ebit)
+    _settle(b, [A, B])
+    with _Quiet(b, quiet_bell_blocks):
+        _settle(b, [M, A2])
+    b.transversalOp("H", [M], typeArr=["BB"])
+    _nonlocal_cnot(b, M, A2)
+    with _Quiet(b, quiet_bsm):
+        b.transversalOp("CX", [A, M], typeArr=["BB", "BB"])
+        b.transversalOp("H", [A], typeArr=["BB"])
+        b.measureCBThenCorrectCB("CX", [M, A2])
+        b.measureCBThenCorrectCB("CZ", [A, A2])
+    _rounds(b, [A2, B], ROUNDS_BETWEEN_OPS)
+    for _ in range(k):
+        b.transversalOp("CX", [A2, B], typeArr=["BB", "BB"])
+        _rounds(b, [A2, B], ROUNDS_BETWEEN_OPS)
+    _readout(b, code, [A2, B])
+    t = SETTLE_ROUNDS + ROUNDS_BETWEEN_OPS * (k + 1)
+    name = "T" + ("_qbell" if quiet_bell_blocks else "") + ("_qbsm" if quiet_bsm else "")
+    return Pattern(name, k, b.getCirc(), code.n, 1, 1, t, {"B": t}, 4)

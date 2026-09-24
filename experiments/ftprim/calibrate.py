@@ -42,6 +42,13 @@ def run_point(pt: dict) -> dict:
     if pt["strategy"] == "MEM":
         circuit = pat.memory_pair(code, p, pt["rounds"])
         meta = dict(ebit_pairs=0, teleports=0, time_rounds=pat.SETTLE_ROUNDS + pt["rounds"], k=0)
+    elif pt["strategy"].startswith("T_q"):
+        pattern = pat.teleport_ablation(code, p, ratio * p, pt["k"],
+                                        quiet_bell_blocks="qbell" in pt["strategy"],
+                                        quiet_bsm="qbsm" in pt["strategy"])
+        circuit = pattern.circuit
+        meta = dict(ebit_pairs=pattern.ebit_pairs, teleports=pattern.teleports,
+                    time_rounds=pattern.time_rounds, k=pt["k"])
     else:
         pattern = pat.build(code, pt["strategy"], p, ratio * p, pt["k"])
         circuit = pattern.circuit

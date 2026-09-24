@@ -75,3 +75,13 @@ def test_bb_patterns_match_tmcbs_and_are_deterministic():
         assert c.num_observables == 2 * code.k
         _, obs = c.without_noise().compile_detector_sampler().sample(64, separate_observables=True)
         assert not obs.any()
+
+
+def test_ablation_without_quieting_equals_teleport():
+    code = tmcbs.surface_code(3)
+    full = pat.teleport(code, 1e-3, 1e-2, 2).circuit
+    same = pat.teleport_ablation(code, 1e-3, 1e-2, 2).circuit
+    assert str(full) == str(same)
+    quiet = pat.teleport_ablation(code, 1e-3, 1e-2, 2, quiet_bell_blocks=True, quiet_bsm=True).circuit
+    assert quiet.num_detectors == full.num_detectors
+    assert quiet.detector_error_model().num_errors < full.detector_error_model().num_errors
