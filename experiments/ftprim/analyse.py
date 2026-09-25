@@ -149,6 +149,61 @@ def workload_summary(rows, realistic_kstar_spread):
     return res
 
 
+def class_summary(rows):
+    """Informational breakdown by regime class (all classes, communicating workloads)."""
+    comm = [r for r in rows if r["static_remote"] >= COMM_MIN_REMOTE]
+    out = {}
+    for cls in ("realistic", "near-term", "idealised"):
+        rs = [r for r in comm if r["regime_class"] == cls]
+        if not rs:
+            continue
+        ratios = [r["A_fail_sum"] / r["C_fail_sum"] for r in rs]
+        wins = [r for r in rs if r["C_fail_sum"] < 0.99 * r["A_fail_sum"]]
+        ebit_over = [r["C_ebit_pairs"] / max(r["A_ebit_pairs"], 1) for r in wins]
+        # best K per regime within the class, and its recovery
+        by_reg = {}
+        for r in rs:
+            by_reg.setdefault(r["regime"], []).append(r)
+        num = den = 0.0
+        for reg, group in by_reg.items():
+            K = min(KS, key=lambda K: (sum(g[f"B{K}_fail_sum"] for g in group), K))
+            for g in group:
+                num += g["A_fail_sum"] - g[f"B{K}_fail_sum"]
+                den += g["A_fail_sum"] - g["C_fail_sum"]
+        fixed = {}
+        for K in KS:
+            n2 = sum(g["A_fail_sum"] - g[f"B{K}_fail_sum"] for g in rs)
+            fixed[K] = n2 / den if den > 1e-15 else float("nan")
+        bestK = max((K for K in KS if fixed[K] == fixed[K]), key=lambda K: fixed[K], default=None)
+        out[cls] = dict(
+            instances=len(rs), regimes=len(by_reg),
+            share_disagree_ge_10pct=sum(r["decision_disagreement"] >= 0.10 for r in rs) / len(rs),
+            median_disagreement=statistics.median(r["decision_disagreement"] for r in rs),
+            median_failure_ratio=statistics.median(ratios), max_failure_ratio=max(ratios),
+            share_ratio_ge_10=sum(x >= 10 for x in ratios) / len(ratios),
+            share_ratio_ge_1_25=sum(x >= 1.25 for x in ratios) / len(ratios),
+            c_wins=len(wins),
+            c_ebit_overhead_median=statistics.median(ebit_over) if ebit_over else None,
+            c_ebit_overhead_max=max(ebit_over) if ebit_over else None,
+            share_wins_within_overhead=(sum(1 for r in wins if r["C_ebit_pairs"] <= 3 * max(r["A_ebit_pairs"], 1)
+                                           and r["C_run_rounds"] <= 2 * r["A_run_rounds"]) / len(wins)
+                                       if wins else None),
+            hardware_conditioned_recovery=(num / den) if den > 1e-15 else float("nan"),
+            best_fixed_K=bestK, best_fixed_recovery=fixed.get(bestK) if bestK else float("nan"),
+            total_benefit=den)
+    per_workload = {}
+    for r in comm:
+        w = per_workload.setdefault(r["workload"], dict(category=r["category"], static_remote=r["static_remote"],
+                                                         max_ratio=1.0, max_ratio_regime=None,
+                                                         realistic_max_ratio=1.0))
+        x = r["A_fail_sum"] / r["C_fail_sum"]
+        if x > w["max_ratio"]:
+            w["max_ratio"], w["max_ratio_regime"] = x, r["regime"]
+        if r["regime_class"] == "realistic":
+            w["realistic_max_ratio"] = max(w["realistic_max_ratio"], x)
+    return out, per_workload
+
+
 def verdict(clean, kstar, wl, slack_rows):
     # A regime whose failure objective never teleports within k <= 30 counts as 31.
     real_kstars = [(v["oneway"]["k"] or 31) for v in kstar.values()
@@ -198,6 +253,13 @@ def main() -> None:
         if f.name != "WORKLOADS_slack1.csv":
             s = workload_summary(load_csv(f), None)
             sens[f.stem] = dict(verdict=verdict(clean, kstar, s, None), summary=s)
+    by_class, per_workload = class_summary(primary)
+    wl["by_class"] = by_class
+    wl["per_workload"] = per_workload
+    wl["solver_status"] = {
+        "A_ebit_optimal_proven": sum(1 for r in primary if str(r["a_status"]).startswith(("OPTIMAL", "TRIVIAL"))),
+        "C_optimal_proven": sum(1 for r in primary if r["c_status"] in ("OPTIMAL", "TRIVIAL")),
+        "instances": len(primary)}
     summary = dict(decision=v["decision"], verdict=v, clean_pattern=clean, clean_thresholds=thresholds,
                    break_even_k=kstar, fitted_break_even=fit_k, workloads=wl, sensitivity=sens,
                    holdout=fits.get("holdouts"))
