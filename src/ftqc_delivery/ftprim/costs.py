@@ -182,8 +182,15 @@ def pattern_metrics(fit: Fit, strategy: str, k: int, rho: float, live_blocks: in
         raise ValueError(strategy)
     run = max(compute, rho * batches)
     fail = base + live_blocks * d["s_mem"] * (run - compute)
+    # Space-time volume in logical block-rounds: A and B for the whole run, plus
+    # each teleport's two Bell-pair blocks for their settling rounds.
+    spacetime = live_blocks * run + batches_teleport(strategy) * 2 * SETTLE
     return dict(strategy=strategy, k=k, rho=rho, fail=fail, ebit_pairs=batches * fit.n,
-                batches=batches, latency_rounds=run, compute_rounds=compute)
+                batches=batches, latency_rounds=run, compute_rounds=compute, spacetime_block_rounds=spacetime)
+
+
+def batches_teleport(strategy: str) -> int:
+    return {"R": 0, "T": 1, "T_rt": 2}[strategy]
 
 
 def decide(options: List[dict], objective: str) -> dict:

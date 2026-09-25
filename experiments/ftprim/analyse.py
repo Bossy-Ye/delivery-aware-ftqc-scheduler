@@ -175,8 +175,20 @@ def class_summary(rows):
             n2 = sum(g["A_fail_sum"] - g[f"B{K}_fail_sum"] for g in rs)
             fixed[K] = n2 / den if den > 1e-15 else float("nan")
         bestK = max((K for K in KS if fixed[K] == fixed[K]), key=lambda K: fixed[K], default=None)
+        def spacetime(r, pol):
+            # logical block-rounds: every qubit for the whole run, plus two Bell-pair
+            # blocks settling 4 rounds per teleport
+            return r["nq"] * r[f"{pol}_run_rounds"] + 8 * r[f"{pol}_teleports"]
+
+        st_ratio = [spacetime(r, "C") / spacetime(r, "A") for r in rs]
+        lat_ratio = [r["C_run_rounds"] / r["A_run_rounds"] for r in rs]
         out[cls] = dict(
             instances=len(rs), regimes=len(by_reg),
+            spacetime_C_over_A_median=statistics.median(st_ratio), spacetime_C_over_A_max=max(st_ratio),
+            latency_C_over_A_median=statistics.median(lat_ratio), latency_C_over_A_max=max(lat_ratio),
+            solver_seconds_median=statistics.median(r["a_seconds"] + r["c_seconds"] for r in rs),
+            solver_seconds_max=max(r["a_seconds"] + r["c_seconds"] for r in rs),
+            threshold_seconds_max=max(r["threshold_seconds"] for r in rs),
             share_disagree_ge_10pct=sum(r["decision_disagreement"] >= 0.10 for r in rs) / len(rs),
             median_disagreement=statistics.median(r["decision_disagreement"] for r in rs),
             median_failure_ratio=statistics.median(ratios), max_failure_ratio=max(ratios),

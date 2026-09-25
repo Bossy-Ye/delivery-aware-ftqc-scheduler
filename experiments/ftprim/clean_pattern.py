@@ -60,6 +60,7 @@ def main() -> None:
                         fail_R=by["R"]["fail"], fail_T=by[s2]["fail"],
                         ebits_R=by["R"]["ebit_pairs"], ebits_T=by[s2]["ebit_pairs"],
                         latency_R=by["R"]["latency_rounds"], latency_T=by[s2]["latency_rounds"],
+                        spacetime_R=by["R"]["spacetime_block_rounds"], spacetime_T=by[s2]["spacetime_block_rounds"],
                         choice_ebits=pick["ebits"]["strategy"], choice_latency=pick["latency"]["strategy"],
                         choice_failure=pick["failure"]["strategy"],
                         fail_of_ebits_choice=pick["ebits"]["fail"], fail_of_failure_choice=pick["failure"]["fail"],

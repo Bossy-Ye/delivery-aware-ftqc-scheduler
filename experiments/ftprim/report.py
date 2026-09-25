@@ -117,6 +117,12 @@ def main() -> None:
             f"{fmt(c['median_failure_ratio'])} | {fmt(c['max_failure_ratio'])} | {pct(c['share_ratio_ge_1_25'])} | "
             f"{c['c_wins']} | {fmt(c['c_ebit_overhead_median'])}, {fmt(c['c_ebit_overhead_max'])} | "
             f"{pct(c['hardware_conditioned_recovery'])} | {c['best_fixed_K']} ({pct(c['best_fixed_recovery'])}) |")
+    add("\n| regime class | latency C/A (median, max) | space-time C/A (median, max) | oracle solve s (median, max) | "
+        "all 30 threshold plans s (max) |\n| --- | --- | --- | --- | --- |")
+    for cls, c in wl["by_class"].items():
+        add(f"| {cls} | {fmt(c['latency_C_over_A_median'])}, {fmt(c['latency_C_over_A_max'])} | "
+            f"{fmt(c['spacetime_C_over_A_median'])}, {fmt(c['spacetime_C_over_A_max'])} | "
+            f"{fmt(c['solver_seconds_median'])}, {fmt(c['solver_seconds_max'])} | {fmt(c['threshold_seconds_max'])} |")
     add("\nRecovery = sum(F_A - F_B) / sum(F_A - F_C); it is negative when the threshold rule is worse than "
         "the ebit-optimal baseline and is ill-conditioned when the oracle benefit is near zero "
         f"(realistic total benefit {fmt(wl['by_class'].get('realistic', {}).get('total_benefit'))} expected faults).\n")
