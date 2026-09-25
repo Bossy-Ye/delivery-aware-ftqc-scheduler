@@ -41,7 +41,7 @@ def main() -> None:
     fits, holdouts, table = {}, {}, []
     for key, pts in sorted(C.group(rows).items()):
         strategies = {r["strategy"] for r in pts}
-        if not {"R", "T", "T_rt", "MEM"} <= strategies:
+        if not {"R", "T", "MEM"} <= strategies:  # T_rt may be absent (SC d=7: return = outbound)
             continue
         fit = C.fit_point(key, pts)
         name = f"{key[0]}|p={key[1]:g}|r={key[2]:g}"
