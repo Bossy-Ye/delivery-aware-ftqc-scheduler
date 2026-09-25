@@ -1,0 +1,72 @@
+[
+ {
+  "code": "SC5",
+  "p": 0.001,
+  "ratio": 10,
+  "rho": 10,
+  "regime_class": "realistic"
+ },
+ {
+  "code": "SC5",
+  "p": 0.001,
+  "ratio": 10,
+  "rho": 100,
+  "regime_class": "realistic"
+ },
+ {
+  "code": "SC5",
+  "p": 0.001,
+  "ratio": 30,
+  "rho": 10,
+  "regime_class": "realistic"
+ },
+ {
+  "code": "SC5",
+  "p": 0.001,
+  "ratio": 30,
+  "rho": 100,
+  "regime_class": "realistic"
+ },
+ {
+  "code": "SC5",
+  "p": 0.002,
+  "ratio": 10,
+  "rho": 10,
+  "regime_class": "realistic"
+ },
+ {
+  "code": "SC5",
+  "p": 0.002,
+  "ratio": 10,
+  "rho": 100,
+  "regime_class": "realistic"
+ },
+ {
+  "code": "SC5",
+  "p": 0.002,
+  "ratio": 30,
+  "rho": 10,
+  "regime_class": "realistic"
+ },
+ {
+  "code": "SC5",
+  "p": 0.002,
+  "ratio": 30,
+  "rho": 100,
+  "regime_class": "realistic"
+ },
+ {
+  "code": "SC7",
+  "p": 0.001,
+  "ratio": 10,
+  "rho": 10,
+  "regime_class": "realistic"
+ },
+ {
+  "code": "SC7",
+  "p": 0.001,
+  "ratio": 10,
+  "rho": 100,
+  "regime_class": "realistic"
+ }
+]
