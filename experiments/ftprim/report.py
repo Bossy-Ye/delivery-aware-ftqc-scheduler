@@ -88,6 +88,8 @@ def main() -> None:
         f"{pct(ideal.get('share_disagree_ge_10pct'))} of idealised instances differ on >= 10% of decisions, "
         f"almost always in one direction (the ebit objective teleports where the failure objective keeps the "
         f"non-local CNOT; every clean-pattern inversion is of this kind), but the consequence is small.")
+    add("* G5 passes only vacuously: in realistic regimes no burst threshold beats the ebit-optimal plan "
+        "(negative recovery), because that plan is already within a few percent of the failure oracle.")
     add(f"* Where the failure oracle wins in idealised regimes, it spends a median {fmt(ideal.get('c_ebit_overhead_median'))}x "
         f"(max {fmt(ideal.get('c_ebit_overhead_max'))}x) the Bell pairs of the ebit-optimal plan, and a burst "
         f"threshold chosen per regime recovers {pct(ideal.get('hardware_conditioned_recovery'))} of its benefit.\n")
@@ -127,7 +129,7 @@ def main() -> None:
         "the ebit-optimal baseline and is ill-conditioned when the oracle benefit is near zero "
         f"(realistic total benefit {fmt(wl['by_class'].get('realistic', {}).get('total_benefit'))} expected faults).\n")
     add("| realistic regime | workloads | median F_A/F_C | max F_A/F_C | share disagree >= 10% | "
-        "median ratio bound from solver | C proven optimal |")
+        "median ratio bound from CP-SAT (loose; see the solver-independent bound below) | C proven optimal |")
     add("| --- | --- | --- | --- | --- | --- | --- |")
     for reg, r in wl["per_realistic_regime"].items():
         add(f"| {reg} | {r['workloads']} | {fmt(r['median_failure_ratio'])} | {fmt(r['max_failure_ratio'])} | "
@@ -140,7 +142,8 @@ def main() -> None:
             f"({w['max_ratio_regime'] or '-'}) | {fmt(w['realistic_max_ratio'])} |")
     add("")
     if S.get("sensitivity"):
-        add("Capacity sensitivity (reduced solver limits, see section 7):\n")
+        add("Capacity sensitivity (capacity = home count + 25%, the 10 realistic regimes, solver limits 60 s ebit / "
+            "10 s tie-break / 30 s failure):\n")
         for tag, sv in S["sensitivity"].items():
             s = sv["summary"]
             add(f"* {tag}: decision under the same criteria {sv['verdict']['decision']}; realistic share "
@@ -219,7 +222,14 @@ def main() -> None:
                 add(f"| {name} | {fmt(e['c_tel'])} | {pct(e.get('share_bell_block_settle'))} | "
                     f"{pct(e.get('share_bsm_feedforward'))} | {pct(e.get('share_remaining'))} | "
                     f"{fmt(e.get('k_star_without_both'))} |")
-            add("")
+            r10 = {k: e for k, e in split.items() if k.endswith("|r=10")}
+            with_both = [F["fits"][k]["derived"]["k_star_oneway"] for k in r10 if k in F["fits"]]
+            without = [e.get("k_star_without_both") for e in r10.values() if e.get("k_star_without_both") is not None]
+            add("\nShares are differences of fitted intercepts from separate simulations, so they carry the "
+                "bootstrap uncertainty of c_tel in section 4 (often +-30-70%) and need not sum to 100% (the removed "
+                "noise sources interact). They are indicative: both the extra Bell-pair blocks and the Bell "
+                "measurement contribute. At p_ebit = 10p, making both noiseless moves the one-way break-even from "
+                f"{fmt(min(with_both))}-{fmt(max(with_both))} to {fmt(min(without))}-{fmt(max(without))}.\n")
         rho = M.get("break_even_k_vs_rho", {})
         if rho:
             add("Break-even k (one-way) as entanglement generation slows (rho = rounds per batch; "
